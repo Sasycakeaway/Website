@@ -21,7 +21,7 @@
 				<li class="uk-active"><a href="/">Sasy's Cake Away</a></li>
 				
 					<li><a href="/about">Chi sono</a></li>
-					<li><a href="#">Perchè Sasy's</a></li>
+					<li><a href="/why">Perchè Sasy's</a></li>
 					<li>
 					<a href="#">I miei prodotti</a>
 					<div class="uk-navbar-dropdown">
