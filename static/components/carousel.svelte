@@ -4,12 +4,6 @@
       <li>
           <img src="images/background.png" alt="" uk-cover>
       </li>
-      <li>
-          <img src="images/dark.jpg" alt="" uk-cover>
-      </li>
-      <li>
-          <img src="images/light.jpg" alt="" uk-cover>
-      </li>
   </ul>
 
   <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
