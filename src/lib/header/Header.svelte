@@ -1,6 +1,6 @@
 
 <svelte:head>
-	<!-- UIkit CSS -->
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
 
 <!-- UIkit JS -->
