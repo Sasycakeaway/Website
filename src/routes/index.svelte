@@ -26,7 +26,7 @@ import Prod from '/static/components/prod.svelte';
 <h1>&nbsp;</h1>
 <h4>Sasy's su LIVE SOCIAL</h4>
 <h4>&nbsp;</h4>
-<p>La mia storia di imprenditrice appassionata, raccontata a Francesca Corso ai microfoni di Radio Veronica One</p><a href="www.radioveronicaone.it"> www.radioveronicaone.it</a> - <a>www.radiolivesocial.it</a>
+<p>La mia storia di imprenditrice appassionata, raccontata a Francesca Corso ai microfoni di Radio Veronica One</p><a> www.radioveronicaone.it</a> - <a>www.radiolivesocial.it</a>
 </div>
 <h5>&nbsp;</h5>
 <Carousel></Carousel>
