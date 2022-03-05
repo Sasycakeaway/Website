@@ -4,11 +4,12 @@
         <div>
             <div class="uk-card uk-card-default but">
                 <div class="uk-card-media-top" align="center">
-                    <img src="images/biscuits.png" alt="">
+                    <img src="https://img.icons8.com/windows/128/000000/--biscuits.png"/>
                 </div>
                 <div class="uk-card-body" align="center">
                     <h3 class="uk-card-title" >Biscotti</h3>
-                    <p>Le mie proposte di pasticceria secca e biscotteria spaziano dai sapori tradizionali (paste di Meliga, baci di dama, canestrelli, Krumiri),  fino ai più moderni accostamenti tra i sapori dell'orto e gli agrumi in una costante ricerca di delicata estasi del palato.</p>
+                    <p>Le mie proposte di pasticceria secca e biscotteria spaziano dai sapori tradizionali (paste di Meliga, baci di dama, canestrelli...),  fino ai più moderni accostamenti tra i sapori dell'orto e gli agrumi in una costante ricerca di delicata estasi del palato.</p>
+                    <h3>&nbsp;</h3>
                 </div>
             </div>
         </div>
@@ -19,11 +20,13 @@
         <div>
             <div class="uk-card uk-card-default but">
                 <div class="uk-card-media-top" align="center">
-                    <img src="images/box.png" alt="">
+                    <h6>&nbsp;</h6>
+                    <img src="https://img.icons8.com/ios/100/000000/bee--v1.png"/>
                 </div>
                 <div class="uk-card-body" align="center">
                     <h3 class="uk-card-title">Apebox</h3>
                     <p>Metti una sera tra amici, metti che non sai come rendere frizzante l'atmosfera, metti che lavori fino a tardi e non sai proprio come fare. Ci pensiamo noi con il nostro BOX APERITIVO direttamente a casa tua. Stuzzichini, biscotti e prodotti a Km 0 selezionati per voi. Scegli il tuo personaggio e... buon appetito!</p>
+                    
                 </div>
             </div>
         </div>
@@ -34,11 +37,13 @@
         <div>
             <div class="uk-card uk-card-default but">
                 <div class="uk-card-media-top" align="center">
-                    <img src="images/cake.png" alt="">
+                    <h6>&nbsp;</h6>
+                    <img src="https://img.icons8.com/ios/100/000000/birthday-cake--v1.png"/>
                 </div>
                 <div class="uk-card-body" align="center">
                     <h3 class="uk-card-title">Torte</h3>
                     <p>Con la torta si celebra un evento speciale, una ricorrenza, un compleanno, il matrimonio, o più semplicemente il piacere di stare insieme ai propri cari. In ogni occasione ti posso accompagnare con la torta giusta per te.</p>
+                    <h3>&nbsp;</h3>
                 </div>
             </div>
         </div>
@@ -48,7 +53,8 @@
     <div>
         <div class="uk-card uk-card-default but">
             <div class="uk-card-media-top" align="center">
-                <img src="images/cake.png" alt="">
+                <h6>&nbsp;</h6>
+                <img src="https://img.icons8.com/external-icongeek26-outline-icongeek26/128/000000/external-panettone-italian-food-icongeek26-outline-icongeek26.png"/>
             </div>
             <div class="uk-card-body" align="center">
                 <h3 class="uk-card-title">Panettoni e Colombe</h3>

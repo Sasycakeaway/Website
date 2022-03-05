@@ -26,7 +26,7 @@
 					<a href="#">I miei prodotti</a>
 					<div class="uk-navbar-dropdown but">
 						<ul class="uk-nav uk-navbar-dropdown-nav">
-							<li><a href="#">Pasticceria fresca</a></li>
+							<li><a href="/fresca">Pasticceria fresca</a></li>
 							<li><a href="#">Pasticceria salata</a></li>
 							<li><a href="#">Biscotti</a></li>
 							<li><a href="#">Torte</a></li>
