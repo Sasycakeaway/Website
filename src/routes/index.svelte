@@ -18,7 +18,7 @@ import Prod from '/static/components/prod.svelte';
 </div>
 <div align="center">
 <h1>&nbsp;</h1>
-<button class="uk-button uk-button-primary uk-button-large">Scopri i nostri prodotti</button>
+<button class="uk-button uk-button-primary uk-button-large but">Scopri i nostri prodotti</button>
 <h1>&nbsp;</h1>
 <p class="info">Per prenotazioni ed ordini chiama il 333/9273367 oppure scrivi a Sasy.vitrani@gmail.com</p>
 <h1>&nbsp;</h1>

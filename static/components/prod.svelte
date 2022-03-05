@@ -2,7 +2,7 @@
     <div class="col">
     <div>
         <div>
-            <div class="uk-card uk-card-default">
+            <div class="uk-card uk-card-default but">
                 <div class="uk-card-media-top" align="center">
                     <img src="images/biscuits.png" alt="">
                 </div>
@@ -17,7 +17,7 @@
 <div class="col">
     <div>
         <div>
-            <div class="uk-card uk-card-default">
+            <div class="uk-card uk-card-default but">
                 <div class="uk-card-media-top" align="center">
                     <img src="images/box.png" alt="">
                 </div>
@@ -32,7 +32,7 @@
 <div class="col">
     <div>
         <div>
-            <div class="uk-card uk-card-default">
+            <div class="uk-card uk-card-default but">
                 <div class="uk-card-media-top" align="center">
                     <img src="images/cake.png" alt="">
                 </div>
@@ -46,7 +46,7 @@
 </div>
 <div class="col">
     <div>
-        <div class="uk-card uk-card-default">
+        <div class="uk-card uk-card-default but">
             <div class="uk-card-media-top" align="center">
                 <img src="images/cake.png" alt="">
             </div>

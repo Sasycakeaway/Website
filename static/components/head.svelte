@@ -1,13 +1,12 @@
 
-<div class="uk-section-default" >
-    <div class="uk-section uk-light uk-background-cover" style="background-image: url(images/background.png)">
-        <div class="uk-container sezione">
+<div class="uk-section-default but" >
+    <div class="uk-section uk-light uk-background-cover but" style="background-image: url(images/background.png)">
+        <div class="uk-container sezione but">
 
-            <h3>Section with Images</h3>
+            <h3>&nbsp;</h3>
 
-
+            <div align="center">
                 <p class="titolo">LABORATORIO ARTIGIANALE DI PASTICCERIA DOLCE e SALATA</p>
-				<div align="center">
 				<p class="sub">Impresa Alimentare Domestica</p>
                 <p>--------------------------------------</p>
                 <p class="cit">"Insieme progetteremo la tua torta, e il tuo evento diventerà indimenticabile"</p>
