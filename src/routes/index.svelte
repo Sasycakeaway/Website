@@ -8,6 +8,32 @@ import Prod from '/static/components/prod.svelte';
 <svelte:head>
 	<title>Home</title>
 	<link rel="stylesheet" href="css/index.css">
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+		import { getPerformance } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-performance.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		  apiKey: "AIzaSyAE_uqiqEDqQkaaIzZ-6L2pTQ_6uU6-anM",
+		  authDomain: "sasy-s-cake-away-bc051.firebaseapp.com",
+		  projectId: "sasy-s-cake-away-bc051",
+		  storageBucket: "sasy-s-cake-away-bc051.appspot.com",
+		  messagingSenderId: "650417814398",
+		  appId: "1:650417814398:web:78791de6ca784c5b24d12f",
+		  measurementId: "G-VNSBH37Q9R"
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+		// Initialize Performance Monitoring and get a reference to the service
+		const perf = getPerformance(app);
+	</script>
 </svelte:head>
 	
 
