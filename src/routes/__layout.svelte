@@ -4,7 +4,7 @@
 	
 </script>
 <svelte:head>
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="/css/footer.css">
 	<script src="/js/footer.js"></script>
 </svelte:head>
 

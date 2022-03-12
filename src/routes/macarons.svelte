@@ -9,7 +9,7 @@ import Info from '/static/components/info.svelte';
     
     <svelte:head>
         <title>Home</title>
-        <link rel="stylesheet" href="css/why.css">
+        <link rel="stylesheet" href="/css/why.css">
     </svelte:head>
     <h1>&nbsp;</h1>
     <h1 class="tit">Macarons</h1>
