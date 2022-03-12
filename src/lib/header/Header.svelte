@@ -14,11 +14,11 @@
 <header>
 
 
-	<nav class="uk-navbar-container" uk-navbar>
+	<nav class="uk-navbar-container" uk-navbar style="background-color: #121212;"> 
 		<div class="uk-navbar-left">
 	
 			<ul class="uk-navbar-nav">
-				<li class="uk-active firma"><a href="/">Sasy's Cake Away</a></li>
+				<li class="firma"><a href="/">Sasy's Cake Away</a></li>
 				
 					<li><a href="/about">Chi sono</a></li>
 					<li><a href="/why">Perchè Sasy's</a></li>
@@ -28,7 +28,7 @@
 						<ul class="uk-nav uk-navbar-dropdown-nav">
 							<li><a href="/fresca">Pasticceria fresca</a></li>
 							<li><a href="#">Pasticceria salata</a></li>
-							<li><a href="#">Biscotti</a></li>
+							<li><a href="/biscotti">Biscotti</a></li>
 							<li><a href="#">Torte</a></li>
 							<li><a href="#">American cakes</a></li>
 							<li><a href="#">Dolci tradizionali</a></li>

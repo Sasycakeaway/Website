@@ -7,17 +7,17 @@
     
     <svelte:head>
         <title>Home</title>
-        <link rel="stylesheet" href="css/why.css">
+        <link rel="stylesheet" href="/css/why.css">
     </svelte:head>
     <h1>&nbsp;</h1>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-        <div class="uk-card-media-left uk-cover-container">
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin cardone" uk-grid>
+        <div class="uk-card-media-left uk-cover-container ">
             <img src="images/harry.jpg" alt="" uk-cover>
             <canvas width="800" height="800"></canvas>
         </div>
         <div>
             <div class="uk-card-body">
-                <h1>Perchè scegliere Sasy's?</h1>
+                <h1 style="color:white">Perchè scegliere Sasy's?</h1>
                 <h1>&nbsp;</h1>
                 <ul class="uk-list">
                     <li class="det">Sasy's si sceglie per la sua originalità nel proporre un prodotto ARTISTICO e di alta QUALITA'.</li>

@@ -16,13 +16,13 @@
 
 <svelte:head>
 	<title>About</title>
-	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="/css/about.css">
 </svelte:head>
 <div class="container">
 <div class="timeline">
 		<div class="timeline-row">
 			<div class="timeline-time">
-				Io, alby & the great family
+				<p>Io, alby & the great family</p>
 			</div>
 			<div class="timeline-content">
 				<img src="images/profilo.jpg" class="img"/>
@@ -33,7 +33,7 @@
 
 		<div class="timeline-row">
 			<div class="timeline-time">
-				Cosi'e' nata un'idea...
+				<p>Cosi'e' nata un'idea...</p>
 			</div>
 			<div class="timeline-content">
 				<p>
@@ -44,7 +44,7 @@
 
 		<div class="timeline-row">
 			<div class="timeline-time">
-				Pionieri della IAD
+				<p>Pionieri della IAD</p>
 			</div>
 			<div class="timeline-content">
 				<img src="images/iad.png" class="img"/>
@@ -55,7 +55,7 @@
 
 		<div class="timeline-row">
 			<div class="timeline-time">
-				I miei corsi di formazione
+				<p>I miei corsi di formazione</p>
 			</div>
 			<div class="timeline-content">
 				<img src="images/corsi.jpg" class="img"/>
@@ -66,7 +66,7 @@
 
 		<div class="timeline-row">
 			<div class="timeline-time">
-				Manchi solo tu!
+				<p>Manchi solo tu!</p>
 			</div>
 			<div class="timeline-content">
 				<img src="images/tu.jpg" class="img"/>

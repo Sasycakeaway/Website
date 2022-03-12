@@ -1,4 +1,4 @@
-<form>
+<form style="background-color: #b96563;">
     <fieldset class="uk-fieldset">
         <div align="center">
         <legend class="uk-legend" >Per informazioni compila il modulo sottostante</legend>

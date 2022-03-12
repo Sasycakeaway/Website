@@ -17,7 +17,7 @@
 <footer>
 	
 	<p class="titindirizzo">Mi trovi in Viale falchera 69</p>
-	<p>Seguici su Instagram e Facebook</p>
+	<p style="color: white;">Seguici su Instagram e Facebook</p>
 	<div uk-grid>
 		<div>
 	<a href="https://www.instagram.com/sasy_cakeaway/" target="_blank"><img src="https://img.icons8.com/material-outlined/48/000000/instagram-new--v1.png"/></a>
@@ -37,7 +37,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
-		background-color: whitesmoke;
+		background-color: #121212;
 	}
 
 	footer a {

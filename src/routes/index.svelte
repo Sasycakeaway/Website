@@ -50,7 +50,7 @@ import Prod from '/static/components/prod.svelte';
 <h1>&nbsp;</h1>
 <iframe width="622" height="311" src="https://www.youtube.com/embed/jF6h8jJJuhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h1>&nbsp;</h1>
-<h4>Sasy's su LIVE SOCIAL</h4>
+<h4 style="color:white">Sasy's su LIVE SOCIAL</h4>
 <h4>&nbsp;</h4>
 <p>La mia storia di imprenditrice appassionata, raccontata a Francesca Corso ai microfoni di Radio Veronica One</p><a> www.radioveronicaone.it</a> - <a>www.radiolivesocial.it</a>
 </div>
