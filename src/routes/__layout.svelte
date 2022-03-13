@@ -37,7 +37,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
-		background-color: #121212;
+		background-color: #ffffff;
 	}
 
 	footer a {

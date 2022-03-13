@@ -14,7 +14,7 @@
 <header>
 
 
-	<nav class="uk-navbar-container" uk-navbar style="background-color: #121212;"> 
+	<nav class="uk-navbar-container" uk-navbar > 
 		<div class="uk-navbar-left">
 	
 			<ul class="uk-navbar-nav">
@@ -29,7 +29,7 @@
 							<li><a href="/fresca">Pasticceria fresca</a></li>
 							<li><a href="#">Pasticceria salata</a></li>
 							<li><a href="/biscotti">Biscotti</a></li>
-							<li><a href="#">Torte</a></li>
+							<li><a href="/torte">Torte</a></li>
 							<li><a href="#">American cakes</a></li>
 							<li><a href="#">Dolci tradizionali</a></li>
 							<li><a href="#">Panettoni e colombe</a></li>
