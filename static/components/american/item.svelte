@@ -26,7 +26,7 @@
                         </p>
                     </div>
                     <div class="uk-card-media-bottom">
-                        <img src="/images/cupcake.jpg" class="cardimg" alt="">
+                       
                     </div>
                 </div>
             </div>
