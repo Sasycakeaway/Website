@@ -30,9 +30,9 @@
 							<li><a href="#">Pasticceria salata</a></li>
 							<li><a href="/biscotti">Biscotti</a></li>
 							<li><a href="/torte">Torte</a></li>
-							<li><a href="#">American cakes</a></li>
-							<li><a href="#">Dolci tradizionali</a></li>
-							<li><a href="#">Panettoni e colombe</a></li>
+							<li><a href="/torte/american/">American cakes</a></li>
+							<li><a href="/Dolci_Regionali">Dolci tradizionali</a></li>
+							<li><a href="/lievitati">Panettoni e colombe</a></li>
 							<li><a href="#">Biscotti decorati</a></li>
 							<li><a href="#">Dolci artistici</a></li>
 							<li><a href="#">Apebox</a></li>
