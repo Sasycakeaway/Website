@@ -81,7 +81,7 @@
                             New York alle mele. Noi a Falchera lo amiamo con pepite di cioccolato. </p>
                     </div>
                     <div class="uk-card-media-bottom">
-                        <img src="images/cantucci.jpeg" class="cardimg" alt="">
+                 
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         <p>Sono ricchi e golosi quadratini di cioccolato, una via di mezzo tra un biscotto e una torta dal cuore morbido. Devono il loro nome al colore scuro e si differenziano dai loro "fratelli", i blondie, dove non viene usato cacao ma solo cioccolato bianco.</p>
                     </div>
                     <div class="uk-card-media-bottom">
-                        <img class="cardimg" src="images/canestrelli.jpeg" alt="">
+              
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                         <p>L’apple pie è una delle torte maggiormente diffuse nel mondo. Anche nella sua versione sbriciolata è riuscita comunque a conquistare il palato di tutti i golosi. E' un dolce povero nato nel dopoguerra e richiama la semplicità di pochi ingredienti saporiti e tradizionali.</p>
                     </div>
                     <div class="uk-card-media-bottom">
-                        <img class="cardimg" src="images/frolla.jpeg" alt="">
+                        
                     </div>
                 </div>
             </div>
