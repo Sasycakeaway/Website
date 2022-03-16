@@ -33,7 +33,7 @@
 							<li><a href="/torte/american/">American cakes</a></li>
 							<li><a href="/Dolci_Regionali">Dolci tradizionali</a></li>
 							<li><a href="/lievitati">Panettoni e colombe</a></li>
-							<li><a href="#">Biscotti decorati</a></li>
+							<li><a href="/decorati">Biscotti decorati</a></li>
 							<li><a href="#">Dolci artistici</a></li>
 							<li><a href="#">Apebox</a></li>
 							<li><a href="#">Sacco di natale</a></li>
