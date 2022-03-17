@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200&display=swap');
+.info {
+    margin-left: 1200px;
+    border-radius: 8px;
+}
+.bloccot{
+    position: absolute;
+    margin-right: 1200px;
+    top:190px;
+    margin-left:300px;
+    width:45%;
+}
+.testo {
+    color: #e7e6c8;
+    font-family: 'Poppins', sans-serif;
+    font-style: regular;
+}
+
+.sud {
+    margin-top: 21px;
+}
+
+.abimg {
+    width: 88%;
+}
+
+.testisp {
+    color: #e93657;
+}
+
+.trasf {
+    margin-bottom: 15px;
+}
+
+.nomi {
+    color: #0e3e63;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-style: regular;
+}
+
+ul {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-style: regular;
+}
+a {
+    color: #e93657;
+}
+.tot {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.santa{
+    margin-bottom:40px;
+}
+.contadino{
+    margin-bottom:75px;
+}
+.inform {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.ordini{
+    border-radius:5px;
+}
+.titboh {
+    color: #e93657;
+    font-family: 'Poppins';
+    font-weight:600;
+}
