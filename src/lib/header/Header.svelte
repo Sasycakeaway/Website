@@ -35,7 +35,7 @@
 							<li><a href="/lievitati">Panettoni e colombe</a></li>
 							<li><a href="/decorati">Biscotti decorati</a></li>
 							<li><a href="#">Dolci artistici</a></li>
-							<li><a href="#">Apebox</a></li>
+							<li><a href="/apebox">Apebox</a></li>
 							<li><a href="#">Sacco di natale</a></li>
 							<li><a href="#">Praline d'autore</a></li>
 							<li><a href="#">Uovo di pasqua</a></li>
