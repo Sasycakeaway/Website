@@ -37,8 +37,8 @@
 							<li><a href="#">Dolci artistici</a></li>
 							<li><a href="/apebox">Apebox</a></li>
 							<li><a href="/sacco_di_natale">Sacco di natale</a></li>
-							<li><a href="#">Praline d'autore</a></li>
-							<li><a href="#">Uovo di pasqua</a></li>
+							<li><a href="/praline">Praline d'autore</a></li>
+							<li><a href="/uovo">Uovo di pasqua</a></li>
 						</ul>
 					</div>
 				</li>
