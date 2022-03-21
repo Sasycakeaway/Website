@@ -1,9 +1,10 @@
-/*.cardc{
-    background-color: #b96563;
+.cardc{
+    border: 2px solid black;
 }
-p{
-    color:white;
+
+.torte{
+    margin-top:30px;
 }
-h3{
-    color:white;
-}*/
+.panettoni {
+    margin-top: 25px;
+}

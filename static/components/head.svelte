@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/card.css">
-<div class="uk-section-default but cardc" >
-    <div class="uk-section uk-light uk-background-cover but cardc" style="background-image: url(images/background.png)">
+<div class="uk-section-default but" >
+    <div class="uk-section uk-light uk-background-cover but " style="background-image: url(/images/head.jpg)">
         <div class="uk-container sezione but cardc">
 
             <h3>&nbsp;</h3>

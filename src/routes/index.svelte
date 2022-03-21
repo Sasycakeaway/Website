@@ -1,13 +1,11 @@
 
-<script>
-import Carousel from '/static/components/carousel.svelte';
-import Head from '/static/components/head.svelte';
-import Prod from '/static/components/prod.svelte';
-</script>
 
 <svelte:head>
 	<title>Home</title>
 	<link rel="stylesheet" href="/css/index.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 	<script type="module">
 		// Import the functions you need from the SDKs you need
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
@@ -55,15 +53,44 @@ import Prod from '/static/components/prod.svelte';
 <p>La mia storia di imprenditrice appassionata, raccontata a Francesca Corso ai microfoni di Radio Veronica One</p><a> www.radioveronicaone.it</a> - <a>www.radiolivesocial.it</a>
 </div>
 <h5>&nbsp;</h5>
-<Carousel></Carousel>
+
+
+
+ <svelte:component
+  this={Carousel}
+  bind:this={carousel}
+    particlesToShow={3}
+  particlesToScroll={2}
+    autoplay
+  autoplayDuration={2000}
+>
+  	{#each item as image}
+	<div align="center"><img src={"/images/slide/" + image } alt={image} width="256"/></div>
+
+	{/each}
+</svelte:component>
+
+
+
 	
 	
 
+<script>
 
+import Head from '/static/components/head.svelte';
+import Prod from '/static/components/prod.svelte';
+import item from '/static/images/slide/list.json'
+  import { onMount } from 'svelte';
 
+  let Carousel; // for saving Carousel component class
+  let carousel; // for calling methods of the carousel instance
+  onMount(async () => {
+    const module = await import('svelte-carousel');
+    Carousel = module.default;
+  });
 
+  const handleNextClick = () => {
+    carousel.goToNext()
+  }
 
-
-
-<style>
-</style>
+</script>

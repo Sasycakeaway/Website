@@ -5,7 +5,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
-		// Override http methods in the Todo forms
+		vite: { optimizeDeps: { include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep'] } },
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
 		}

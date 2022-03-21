@@ -41,10 +41,11 @@
                     <h6>&nbsp;</h6>
                     <img src="https://img.icons8.com/ios/100/000000/birthday-cake--v1.png"/>
                 </div>
-                <div class="uk-card-body" align="center">
+                <div class="uk-card-body " align="center">
                     <h3 class="uk-card-title testo">Torte</h3>
-                    <p style="testo">Con la torta si celebra un evento speciale, una ricorrenza, un compleanno, il matrimonio, o più semplicemente il piacere di stare insieme ai propri cari. In ogni occasione ti posso accompagnare con la torta giusta per te.</p>
+                    <p class="torte">Con la torta si celebra un evento speciale, una ricorrenza, un compleanno, il matrimonio, o più semplicemente il piacere di stare insieme ai propri cari. In ogni occasione ti posso accompagnare con la torta giusta per te.</p>
                     <h3>&nbsp;</h3>
+
                 </div>
             </div>
         </div>
@@ -59,7 +60,7 @@
             </div>
             <div class="uk-card-body" align="center">
                 <h3 class="uk-card-title">Panettoni e Colombe</h3>
-                <p>I lievitati da ricorrenza sono prodotti dal lungo procedimento e dalla dedizione lenta e amorosa. Un amore che nasce dalla cura del mio lievito che da più di 100 anni si tramanda di mano in mano per far nascere panettoni e colombe straordinari nel gusto.</p>
+                <p class="panettoni">I lievitati da ricorrenza sono prodotti dal lungo procedimento e dalla dedizione lenta e amorosa. Un amore che nasce dalla cura del mio lievito che da più di 100 anni si tramanda di mano in mano per far nascere panettoni e colombe straordinari nel gusto.</p>
             </div>
         </div>
     </div>

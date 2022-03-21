@@ -42,7 +42,7 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="#">Galleria fotografica</a></li>
+				<li><a href="/gallery">Galleria fotografica</a></li>
 				<li><a href="/contatti">Contatti</a></li>
 				<li><a href="/ingredienti">Elenco ingredienti</a></li>
 			</ul>
