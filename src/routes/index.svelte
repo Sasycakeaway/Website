@@ -56,7 +56,7 @@
 
 
 
- <svelte:component
+ <!-- <svelte:component
   this={Carousel}
   bind:this={carousel}
     particlesToShow={3}
@@ -68,7 +68,7 @@
 	<div align="center"><img src={"/images/slide/" + image } alt={image} width="256"/></div>
 
 	{/each}
-</svelte:component>
+</svelte:component> -->
 
 
 

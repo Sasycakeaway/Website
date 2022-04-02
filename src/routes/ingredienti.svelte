@@ -21,4 +21,4 @@ import Info from '/static/components/info.svelte';
         <a href="elenco_ingredienti.pdf"><button class="uk-button uk-button-primary uk-button-large but" >Scarica l'elenco ingredienti</button></a>
     </div>
 </div>
-
+<h1>&nbsp;</h1>

@@ -10,6 +10,7 @@
                        <h3 class="uk-card-title nomi">APEBOX   "BENVENUTI AL NORD" </h3>
                         <h4>&nbsp;</h4>
                         <ul class="uk-list uk-list-disc">
+                            <li style="opacity:0"></li>
                           <li>SELEZIONE DI FORMAGGI E AFFETTATI  DEL NORD ITALIA</li>
                           <li>BOTTONCINI DI PANE CON LARDO </li>
                           <li>FOCACCIA GENOVESE CON PATE' DI OLIVE TAGGIASCHE</li>
@@ -18,7 +19,7 @@
                         </ul>  
                         <p class="testisp">12 &euro;</p>
                     </div>
-
+                    
                 </div>
             </div>
         </div>

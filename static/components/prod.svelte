@@ -10,7 +10,7 @@
                 <div class="uk-card-body" align="center">
                     <a style="background-color: white;"><h3 class=" testow uk-card-title " >Biscotti</h3></a>
                     <p>Le mie proposte di pasticceria secca e biscotteria spaziano dai sapori tradizionali (paste di Meliga, baci di dama, canestrelli...),  fino ai più moderni accostamenti tra i sapori dell'orto e gli agrumi in una costante ricerca di delicata estasi del palato.</p>
-                    <h3>&nbsp;</h3>
+                    <h4>&nbsp;</h4>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 <div class="uk-card-body" align="center">
                     <h3 class="uk-card-title">Apebox</h3>
                     <p>Metti una sera tra amici, metti che non sai come rendere frizzante l'atmosfera, metti che lavori fino a tardi e non sai proprio come fare. Ci pensiamo noi con il nostro BOX APERITIVO direttamente a casa tua. Stuzzichini, biscotti e prodotti a Km 0 selezionati per voi. Scegli il tuo personaggio e... buon appetito!</p>
-                    
+                <hr>
                 </div>
             </div>
         </div>

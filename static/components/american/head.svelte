@@ -1,13 +1,13 @@
 <div class="uk-section-default">
-    <div class="uk-section uk-light uk-background-cover" style="background-image: url(/images/background.png)">
+    <div class="uk-section uk-light uk-background-cover amhead" >
 
         <div class="uk-container" align="center">
 
-            <h3 class="tit">American Cakes: the real american taste is here!</h3>
+            <h3 class="tit" style="color:white">American Cakes: the real american taste is here!</h3>
             
            
                 <div>
-                    <p class="det" style="color:white">Inseguendo il sogno americano, arriviamo dritti dritti in un mondo fatto di cupcakes, cake pops, cheesecakes, brownies, red velvet, muffins e molte altre delizie a stelle e striscie.</p>
+                    <p class="det" >Inseguendo il sogno americano, arriviamo dritti dritti in un mondo fatto di cupcakes, cake pops, cheesecakes, brownies, red velvet, muffins e molte altre delizie a stelle e striscie.</p>
                 </div>
             
 

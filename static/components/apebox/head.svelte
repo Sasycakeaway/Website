@@ -1,9 +1,9 @@
 <div class="uk-section-default">
-    <div class="uk-section uk-light uk-background-cover" style="background-image: url(images/background.png)">
+    <div class="uk-section uk-light uk-background-cover apehead">
 
         <div class="uk-container" align="center">
 
-            <h3 class="tit">Una serata stuzzicante a Km 0</h3>
+            <h3 class="tit" style="color:white">Una serata stuzzicante a Km 0</h3>
             
            
                 <div>

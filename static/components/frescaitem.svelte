@@ -11,6 +11,7 @@
                 <div class="uk-card-media-bottom">
                     <img src="images/bignole.jpg" class="cardimg" alt="">
                 </div>
+                <hr>
             </div>
         </div>
     </div>
@@ -24,6 +25,8 @@
                 <div class="uk-card-media-bottom">
                     <img src="images/cropan.webp" class="cardimg" alt="">
                 </div>
+                <br>
+                <br>
             </div>
         </div>
     </div>

@@ -8,6 +8,9 @@
                         <a href="/biscotti/meliga"><h3 class="uk-card-title">Paste di meliga </h3></a>
                         <p>I biscotti più tipici del nostro Piemonte. Utilizzo farina Fioretto del nostro territorio per dar loro un sapore rotondo, genuino e sano.</p>
                     </div>
+                    <hr class="classic">
+                 
+                    
                     <div class="uk-card-media-bottom">
                         <img src="images/meliga.jpeg" class="cardimg" alt="">
                     </div>
@@ -21,6 +24,7 @@
                         <a href="/biscotti/dama"><h3 class="uk-card-title">Baci di Dama</h3></a>
                         <p>Due calotte di biscotto si uniscono con un velo di cioccolato come due labbra intente a darsi un dolcissimo bacio. Lasciatevi sedurre!</p>
                     </div>
+                    <hr class="classic">
                     <div class="uk-card-media-bottom">
                         <img src="images/dama.jpeg" class="cardimg" alt="">
                     </div>
@@ -48,6 +52,7 @@
                         <p>Un dolcetto da sgranocchiare, una decorazione per impreziosire una torta, una soluzione elegante per avere centro tavola davvero originale in un’occasione speciale, un dolce pensiero da confezionare. Tutto questo è la meringa e anche di più.</p>
                         
                     </div>
+                    
                     <div class="uk-card-media-bottom">
                         <img src="images/meringa.jpeg" class="cardimg" alt="">
                     </div>
@@ -61,9 +66,16 @@
                         <a href="/biscotti/nocciolotti"><h3 class="uk-card-title">Nocciolotti</h3></a>
                         <p>Quando ho pensato ai nocciolotti, avevo in mente un’esplosione di gusto, e siccome l’unione fa la forza, perché non unire la dolcezza del cioccolato bianco con la gentilezza della nocciola langarola? Risultato: connubio perfetto!</p>
                     </div>
+                    <hr class="classic">
+                    <hr class="classic">
+                    
+                    
+                    
                     <div class="uk-card-media-bottom">
                         <img class="cardimg" src="images/nocciolotti.jpeg" alt="">
                     </div>
+                    <hr class="classic">
+                    <hr class="noc"> 
                 </div>
             </div>
         </div>
@@ -77,6 +89,9 @@
                     <div class="uk-card-media-bottom">
                         <img src="images/cantucci.jpeg" class="cardimg" alt="">
                     </div>
+              
+                    <hr class="cantucci">
+               
                 </div>
             </div>
         </div>
@@ -100,9 +115,15 @@
                         <a href="/biscotti/frolla"><h3 class="uk-card-title">Biscotti di Frolla</h3></a>
                         <p>Ogni frollino che esce dal mio laboratorio ha un gusto unico e inconfondibile. Posso realizzarlo con i sapori che più ti piacciono.</p>
                     </div>
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
                     <div class="uk-card-media-bottom">
                         <img class="cardimg" src="images/frolla.jpeg" alt="">
                     </div>
+                    <hr class="classic">
+                    <hr class="classic">
+                   
                 </div>
             </div>
         </div>
@@ -114,9 +135,13 @@
                         <p>Il loro nome deriva dagli ospiti africani che furono presenti a Torino nel 1884 durante l’esposizione generale italiana. Sono dei biscottini di frolla montata al cioccolato,
                             dei golosi bocconcini perfetti per regalarsi un momento di dolcezza unica.</p>
                     </div>
+                    <hr class="classic">
                     <div class="uk-card-media-bottom">
                         <img class="cardimg" src="images/assabesi.jpeg" alt="">
                     </div>
+                    <hr class="classic">
+                    <hr class="classic">
+                    
                 </div>
             </div>
         </div>

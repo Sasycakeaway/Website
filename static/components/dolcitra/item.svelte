@@ -11,6 +11,7 @@
                     <div class="uk-card-media-bottom">
                         <img src="/images/zeppole.jpg" class="cardimg" alt="">
                     </div>
+                    <h4>&nbsp;</h4>
                 </div>
             </div>
         </div>
@@ -22,9 +23,14 @@
                         <p>E' il dolce che a Pasqua contende il ruolo di re della tavola alla Colomba. Originaria di Napoli ha radici antichissime. Grano cotto, ricotta, canditi sono i suoi ingredienti principali. E la sua scioglievolezza al palato è un tripudio di gioia per i sensi.
                         </p>
                     </div>
+                    <h4>&nbsp;</h4>
+                    <h4>&nbsp;</h4>
                     <div class="uk-card-media-bottom">
                         <img src="/images/pastiera.jpg" class="cardimg" alt="">
                     </div>
+                    <h4>&nbsp;</h4>
+                    <h4>&nbsp;</h4>
+                    <hr class="pasti">
                 </div>
             </div>
         </div>
@@ -49,11 +55,13 @@
                     <div class="uk-card-body">
                         <a href="/biscotti/meringhe"><h3 class="uk-card-title">Piccidde’t castelluccese</h3></a>
                         <p>E' il dolce che più mi ricorda la mia infanzia. Nasco da mamma lucana e babbo pugliese. E, da sempre, Pasqua non è Pasqua senza il Piccidde't lucano. Da un impasto di uova e farina si crea un pane semidolce adatto a una colazione all'italiana, o, come era abituato il nonno, abbinandolo agli ottimi salumi del paese. Semplicemente meraviglioso!</p>
-                        
+                        <hr class="classic">
                     </div>
+                    
                     <div class="uk-card-media-bottom">
                         <img src="/images/piccidde.jpg" class="cardimg" alt="">
                     </div>
+                   <h4>&nbsp;</h4>
                 </div>
             </div>
         </div>
@@ -77,9 +85,15 @@
                         <a href="/tartfrolla"><h3 class="uk-card-title">Bonet piemontese</h3></a>
                         <p>Il tipico budino della tradizione piemontese fatto con uova, zucchero, cacao, latte, liquore (nella ricetta originale veniva usato il fernet) e amaretti secchi. Il bonet, il cui nome significa “cappello”, era appunto l’ultima pietanza che veniva alla fine, come il cappello, uscendo da una casa o da un ristorante, era l’ultima cosa ad essere indossata. Insomma un bonet a fine pranzo… quando si dice chiudere in bellezza!.</p>
                     </div>
+                    <h2>&nbsp;</h2>
                     <div class="uk-card-media-bottom">
                         <img src="images/cantucci.jpeg" class="cardimg" alt="">
                     </div>
+                    <h2>&nbsp;</h2>
+                 
+                    <hr>
+                    <hr>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -93,6 +107,12 @@
                     <div class="uk-card-media-bottom">
                         <!--<img class="cardimg" src="images/canestrelli.jpeg" alt="">-->
                     </div>
+                    <h1>&nbsp;</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>&nbsp;</h1>
+                    <h1>&nbsp;</h1>
+                    <br class="cantucci">
                 </div>
             </div>
         </div>

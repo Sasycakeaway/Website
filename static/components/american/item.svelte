@@ -28,6 +28,27 @@
                     <div class="uk-card-media-bottom">
                        
                     </div>
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+
+                    <hr class="classic">
+                    <!-- <hr class="classic"> -->
                 </div>
             </div>
         </div>
@@ -38,9 +59,13 @@
                     <a href="/biscotti/brut"><h3 class="uk-card-title">Cookies</h3></a>
                     <p>Croccanti e dorati all’esterno, morbidi all’interno, con gocce di cioccolato fondente. E’ difficile resistere ai “Chocolate Chips Cookies” americani. Crispy, chewy, delicious! Nelle varianti classiche, al doppio cioccolato o al caffè, sono una vera delizia per il palato.</p>
                 </div>
+                <hr class="classic">
+                <hr class="classic">
                 <div class="uk-card-media-bottom">
                     <img src="/images/cookies.jpg" class="cardimg"  alt="">
                 </div>
+                <hr class="classic">
+                <hr class="classic">
             </div>
         </div>
         </div>
@@ -52,9 +77,12 @@
                         <p>Tradotto in italiano torta di velluto rosso.  Questa torta è realizzata a strati di morbido pan di spagna rosso e guarnita con crema alla vaniglia, al burro, frosting al formaggio o panna.  Un candido vestito che nasconde il rosso focoso della passione.</p>
                         
                     </div>
+                    
                     <div class="uk-card-media-bottom">
                         <img src="/images/redvelvet.jpg" class="cardimg" alt="">
                     </div>
+                    <br>
+                    <hr class="classic">
                 </div>
             </div>
         </div>
@@ -68,6 +96,8 @@
                     <div class="uk-card-media-bottom">
                         <img class="cardimg" src="/images/cakepop.jpg" alt="">
                     </div>
+                    <hr class="classic">
+                    
                 </div>
             </div>
         </div>
@@ -83,6 +113,24 @@
                     <div class="uk-card-media-bottom">
                  
                     </div>
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <hr class="classic">
+                    <!-- <hr class="classic"> -->
                 </div>
             </div>
         </div>
