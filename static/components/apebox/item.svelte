@@ -3,7 +3,7 @@
     <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
         <div>
             <div>
-                <div class="uk-card uk-card-default" >
+                <div class="uk-card uk-card-default" uk-height-viewport="expand: true;min-height: 1030">
                     <div class="uk-card-body">
                         <img src="/images/nord.jpg" class="cardimg" alt="">
                         <h4>&nbsp;</h4>
@@ -25,7 +25,7 @@
         </div>
         <div>
             <div >
-                 <div class="uk-card uk-card-default" >
+                 <div class="uk-card uk-card-default" uk-height-viewport="expand: true;min-height: 1030">
                     <div class="uk-card-body">
                         <img src="/images/sud.jpg" class="cardimg" alt="">
                         <h4>&nbsp;</h4>
@@ -47,7 +47,7 @@
         </div>
         <div>
             <div >
-                                 <div class="uk-card uk-card-default" >
+                                 <div class="uk-card uk-card-default" uk-height-viewport="expand: true;min-height: 1030">
                     <div class="uk-card-body">
                         <img src="/images/grandeabbuffata.jpg" class="abimg" alt="">
                         <h4>&nbsp;</h4>
@@ -68,7 +68,7 @@
         </div>
         <div>
             <div >
-                                  <div class="uk-card uk-card-default" >
+                                  <div class="uk-card uk-card-default" uk-height-viewport="expand: true;min-height: 1030">
                     <div class="uk-card-body">
                         <img src="/images/vegetariano.jpg"  alt="">
                         <h4>&nbsp;</h4>
@@ -88,7 +88,7 @@
         </div>
         <div>
             <div>
-                                   <div class="uk-card uk-card-default" >
+                                   <div class="uk-card uk-card-default" uk-height-viewport="expand: true;min-height: 1030">
                     <div class="uk-card-body">
                         <img src="/images/trasformista.png"  alt="">
                         <h4>&nbsp;</h4>
@@ -106,7 +106,7 @@
         </div>
         <div>
             <div>
-                <div class="uk-card uk-card-default" >
+                <div class="uk-card uk-card-default" uk-height-viewport="expand: true;min-height: 1030">
                     <div class="uk-card-body">
                         <h1>&nbsp;</h1>
                         <h4>&nbsp;</h4>
@@ -131,11 +131,9 @@
                           <li>BAVARESE AI 3 CIOCCOLATI </li>
                           
                         </ul>  
-                       <h4>&nbsp;<h4>
-
+                     
                         <p class="testisp prezzi">3.50 &euro;</p>
-                    <h3>&nbsp;</h3>
-                    <h6>&nbsp;</h6>
+
                     
                     <div class="uk-card-media-bottom">
                       </div>
