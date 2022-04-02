@@ -17,7 +17,7 @@ import Info from '/static/components/info.svelte';
     <div class="divv" align="center">
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
-            <img src="/images/cupcake.jpg"  alt="" uk-cover>
+            <!-- <img src="/images/cupcake.jpg"  alt="" uk-cover> -->
             <canvas width="600" height="400"></canvas>
         </div>
         <div>
