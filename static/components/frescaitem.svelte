@@ -15,8 +15,10 @@
             </div>
         </div>
     </div>
+    <a href="/frollacacaos">
     <div>
-        <div >
+       
+            <div >
             <div class="uk-card uk-card-default uk-height-max-large" uk-height-viewport="expand: true;min-height: 600" >
                 <div class="uk-card-body">
                     <h3 class="uk-card-title">Frolla al cacao con panna cotta</h3>
@@ -30,6 +32,7 @@
             </div>
         </div>
     </div>
+</a>
     <div>
         <div >
             <div class="uk-card uk-card-default uk-height-max-large"  uk-height-viewport="expand: true;min-height: 600">
