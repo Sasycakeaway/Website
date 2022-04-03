@@ -162,11 +162,11 @@
             <div>
                 <div class="uk-card uk-card-default uk-height-max-large" uk-height-viewport="expand: true;min-height: 600">
                     <div class="uk-card-body">
-                        <a href="#"><h3 class="uk-card-title">Diamanti al cacao</h3></a>
+                        <a href="/biscotti/diamantini"><h3 class="uk-card-title">Diamanti al cacao</h3></a>
                         <p>Se è vero che un diamante è per sempre, queste delizie sapranno conquistare il tuo cuore. Non sarà proprio come regalarne uno da 18 carati, ma di sicuro farai felici i tuoi ospiti con una cascata di deliziose dolcezze. Cacao selezionato, burro e zucchero grezzo di canna rendono questo frollino irresistibile.</p>
                     </div>
                     <div class="uk-card-media-bottom">
-                        <!--<img class="acc" src="images/frollaorto.jpg" alt="">-->
+                        <img class="acc" src="/images/diamantini.jpg" alt="">
                     </div>
                 </div>
             </div>

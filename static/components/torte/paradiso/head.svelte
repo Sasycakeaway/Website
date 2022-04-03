@@ -1,5 +1,5 @@
 <div class="uk-section-default">
-    <div class="uk-section uk-light uk-background-cover" style="background-image: url(/images/background.png)">
+    <div class="uk-section uk-light uk-background-cover parhead">
 
         <div class="uk-container" align="center">
 
