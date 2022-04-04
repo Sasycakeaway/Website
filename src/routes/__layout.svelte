@@ -6,6 +6,7 @@
 <svelte:head>
   <link rel="stylesheet" href="/css/footer.css" />
   <script src="/js/footer.js"></script>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4eb542da840847f19beb4ec2c07f5df4"}'></script><!-- End Cloudflare Web Analytics -->
 </svelte:head>
 
 <Header />
