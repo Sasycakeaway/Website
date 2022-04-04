@@ -1,10 +1,10 @@
-    <svelte:head>
-        <title>Home</title>
-        <link rel="stylesheet" href="/css/why.css">
-    </svelte:head>
-    <h1>&nbsp;</h1>
-    <h1>Work in progress</h1>
-    <!--<h1 class="tit">Baci di Dama</h1>
+<svelte:head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/why.css" />
+</svelte:head>
+<h1>&nbsp;</h1>
+<h1>Work in progress</h1>
+<!--<h1 class="tit">Baci di Dama</h1>
     <h1>&nbsp;</h1>
     <div class="divv" align="center">
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>

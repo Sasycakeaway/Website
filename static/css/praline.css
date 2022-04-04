@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200&display=swap");
 .testoc {
-    margin-left: 100px;
-    margin-right: 100px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-style: regular;
 }
 .but {
-    border-radius: 8px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-style: regular;
 }
 .titc {
-    font-size: 35px;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
-    font-weight:600;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  font-style: regular;
+  font-weight: 600;
 }

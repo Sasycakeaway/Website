@@ -1,45 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,200&display=swap');
-@import url('http://fonts.cdnfonts.com/css/safiar-signature');
-.infor{
-    /*background-color: #b96563;*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,200&display=swap");
+@import url("http://fonts.cdnfonts.com/css/safiar-signature");
+.infor {
+  /*background-color: #b96563;*/
 }
-.sezione{
-    background-color: white; 
-    width: 450px;
-    height: 400px;
-    margin-left: 100px;
+.sezione {
+  background-color: white;
+  width: 450px;
+  height: 400px;
+  margin-left: 100px;
 }
-.titolo{
-    color: rgb(116, 16, 146);
-    font-size: 30px;
-    font-family: 'Poppins', sans-serif;
+.titolo {
+  color: rgb(116, 16, 146);
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
 }
-.sub{
-    color: rgb(116, 16, 146);
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-style: italic;
+.sub {
+  color: rgb(116, 16, 146);
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
 }
-.cit{
-
-        font-size: 20px;
-        font-family: 'Poppins', sans-serif;
-        font-style: italic;
-    
+.cit {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
 }
-.firma{
-    font-size: 50px;
-    font-family: 'Safiar Signature', sans-serif;
+.firma {
+  font-size: 50px;
+  font-family: "Safiar Signature", sans-serif;
 }
-.prodi{
-    margin-left: 20px;
-    margin-right: 20px;
+.prodi {
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.info{
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+.info {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
-.but{
-    border-radius: 8px;
+.but {
+  border-radius: 8px;
 }

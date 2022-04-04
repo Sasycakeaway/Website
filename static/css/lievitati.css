@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200&display=swap');
-.para{
-    width: 80%;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    font-style: regular;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200&display=swap");
+.para {
+  width: 80%;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-style: regular;
 }
-.carosello{
-    width: 50%;
-    height: 10%;
-    margin: auto;
-    padding: 10px;
+.carosello {
+  width: 50%;
+  height: 10%;
+  margin: auto;
+  padding: 10px;
 }
-.liehead{
-    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/images/libro.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.liehead {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("/images/libro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

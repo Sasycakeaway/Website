@@ -1,35 +1,41 @@
-
 <script>
-    import Form from '/static/components/form.svelte';
-import Carousel from '/static/components/carousel.svelte';
-    import Head from '/static/components/head.svelte';
-    import Prod from '/static/components/prod.svelte';
-import Info from '/static/components/info.svelte';
-    </script>
-    
-    <svelte:head>
-        <title>Home</title>
-        <link rel="stylesheet" href="/css/why.css">
-    </svelte:head>
-    <h1>&nbsp;</h1>
-    <h1 class="tit">Tartellette di frolla con crema e frutta</h1>
-    <h1>&nbsp;</h1>
-    <div class="divv" align="center">
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-        <div class="uk-card-media-left uk-cover-container">
-            <img src="images/frollacrema.jpg"  alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div>
-            <div class="uk-card-body">
+  import Form from "/static/components/form.svelte";
+  import Carousel from "/static/components/carousel.svelte";
+  import Head from "/static/components/head.svelte";
+  import Prod from "/static/components/prod.svelte";
+  import Info from "/static/components/info.svelte";
+</script>
 
-                <p class="det">Freschi, gustosi, coloratissimi e di grande effetto scenico, questi dolcetti di origine francese si sono imposti anche nella pasticceria tradizionale nostrana. Per realizzare questi piccoli bocconcini deliziosi serve un cestino di frolla friabile, l’immancabile crema pasticcera e tanta creatività, per inventare i migliori accostamenti tra la frutta e per curare la presentazione della guarnizione. Un tripudio di colori e di sapori che sicuramente vi permetteranno di fare un ottima figura con tutti gli ospiti della casa.</p>
-            </div>
-        </div>
+<svelte:head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/why.css" />
+</svelte:head>
+<h1>&nbsp;</h1>
+<h1 class="tit">Tartellette di frolla con crema e frutta</h1>
+<h1>&nbsp;</h1>
+<div class="divv" align="center">
+  <div class="uk-card uk-card-default">
+    <br />
+    <img class="imgcenter" src="images/frollacrema.jpg" alt="" />
+    <div>
+      <div class="uk-card-body">
+        <p class="det">
+          Freschi, gustosi, coloratissimi e di grande effetto scenico, questi
+          dolcetti di origine francese si sono imposti anche nella pasticceria
+          tradizionale nostrana. Per realizzare questi piccoli bocconcini
+          deliziosi serve un cestino di frolla friabile, l’immancabile crema
+          pasticcera e tanta creatività, per inventare i migliori accostamenti
+          tra la frutta e per curare la presentazione della guarnizione. Un
+          tripudio di colori e di sapori che sicuramente vi permetteranno di
+          fare un ottima figura con tutti gli ospiti della casa.
+        </p>
+      </div>
     </div>
-    
-    <h1>&nbsp;</h1>
-    <p class="tit" style="color:rgb(195, 0, 255)">"E qui si scatena la mia fantasia negli accostamenti tra creme e frutta per creare delle piccole opere d'arte"</p>
-  
+  </div>
 
+  <h1>&nbsp;</h1>
+  <p class="tit" style="color:rgb(195, 0, 255)">
+    "E qui si scatena la mia fantasia negli accostamenti tra creme e frutta per
+    creare delle piccole opere d'arte"
+  </p>
 </div>
