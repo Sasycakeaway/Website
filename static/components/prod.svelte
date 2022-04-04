@@ -3,7 +3,7 @@
     <div class="col">
     <div>
         <div>
-            <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 580">
+            <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 640">
                 <div class="uk-card-media-top" align="center">
                     <img src="https://img.icons8.com/windows/128/000000/--biscuits.png"/>
                 </div>
@@ -19,7 +19,7 @@
 <div class="col">
     <div>
         <div>
-            <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 580">
+            <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 640">
                 <div class="uk-card-media-top" align="center">
                     <h6>&nbsp;</h6>
                     <img src="https://img.icons8.com/ios/100/000000/bee--v1.png"/>
@@ -36,7 +36,7 @@
 <div class="col">
     <div>
         <div>
-            <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 580">
+            <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 640">
                 <div class="uk-card-media-top" align="center">
                     <h6>&nbsp;</h6>
                     <img src="https://img.icons8.com/ios/100/000000/birthday-cake--v1.png"/>
@@ -53,7 +53,7 @@
 </div>
 <div class="col">
     <div>
-        <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 580">
+        <div class="uk-card uk-card-default but cardc" uk-height-viewport="expand: true;min-height: 640">
             <div class="uk-card-media-top" align="center">
                 <h6>&nbsp;</h6>
                 <img src="https://img.icons8.com/external-icongeek26-outline-icongeek26/128/000000/external-panettone-italian-food-icongeek26-outline-icongeek26.png"/>
