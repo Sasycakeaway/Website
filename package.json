@@ -12,6 +12,7 @@
   "devDependencies": {
     "@beyonk/svelte-carousel": "^2.9.0",
     "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-cloudflare": "^1.0.0-next.17",
     "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
