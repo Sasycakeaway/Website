@@ -19,16 +19,16 @@
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://sasy.imgix.net/uova/intear.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/uova/intear.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/uova/vicino.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/uova/vicino.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/uova/coniglio.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/uova/coniglio.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/uova/insieme.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/uova/insieme.jpg" class="d-block w-100" alt="..." />
     </div>
   </div>
   <button

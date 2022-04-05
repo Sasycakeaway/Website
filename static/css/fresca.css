@@ -17,7 +17,7 @@
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/macarons.jpg");
+    url("https://sasyimg.imgix.net/macarons.jpg");
   background-size: cover;
 }
 .det {
@@ -28,7 +28,7 @@
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/brut.jpeg");
+    url("https://sasyimg.imgix.net/brut.jpeg");
   background-size: cover;
 }
 .torhead {
@@ -36,7 +36,7 @@
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/classiche.jpg");
+    url("https://sasyimg.imgix.net/classiche.jpg");
   background-size: cover;
 }
 h3 {
@@ -47,7 +47,7 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/redvelvet.jpg");
+    url("https://sasyimg.imgix.net/redvelvet.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -56,7 +56,7 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/pastiera.jpg");
+    url("https://sasyimg.imgix.net/pastiera.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -65,7 +65,7 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/biscotti.jpg");
+    url("https://sasyimg.imgix.net/biscotti.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -74,7 +74,7 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/apeback.jpeg");
+    url("https://sasyimg.imgix.net/apeback.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -83,7 +83,7 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/praline/cioc.jpg");
+    url("https://sasyimg.imgix.net/praline/cioc.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -92,7 +92,7 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/uovaback.jpg");
+    url("https://sasyimg.imgix.net/uovaback.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -101,6 +101,6 @@ h3 {
       rgba(58, 47, 47, 0.5),
       rgba(58, 47, 47, 0.5)
     ),
-    url("/images/macarons.jpg");
+    url("https://sasyimg.imgix.net/macarons.jpg");
   background-size: cover;
 }

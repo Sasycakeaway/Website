@@ -21,7 +21,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasy.imgix.net/bignole.jpg" class="cardimg" alt="" />
+            <img src="https://sasyimg.imgix.net/bignole.jpg" class="cardimg" alt="" />
           </div>
           <!--  -->
         </div>
@@ -43,7 +43,7 @@
               </p>
             </div>
             <div class="uk-card-media-bottom">
-              <img src="https://sasy.imgix.net/cropan.webp" class="cardimg" alt="" />
+              <img src="https://sasyimg.imgix.net/cropan.webp" class="cardimg" alt="" />
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasy.imgix.net/bic.jpg" class="alt2 cardimg" alt="" />
+            <img src="https://sasyimg.imgix.net/bic.jpg" class="alt2 cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasy.imgix.net/macarons.jpg" class="cardimg" alt="" />
+            <img src="https://sasyimg.imgix.net/macarons.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="acc cardimg" src="https://sasy.imgix.net/frollaorto.jpg" alt="" />
+            <img class="acc cardimg" src="https://sasyimg.imgix.net/frollaorto.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasy.imgix.net/frollacrema.jpg" class="acc cardimg" alt="" />
+            <img src="https://sasyimg.imgix.net/frollacrema.jpg" class="acc cardimg" alt="" />
           </div>
         </div>
       </div>

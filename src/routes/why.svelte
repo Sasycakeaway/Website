@@ -14,7 +14,7 @@
   uk-grid
 >
   <div class="uk-card-media-left uk-cover-container ">
-    <img src="https://sasy.imgix.net/harry.jpg" alt="" uk-cover />
+    <img src="https://sasyimg.imgix.net/harry.jpg" alt="" uk-cover />
     <canvas width="800" height="800" />
   </div>
   <div>

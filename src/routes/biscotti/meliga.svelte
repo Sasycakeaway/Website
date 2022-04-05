@@ -8,7 +8,7 @@
 <div class="divv" align="center">
   <div class="uk-card uk-card-default ">
     <br />
-    <img src="/images/meliga.jpeg" alt="" class="imgcenter" />
+    <img src="https://sasyimg.imgix.net/meliga.jpeg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">

@@ -259,7 +259,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="acc" src="https://sasy.imgix.net/diamantini.jpg" alt="" />
+            <img class="acc" src="https://sasyimg.imgix.net/diamantini.jpg" alt="" />
           </div>
         </div>
       </div>

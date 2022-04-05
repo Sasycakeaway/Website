@@ -19,16 +19,16 @@
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://sasy.imgix.net/decorati/cane.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/decorati/cane.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/decorati/fiore.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/decorati/fiore.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/decorati/fiore2.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/decorati/fiore2.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/decorati/fiori.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/decorati/fiori.jpg" class="d-block w-100" alt="..." />
     </div>
   </div>
   <button

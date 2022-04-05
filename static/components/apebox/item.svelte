@@ -11,7 +11,7 @@
           uk-height-viewport="expand: true;min-height: 1030"
         >
           <div class="uk-card-body">
-            <img src="https://sasy.imgix.net/nord.jpg" class="cardimg" alt="" />
+            <img src="https://sasyimg.imgix.net/nord.jpg" class="cardimg" alt="" />
             <h4>&nbsp;</h4>
             <h3 class="uk-card-title nomi">APEBOX "BENVENUTI AL NORD"</h3>
             <h4>&nbsp;</h4>
@@ -35,7 +35,7 @@
           uk-height-viewport="expand: true;min-height: 1030"
         >
           <div class="uk-card-body">
-            <img src="https://sasy.imgix.net/sud.jpg" class="cardimg" alt="" />
+            <img src="https://sasyimg.imgix.net/sud.jpg" class="cardimg" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title">APEBOX "BENVENUTI AL SUD"</h3>
@@ -60,7 +60,7 @@
           uk-height-viewport="expand: true;min-height: 1030"
         >
           <div class="uk-card-body">
-            <img src="https://sasy.imgix.net/grandeabbuffata.jpg" class="abimg" alt="" />
+            <img src="https://sasyimg.imgix.net/grandeabbuffata.jpg" class="abimg" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title">APEBOX "LA GRANDE ABBUFFATA"</h3>
@@ -85,7 +85,7 @@
           uk-height-viewport="expand: true;min-height: 1030"
         >
           <div class="uk-card-body">
-            <img src="https://sasy.imgix.net/vegetariano.jpg" alt="" />
+            <img src="https://sasyimg.imgix.net/vegetariano.jpg" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title">APEBOX "IL VEGETARIANO"</h3>
@@ -111,7 +111,7 @@
           uk-height-viewport="expand: true;min-height: 1030"
         >
           <div class="uk-card-body">
-            <img src="https://sasy.imgix.net/trasformista.png" alt="" />
+            <img src="https://sasyimg.imgix.net/trasformista.png" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title trasf">APEBOX "IL TRASFORMISTA"</h3>

@@ -10,7 +10,7 @@
 <div class="divv" align="center">
   <div class="uk-card uk-card-default">
     <br />
-    <img class="imgcenter" src="https://sasy.imgix.net/frollacrema.jpg" alt="" />
+    <img class="imgcenter" src="https://sasyimg.imgix.net/frollacrema.jpg" alt="" />
     <div>
       <div class="uk-card-body">
         <p class="det">

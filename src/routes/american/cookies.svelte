@@ -16,7 +16,7 @@
 <div class="divv" align="center">
   <div class="uk-card uk-card-default">
     <hr />
-    <img src="/images/cookies.jpg" alt="" class="imgcenter" />
+    <img src="https://sasyimg.imgix.net/cookies.jpg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">

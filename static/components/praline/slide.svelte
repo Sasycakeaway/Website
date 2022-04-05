@@ -19,14 +19,14 @@
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://sasy.imgix.net/praline/cioc.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/praline/cioc.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasy.imgix.net/praline/scatola.jpg" class="d-block w-100" alt="..." />
+      <img src="https://sasyimg.imgix.net/praline/scatola.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
       <img
-        src="https://sasy.imgix.net/praline/scatolaperta.jpg"
+        src="https://sasyimg.imgix.net/praline/scatolaperta.jpg"
         class="d-block w-100"
         alt="..."
       />
