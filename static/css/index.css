@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,200&display=swap");
-@import url("http://fonts.cdnfonts.com/css/safiar-signature");
+@font-face {
+  font-family: 'Safiar Signature';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Safiar Signature'), url('https://fonts.cdnfonts.com/s/33556/SafiarSignature.woff') format('woff');
+}
 .infor {
   /*background-color: #b96563;*/
 }
