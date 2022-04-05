@@ -5,6 +5,7 @@
 
 </script>
 <h1>&nbsp;</h1>
+<div class="gallo">
 <Gallery
   on:click={(event) =>
     dialogs.alert(
@@ -16,3 +17,11 @@
 {/each}
 </Gallery>
 <h1>&nbsp;</h1>
+</div>
+<style>
+    .gallo{
+    
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    </style>

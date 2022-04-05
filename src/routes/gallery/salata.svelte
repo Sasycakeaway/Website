@@ -5,7 +5,8 @@
 
 </script>
 <h1>&nbsp;</h1>
-<Gallery
+<div class="gallo">
+<Gallery>
   on:click={(event) =>
     dialogs.alert(
       "<img src=" + event.detail.src + ' alt="Placeholder Image" width="512px"/>'
@@ -15,4 +16,12 @@
     <img src={"https://sasyimg.imgix.net/slide/Salata/" + prod}>
 {/each}
 </Gallery>
+</div>
 <h1>&nbsp;</h1>
+<style>
+    .gallo{
+    
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    </style>

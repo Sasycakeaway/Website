@@ -5,6 +5,7 @@
 
 </script>
 <h1>&nbsp;</h1>
+<div class="gallo">
 <Gallery
   on:click={(event) =>
     dialogs.alert(
@@ -15,4 +16,12 @@
     <img src={"https://sasyimg.imgix.net/slide/Lievitati/" + prod}>
 {/each}
 </Gallery>
+</div>
 <h1>&nbsp;</h1>
+<style>
+    .gallo{
+    
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    </style>

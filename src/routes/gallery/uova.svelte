@@ -5,7 +5,7 @@
 
 </script>
 <h1>&nbsp;</h1>
-<div class="gal">
+<div class="gallo">
 <Gallery
   on:click={(event) =>
     dialogs.alert(
@@ -19,10 +19,9 @@
 </div>
 <h1>&nbsp;</h1>
 <style>
-    .gal{
-        margin: auto;
-  width: 80%;
-  
-  padding: 10px;
+    .gallo{
+    
+        margin-left: 50px;
+        margin-right: 50px;
     }
-</style>
+    </style>
