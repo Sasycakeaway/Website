@@ -1,6 +1,5 @@
 <script>
   import Gallery from "/static/components/gallery.svelte";
-  //import item from "/static/images/slide/list.json";
   import { dialogs } from "svelte-dialogs";
   function open(e) {
     window.open(e.detail.src);

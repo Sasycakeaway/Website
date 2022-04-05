@@ -1,6 +1,4 @@
 <script>
-  import item from "/static/images/slide/list.json";
-  console.log(item);
 </script>
 
 <div
