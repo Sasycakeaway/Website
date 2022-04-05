@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/css/card.css" />
-<div class="uk-section-default but">
+<div class="uk-section-default but ">
   <div
     class="uk-section uk-light uk-background-cover but "
     style="background-image: url(https://sasyimg.imgix.net/head.jpg)"
   >
-    <div class="uk-container sezione but cardc">
+    <div id="pric" class="uk-container sezione but cardc uk-width-xlarge">
       <h3>&nbsp;</h3>
 
       <div align="center">
@@ -22,3 +22,16 @@
     </div>
   </div>
 </div>
+<script>
+  import {onMount} from 'svelte';
+  onMount(()=>{
+  if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
+    document.getElementById("pric").classList.remove("uk-width-xlarge")
+    document.getElementById("pric").classList.add("uk-width-medium")
+    document.getElementById("pric").style.marginLeft="50px"
+
+  }
+  }
+  )
+ 
+</script>

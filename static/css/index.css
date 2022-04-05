@@ -10,8 +10,6 @@
 }
 .sezione {
   background-color: white;
-  width: 450px;
-  height: 400px;
   margin-left: 100px;
 }
 .titolo {
@@ -46,6 +44,8 @@
 .but {
   border-radius: 8px;
 }
+
 .player{
-  width: 700px;
+  margin-left: 50px;
+  margin-right: 50px;
  }

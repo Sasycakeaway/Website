@@ -1,10 +1,4 @@
-<script>
-  import Gallery from "/static/components/gallery.svelte";
-  import { dialogs } from "svelte-dialogs";
-  function open(e) {
-    window.open(e.detail.src);
-  }
-</script>
+
 <svelte:head>
   <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -16,7 +10,7 @@
 <link rel="stylesheet" href="/css/card.css" />
 <h1>&nbsp;</h1>
 <div class="divvone">
-<div class="row">
+<div class="row row-cols-3">
   <div class="col">
     <a href="/gallery/biscotti/">
     <div>
@@ -86,27 +80,6 @@
     </div>
   </a>
   </div>
-  <!-- <div class="col">
-    <a href="/gallery/lievitati">
-    <div>
-      <div
-        class="uk-card uk-card-default but cardc"
-        uk-height-viewport="expand: true;min-height: 500"
-      >
-        <div class="uk-card-media-top" align="center">
-          <h6>&nbsp;</h6>
-          <img
-            src="https://img.icons8.com/external-icongeek26-outline-icongeek26/128/000000/external-panettone-italian-food-icongeek26-outline-icongeek26.png"
-          />
-        </div>
-        <div class="uk-card-body" align="center">
-          <h3 class="uk-card-title">Lievitati</h3>
-          
-        </div>
-      </div>
-    </div>
-  </a>
-  </div> -->
 </div>
 
 
@@ -116,7 +89,7 @@
 
 
 
-<div class="row">
+<div class="row row-cols-3">
   <div class="col">
     <a href="/gallery/pasta_di_zucchero">
     <div>
