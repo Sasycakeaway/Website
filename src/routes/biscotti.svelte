@@ -1,8 +1,6 @@
 <script>
   import Bishead from "/static/components/biscotti/head.svelte";
-  import Carousel from "/static/components/carousel.svelte";
-  import Head from "/static/components/head.svelte";
-  import Prod from "/static/components/prod.svelte";
+ 
   import Bisitem from "/static/components/biscotti/item.svelte";
 </script>
 

@@ -33,6 +33,7 @@
     "firebase": "^9.6.8",
     "lightbox2": "^2.11.3",
     "svelte-dialogs": "^1.1.0",
-    "svelte-feather-icons": "^3.5.1"
+    "svelte-feather-icons": "^3.5.1",
+    "svelte-youtube": "^0.0.2"
   }
 }

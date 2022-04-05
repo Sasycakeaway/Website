@@ -1,23 +1,8 @@
-<!-- <svelte:component
-  this={Carousel}
-  bind:this={carousel}
-    particlesToShow={3}
-  particlesToScroll={2}
-    autoplay
-  autoplayDuration={2000}
->
-  	{#each item as image}
-	<div align="center"><img src={"/images/slide/" + image } alt={image} width="256"/></div>
-
-	{/each}
-</svelte:component> -->
 <script>
   import Head from "/static/components/head.svelte";
   import Prod from "/static/components/prod.svelte";
-  import item from "/static/images/slide/list.json";
   import { onMount } from "svelte";
 
-  let Carousel; // for saving Carousel component class
   let carousel; // for calling methods of the carousel instance
   onMount(async () => {
     const module = await import("svelte-carousel");

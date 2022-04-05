@@ -7,12 +7,6 @@
   }
 </script>
 
-<svelte:head>
-  <link href="/dist/css/lightbox.css" rel="stylesheet" />
-  <script src="/dist/js/lightbox.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js"></script>
-</svelte:head>
 
 <!--<Gallery on:click={open}>
 <img src={"/images/slide/" + image } />

@@ -1,8 +1,5 @@
 <script>
   import Frescahead from "/static/components/frescahead.svelte";
-  import Carousel from "/static/components/carousel.svelte";
-  import Head from "/static/components/head.svelte";
-  import Prod from "/static/components/prod.svelte";
   import Frescaitem from "/static/components/frescaitem.svelte";
 </script>
 
