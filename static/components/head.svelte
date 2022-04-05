@@ -2,7 +2,7 @@
 <div class="uk-section-default but">
   <div
     class="uk-section uk-light uk-background-cover but "
-    style="background-image: url(/images/head.jpg)"
+    style="background-image: url(https://sasy.imgix.net/head.jpg)"
   >
     <div class="uk-container sezione but cardc">
       <h3>&nbsp;</h3>

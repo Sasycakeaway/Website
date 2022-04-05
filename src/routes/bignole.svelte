@@ -9,7 +9,7 @@
 <div class="divv" align="center">
   <div class="uk-card uk-card-default ">
     <br />
-    <img class="imgcenter" src="images/bignole.jpg" alt="" />
+    <img class="imgcenter" src="https://sasy.imgix.net/bignole.jpg" alt="" />
     <div>
       <div class="uk-card-body">
         <p class="det">

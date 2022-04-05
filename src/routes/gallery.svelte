@@ -18,7 +18,7 @@
     )}
 >
   {#each item as image}
-    <img src={"/images/slide/" + image} alt="" />
+    <img src={"https://sasy.imgix.net/slide/" + image} alt="" />
   {/each}
 </Gallery>
 

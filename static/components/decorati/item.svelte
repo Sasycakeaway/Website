@@ -24,10 +24,10 @@
 <h1>&nbsp;</h1>
 <div class="uk-child-width-expand@s uk-text-center foto" uk-grid align="center">
   <div>
-    <img src="/images/renna.jpg" class="renna" />
+    <img src="https://sasy.imgix.net/renna.jpg" class="renna" />
   </div>
   <div>
-    <img src="/images/biscotti.jpg" class="bis" />
+    <img src="https://sasy.imgix.net/biscotti.jpg" class="bis" />
   </div>
 </div>
 <h1>&nbsp;</h1>

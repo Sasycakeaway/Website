@@ -11,7 +11,7 @@
     uk-grid
   >
     <div class="uk-card-media-left uk-cover-container">
-      <img src="images/frollacrema.jpg" alt="" uk-cover />
+      <img src="https://sasy.imgix.net/frollacrema.jpg" alt="" uk-cover />
       <canvas width="600" height="400" />
     </div>
     <div>
