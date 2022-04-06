@@ -23,5 +23,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 70%;
+}
+*{
+  border-radius: 8px;
+}
+.uk-card{
+  border: 2px solid black;
 }

@@ -8,7 +8,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1030"
+          uk-height-viewport="expand: true;min-height: 1100"
         >
           <div class="uk-card-body">
             <img src="https://sasyimg.imgix.net/nord.jpg" class="cardimg" alt="" />
@@ -32,7 +32,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1030"
+          uk-height-viewport="expand: true;min-height: 1100"
         >
           <div class="uk-card-body">
             <img src="https://sasyimg.imgix.net/sud.jpg" class="cardimg" alt="" />
@@ -57,7 +57,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1030"
+          uk-height-viewport="expand: true;min-height: 1100"
         >
           <div class="uk-card-body">
             <img src="https://sasyimg.imgix.net/grandeabbuffata.jpg" class="abimg" alt="" />
@@ -82,7 +82,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1030"
+          uk-height-viewport="expand: true;min-height: 1110"
         >
           <div class="uk-card-body">
             <img src="https://sasyimg.imgix.net/vegetariano.jpg" alt="" />
@@ -108,7 +108,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1030"
+          uk-height-viewport="expand: true;min-height: 1110"
         >
           <div class="uk-card-body">
             <img src="https://sasyimg.imgix.net/trasformista.png" alt="" />
@@ -116,14 +116,12 @@
             <p />
             <h3 class="uk-card-title trasf">APEBOX "IL TRASFORMISTA"</h3>
             <h4>&nbsp;</h4>
-            <h4>&nbsp;</h4>
-            <h4>&nbsp;</h4>
+
             <p>
               Il box lo trasformi tu come vuoi con gli ingredienti degli altri
               box a scelta!
             </p>
-            <h1>&nbsp;</h1>
-            <h1>&nbsp;</h1>
+          
           </div>
         </div>
       </div>
@@ -132,11 +130,11 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1030"
+          uk-height-viewport="expand: true;min-height: 1110"
         >
           <div class="uk-card-body">
             <h1>&nbsp;</h1>
-            <h4>&nbsp;</h4>
+ 
             <a href="/tartfrolla"
               ><h3 class=" testisp">Si possono accompagnare i box con:</h3></a
             >
