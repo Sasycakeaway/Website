@@ -4,16 +4,16 @@
   import Plyr from 'plyr';
   import { onMount } from "svelte";
 
-  let carousel; // for calling methods of the carousel instance
+  // let carousel; // for calling methods of the carousel instance
   onMount(async () => {
     const player = new Plyr('#player');
-    const module = await import("svelte-carousel");
-    Carousel = module.default;
+    // const module = await import("svelte-carousel");
+    // Carousel = module.default;
   });
 
-  const handleNextClick = () => {
-    carousel.goToNext();
-  };
+  // const handleNextClick = () => {
+  //   carousel.goToNext();
+  // };
 
 
 
