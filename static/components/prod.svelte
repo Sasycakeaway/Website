@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/card.css" />
-<div class="row">
-  <div class="col">
+<div class="pure-g">
+  <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div>
         <div
@@ -8,11 +8,13 @@
           uk-height-viewport="expand: true;min-height: 640"
         >
           <div class="uk-card-media-top" align="center">
+            <h6>&nbsp;</h6>
             <img
               src="https://img.icons8.com/windows/128/000000/--biscuits.png"
             />
           </div>
           <div class="uk-card-body" align="center">
+            
             <a style="background-color: white;"
               ><h3 class=" testow uk-card-title ">Biscotti</h3></a
             >
@@ -30,7 +32,7 @@
     </div>
     <h1>&nbsp;</h1>
   </div>
-  <div class="col">
+  <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div>
         <div
@@ -57,7 +59,7 @@
     </div>
     <h1>&nbsp;</h1>
   </div>
-  <div class="col">
+  <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div>
         <div
@@ -85,7 +87,7 @@
     </div>
     <h1>&nbsp;</h1>
   </div>
-  <div class="col">
+  <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div
         class="uk-card uk-card-default but cardc"
@@ -111,3 +113,8 @@
   </div>
   <h1>&nbsp;</h1>
 </div>
+<style>
+  .uk-card{
+    margin: 10px;
+  }
+</style>
