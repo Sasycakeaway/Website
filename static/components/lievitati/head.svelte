@@ -1,7 +1,7 @@
 <div class="uk-section-default">
   <div class="uk-section uk-light uk-background-cover liehead">
     <div class="uk-container" align="center">
-      <h3 class="tit" style="color:white">
+      <h3 class="tit" style="color:black">
         I grandi lievitati della tradizione: la forza della pazienza!
       </h3>
 

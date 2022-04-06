@@ -3,6 +3,7 @@
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div>
+        <a href="/biscotti/">
         <div
           class="uk-card uk-card-default but cardc"
           uk-height-viewport="expand: true;min-height: 640"
@@ -27,7 +28,9 @@
             </p>
             <h4>&nbsp;</h4>
           </div>
+       
         </div>
+      </a>
       </div>
     </div>
     <h1>&nbsp;</h1>
@@ -35,6 +38,7 @@
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div>
+        <a href="/apebox/">
         <div
           class="uk-card uk-card-default but cardc"
           uk-height-viewport="expand: true;min-height: 640"
@@ -55,6 +59,7 @@
             <hr />
           </div>
         </div>
+      </a>
       </div>
     </div>
     <h1>&nbsp;</h1>
@@ -62,6 +67,7 @@
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>
       <div>
+        <a href="/torte/">
         <div
           class="uk-card uk-card-default but cardc"
           uk-height-viewport="expand: true;min-height: 640"
@@ -83,12 +89,14 @@
             <h3>&nbsp;</h3>
           </div>
         </div>
+      </a>
       </div>
     </div>
     <h1>&nbsp;</h1>
   </div>
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>
+      <a href="/lievitati/">
       <div
         class="uk-card uk-card-default but cardc"
         uk-height-viewport="expand: true;min-height: 640"
@@ -109,6 +117,7 @@
           </p>
         </div>
       </div>
+    </a>
     </div>
   </div>
   <h1>&nbsp;</h1>

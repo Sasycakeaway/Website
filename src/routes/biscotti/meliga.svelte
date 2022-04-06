@@ -5,8 +5,8 @@
 <h1>&nbsp;</h1>
 <h1 class="tit">Paste di Meliga - Paste 'd melia</h1>
 <h1>&nbsp;</h1>
-<div class="divv" align="center">
-  <div class="uk-card uk-card-default ">
+<div class="" align="center">
+  <div class="uk-card uk-card-default " id="card">
     <br />
     <img src="https://sasyimg.imgix.net/meliga.jpeg" alt="" class="imgcenter" />
     <div>
@@ -32,3 +32,20 @@
     riuscirai più a farne a meno!"
   </p>
 </div>
+<style>
+  .uk-card{
+    width: 80%;
+  }
+
+</style>
+<script>
+  import {onMount} from 'svelte';
+  onMount(() => {
+    if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
+
+}else{
+  document.getElementById("card").style.width="60%"
+}
+	});
+
+</script>
