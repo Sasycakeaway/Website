@@ -11,6 +11,7 @@
     src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
   <link rel="stylesheet" href="/css/head.css" />
 </svelte:head>
+<div class="header">
 <header>
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
@@ -46,6 +47,12 @@
     </div>
   </nav>
 </header>
-
+</div>
 <style>
+  .header{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin: 2px solid green;
+  }
 </style>
