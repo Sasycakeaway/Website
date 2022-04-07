@@ -1,13 +1,13 @@
 <script>
-  import {onMount} from 'svelte';
+  import { onMount } from "svelte";
   onMount(() => {
-    if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
-
-}else{
-  document.getElementById("card").style.width="60%"
-}
-	});
-
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+    } else {
+      document.getElementById("card").style.width = "60%";
+    }
+  });
 </script>
 
 <svelte:head>
@@ -48,8 +48,9 @@
     cioccolato."
   </p>
 </div>
+
 <style>
-  .uk-card{
+  .uk-card {
     width: 80%;
   }
 </style>

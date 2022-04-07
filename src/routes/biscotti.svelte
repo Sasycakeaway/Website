@@ -1,6 +1,6 @@
 <script>
   import Bishead from "/static/components/biscotti/head.svelte";
- 
+
   import Bisitem from "/static/components/biscotti/item.svelte";
 </script>
 

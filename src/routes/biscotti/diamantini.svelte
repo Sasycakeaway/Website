@@ -1,4 +1,3 @@
-
 <svelte:head>
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />

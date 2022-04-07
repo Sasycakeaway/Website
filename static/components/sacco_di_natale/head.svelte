@@ -37,11 +37,12 @@
         <a style="color:#faec92;">SOSTIENE</a>
         la produttivit&agrave; locale e la
         <a style="color:#faec92;">QUALIT&Agrave;</a>
-        che solo le nostre piccole imprese possono garantire. Ci affidiamo a
-        persone come noi, <a style="color:#faec92;">INNAMORATE</a> del loro
-        lavoro, che mettono l' ANIMA nei loro manufatti, che pensano ai propri
-        clienti come fossero la loro <a style="color:#faec92;">FAMIGLIA</a>, che
-        vivono della <a style="color:#faec92;"> GIOIA</a> e dei
+        che solo le nostre piccole imprese possono garantire. Ci affidiamo a persone
+        come noi, <a style="color:#faec92;">INNAMORATE</a> del loro lavoro, che
+        mettono l' ANIMA nei loro manufatti, che pensano ai propri clienti come
+        fossero la loro <a style="color:#faec92;">FAMIGLIA</a>, che vivono della
+        <a style="color:#faec92;"> GIOIA</a>
+        e dei
         <a style="color:#faec92;">SORRISI</a>
         che ricevono assieme al loro giusto compenso!
         <a style="color:#faec92;">

@@ -121,7 +121,6 @@
               Il box lo trasformi tu come vuoi con gli ingredienti degli altri
               box a scelta!
             </p>
-          
           </div>
         </div>
       </div>
@@ -134,7 +133,7 @@
         >
           <div class="uk-card-body">
             <h1>&nbsp;</h1>
- 
+
             <a href="/tartfrolla"
               ><h3 class=" testisp">Si possono accompagnare i box con:</h3></a
             >

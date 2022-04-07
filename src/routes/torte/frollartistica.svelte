@@ -1,18 +1,12 @@
-<style>
-  .uk-card{
-    width: 80%;
-  }
-</style>
 <script>
-//   import {onMount} from 'svelte';
-//   onMount(() => {
-//     if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
+  //   import {onMount} from 'svelte';
+  //   onMount(() => {
+  //     if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
 
-// }else{
-//   document.getElementById("card").style.width="60%"
-// }
-// 	});
-
+  // }else{
+  //   document.getElementById("card").style.width="60%"
+  // }
+  // 	});
 </script>
 
 <svelte:head>
@@ -47,3 +41,9 @@
     iniziato a questo mondo incredibile, nonostante il COVID-19"
   </p>
 </div>
+
+<style>
+  .uk-card {
+    width: 80%;
+  }
+</style>

@@ -1,3 +1,15 @@
+<script>
+  import { onMount } from "svelte";
+  onMount(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+    } else {
+      document.getElementById("card").style.width = "60%";
+    }
+  });
+</script>
+
 <svelte:head>
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
@@ -31,19 +43,9 @@
     "Un fiore friabile di frolla e zucchero a velo tutto da gustare!"
   </p>
 </div>
+
 <style>
-  .uk-card{
+  .uk-card {
     width: 80%;
   }
 </style>
-<script>
-  import {onMount} from 'svelte';
-  onMount(() => {
-    if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
-
-}else{
-  document.getElementById("card").style.width="60%"
-}
-	});
-
-</script>

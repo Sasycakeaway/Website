@@ -1,3 +1,16 @@
+<script>
+  import { onMount } from "svelte";
+  onMount(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+      document.getElementById("pric").classList.remove("uk-width-xlarge");
+      document.getElementById("pric").classList.add("uk-width-medium");
+      document.getElementById("pric").style.marginLeft = "50px";
+    }
+  });
+</script>
+
 <link rel="stylesheet" href="/css/card.css" />
 <div class="uk-section-default but ">
   <div
@@ -22,16 +35,3 @@
     </div>
   </div>
 </div>
-<script>
-  import {onMount} from 'svelte';
-  onMount(()=>{
-  if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
-    document.getElementById("pric").classList.remove("uk-width-xlarge")
-    document.getElementById("pric").classList.add("uk-width-medium")
-    document.getElementById("pric").style.marginLeft="50px"
-
-  }
-  }
-  )
- 
-</script>

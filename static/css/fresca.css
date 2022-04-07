@@ -104,9 +104,9 @@ h3 {
     url("https://sasyimg.imgix.net/macarons.jpg");
   background-size: cover;
 }
-*{
+* {
   border-radius: 8px;
 }
-.uk-card{
+.uk-card {
   border: 2px solid black;
 }
