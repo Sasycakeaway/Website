@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@emailjs/browser": "^3.5.0",
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "@sveltejs/adapter-static": "^1.0.0-next.28",
@@ -36,8 +37,10 @@
     "plyr": "^3.6.12",
     "svelte-dialogs": "^1.1.0",
     "svelte-feather-icons": "^3.5.1",
+    "svelte-forms": "^2.3.1",
     "svelte-grid-layout": "^1.0.3",
     "svelte-layouts": "^0.9.5",
+    "svelte-seo": "^1.4.0",
     "svelte-youtube": "^0.0.2"
   }
 }
