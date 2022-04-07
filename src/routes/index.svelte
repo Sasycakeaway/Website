@@ -1,7 +1,7 @@
 <script>
   import Head from "/static/components/head.svelte";
   import Prod from "/static/components/prod.svelte";
-  import Plyr from 'plyr';
+ 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {getPerformance} from "firebase/performance"
@@ -20,9 +20,10 @@ const firebaseConfig = {
 
  
   onMount(async () => {
-    const player = new Plyr('#player');
   
-    
+    if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) 
+      document.getElementById("ifname").style.width="300px"
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const perf = getPerformance(app);
@@ -34,7 +35,6 @@ const perf = getPerformance(app);
   <link rel="stylesheet" href="/css/index.css" />
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-min.css">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css" />
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" /> 
 </svelte:head>
 
 <Head />
@@ -53,9 +53,16 @@ const perf = getPerformance(app);
     Sasy.vitrani@gmail.com
   </p>
   <h1>&nbsp;</h1>
-  <div class="player">
-  <div  id="player" data-plyr-provider="youtube" data-plyr-embed-id="jF6h8jJJuhc"></div>
-</div>
+  <iframe
+    width="611"
+    height="311"
+    src="https://www.youtube.com/embed/"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    id="ifname"
+  />
   
   <h1>&nbsp;</h1>
   <h4>Sasy's su LIVE SOCIAL</h4>
