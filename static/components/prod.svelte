@@ -45,7 +45,7 @@
         >
           <div class="uk-card-media-top" align="center">
             <h6>&nbsp;</h6>
-            <img src="https://img.icons8.com/ios/100/000000/bee--v1.png" />
+            <img src="https://img.icons8.com/ios/128/000000/bee--v1.png" />
           </div>
           <div class="uk-card-body" align="center">
             <h3 class="uk-card-title">Apebox</h3>
@@ -75,7 +75,7 @@
           <div class="uk-card-media-top" align="center">
             <h6>&nbsp;</h6>
             <img
-              src="https://img.icons8.com/ios/100/000000/birthday-cake--v1.png"
+              src="https://img.icons8.com/ios/128/000000/birthday-cake--v1.png"
             />
           </div>
           <div class="uk-card-body " align="center">
@@ -112,7 +112,7 @@
           <p class="panettoni">
             I lievitati da ricorrenza sono prodotti dal lungo procedimento e
             dalla dedizione lenta e amorosa. Un amore che nasce dalla cura del
-            mio lievito che da più di 100 anni si tramanda di mano in mano per
+            mio lievito che da più di 128 anni si tramanda di mano in mano per
             far nascere panettoni e colombe straordinari nel gusto.
           </p>
         </div>
