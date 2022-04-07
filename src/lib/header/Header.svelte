@@ -1,7 +1,4 @@
 <svelte:head>
-
-  
-
   <link rel="stylesheet" href="/css/head.css" />
 </svelte:head>
 <div class="header">
