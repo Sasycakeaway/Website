@@ -8,7 +8,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1100"
+          uk-height-viewport="expand: true;min-height: 1200"
         >
           <div class="uk-card-body">
             <img src="/images/nord.jpg" class="cardimg" alt="" />
@@ -32,7 +32,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1100"
+          uk-height-viewport="expand: true;min-height: 1200"
         >
           <div class="uk-card-body">
             <img src="/images/sud.jpg" class="cardimg" alt="" />
@@ -57,7 +57,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 1100"
+          uk-height-viewport="expand: true;min-height: 1200"
         >
           <div class="uk-card-body">
             <img src="/images/grandeabbuffata.jpg" class="abimg" alt="" />
