@@ -23,7 +23,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/cheesecake.jpg" class="cardimg" alt="" />
+            <img src="/images/cheesecake.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/cookies.jpg" class="cardimg" alt="" />
+            <img src="/images/cookies.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/redvelvet.jpg" class="cardimg" alt="" />
+            <img src="/images/redvelvet.jpg" class="cardimg" alt="" />
           </div>
           <br />
         </div>
@@ -120,7 +120,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="https://sasyimg.imgix.net/cakepop.jpg" alt="" />
+            <img class="cardimg" src="/images/cakepop.jpg" alt="" />
           </div>
         </div>
       </div>

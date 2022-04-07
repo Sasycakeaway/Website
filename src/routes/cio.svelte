@@ -11,7 +11,7 @@
            
         </div> -->
     <br />
-    <img class="imgcenter" src="https://sasyimg.imgix.net/cionew.jpg" alt="" width="128" />
+    <img class="imgcenter" src="/images/cionew.jpg" alt="" width="128" />
 
     <div>
       <div class="uk-card-body">

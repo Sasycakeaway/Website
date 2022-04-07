@@ -18,16 +18,16 @@
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://sasyimg.imgix.net/mamy.jpg" class="d-block w-100" alt="..." />
+      <img src="/images/mamy.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasyimg.imgix.net/libro.jpg" class="d-block w-100" alt="..." />
+      <img src="/images/libro.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasyimg.imgix.net/panettone.jpg" class="d-block w-100" alt="..." />
+      <img src="/images/panettone.jpg" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://sasyimg.imgix.net/panettonefronte.jpg" class="d-block w-100" alt="..." />
+      <img src="/images/panettonefronte.jpg" class="d-block w-100" alt="..." />
     </div>
   </div>
   <button

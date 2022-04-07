@@ -8,7 +8,7 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <br />
-    <img class="imgcenter" src="https://sasyimg.imgix.net/maca.jpg" alt="" />
+    <img class="imgcenter" src="/images/maca.jpg" alt="" />
     <div>
       <div class="uk-card-body">
         <p class="det">

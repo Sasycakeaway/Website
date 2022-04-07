@@ -24,7 +24,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/zeppole.jpg" class="cardimg" alt="" />
+            <img src="/images/zeppole.jpg" class="cardimg" alt="" />
           </div>
           <h4>&nbsp;</h4>
         </div>
@@ -48,7 +48,7 @@
           <h4>&nbsp;</h4>
           <h4>&nbsp;</h4>
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/pastiera.jpg" class="cardimg" alt="" />
+            <img src="/images/pastiera.jpg" class="cardimg" alt="" />
           </div>
           <h4>&nbsp;</h4>
           <h4>&nbsp;</h4>
@@ -75,7 +75,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/cannoli.jpg" class="cardimg" alt="" />
+            <img src="/images/cannoli.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="https://sasyimg.imgix.net/piccidde.jpg" class="cardimg" alt="" />
+            <img src="/images/piccidde.jpg" class="cardimg" alt="" />
           </div>
           <h4>&nbsp;</h4>
         </div>
@@ -128,7 +128,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="https://sasyimg.imgix.net/pasticciotto.jpg" alt="" />
+            <img class="cardimg" src="/images/pasticciotto.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -214,7 +214,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="https://sasyimg.imgix.net/strudel.jpg" alt="" />
+            <img class="cardimg" src="/images/strudel.jpg" alt="" />
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@
     )}
 >
 {#each item as prod}
-    <img src={"https://sasyimg.imgix.net/slide/Salata/" + prod}>
+    <img src={"/images/slide/Salata/" + prod}>
 {/each}
 </Gallery>
 </div>

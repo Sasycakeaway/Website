@@ -8,7 +8,7 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
-    <img src="https://sasyimg.imgix.net/frolla.jpeg" alt="" class="imgcenter" />
+    <img src="/images/frolla.jpeg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">

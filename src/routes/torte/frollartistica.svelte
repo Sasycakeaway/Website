@@ -25,7 +25,7 @@
 <div class="divv" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
-    <img src="https://sasyimg.imgix.net/artistiche.jpg" alt="" class="imgcenter" />
+    <img src="/images/artistiche.jpg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">
