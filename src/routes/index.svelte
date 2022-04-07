@@ -21,8 +21,11 @@ const firebaseConfig = {
  
   onMount(async () => {
   
-    if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) 
+    if( /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent) ) {
       document.getElementById("ifname").style.width="300px"
+      document.getElementById("ifname").style.height="200px"
+    }
+
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -35,6 +38,7 @@ const perf = getPerformance(app);
   <link rel="stylesheet" href="/css/index.css" />
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-min.css">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css" />
+  
 </svelte:head>
 
 <Head />
@@ -53,17 +57,7 @@ const perf = getPerformance(app);
     Sasy.vitrani@gmail.com
   </p>
   <h1>&nbsp;</h1>
-  <iframe
-    width="611"
-    height="311"
-    src="https://www.youtube.com/embed/"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    id="ifname"
-  />
-  
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/jF6h8jJJuhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="ifname"></iframe>
   <h1>&nbsp;</h1>
   <h4>Sasy's su LIVE SOCIAL</h4>
   <h4>&nbsp;</h4>

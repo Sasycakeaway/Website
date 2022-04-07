@@ -6,7 +6,9 @@
 <svelte:head>
   <link rel="stylesheet" href="/css/footer.css" />
   <script src="/js/footer.js"></script>
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit-core.min.js"></script>
+
 </svelte:head>
 
 <Header />
