@@ -1,14 +1,14 @@
 <svelte:head>
     <link rel="stylesheet" href="css/login.css">
 </svelte:head>
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma">
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" >
 
     <fieldset class="uk-fieldset">
         <div align="center">
         <legend class="uk-legend">Sasy's Cake Away login</legend>
     </div>
         <div class="uk-margin">
-            <input id="username" class="uk-input" type="text" placeholder="Username" bind:value={user}>
+            <input id="username" class="uk-input" type="text" placeholder="E-mail" bind:value={user}>
         </div>
         <div class="uk-margin">
             <input id="password" class="uk-input" type="password" placeholder="Password" bind:value={pass}>
@@ -25,9 +25,9 @@
         <div class="uk-margin">
             <input id="password2" class="uk-input" type="text" placeholder="Codice fiscale" bind:value={cf}>
         </div>
-        <div class="uk-margin">
+        <!-- <div class="uk-margin">
             <input id="password2" class="uk-input" type="text" placeholder="Indirizzo di residenza" bind:value={indirizzo}>
-        </div>
+        </div> -->
         <div  align="center">
     <div>
         <button class="uk-button uk-button-primary" type="button" on:click={registrati}>Registrati</button>
@@ -52,14 +52,13 @@ function registrati(){
       "password": md5(pass),
       "telefono": tel,
       "nascita": nascita,
-      "cf": cf,
-      "indirizzo":indirizzo
+      "cf": cf
   }),
 })
 .then(response => response.json())
 .then(data => {
   console.log('Success:', data);
-  location.href="/login"
+  location.href="/ecommerce/login"
 })
 .catch((error) => {
   alert("Errore del server, contattare Sasy's")

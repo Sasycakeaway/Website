@@ -40,7 +40,7 @@
     <div class="uk-navbar-right">
 
       <ul class="uk-navbar-nav">
-        <li ><a href="#">Login</a></li>
+        <li ><a href="/ecommerce/login/">Login</a></li>
         <li><a href="/ecommerce/registrati/">Registrati</a></li>
         <li><a href="/ecommerce/carrello/"><img class="cart" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/256/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png"/></a>
         </li>
