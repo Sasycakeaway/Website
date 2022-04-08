@@ -33,8 +33,20 @@
           <li><a href="/gallery">Galleria fotografica</a></li>
           <li><a href="/contatti">Contatti</a></li>
           <li><a href="/ingredienti">Elenco ingredienti</a></li>
+          
         </ul>
       </div>
+
+    <div class="uk-navbar-right">
+
+      <ul class="uk-navbar-nav">
+        <li ><a href="#">Login</a></li>
+        <li><a href="/ecommerce/registrati/">Registrati</a></li>
+        <li><a href="/ecommerce/carrello/"><img class="cart" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/256/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png"/></a>
+        </li>
+      </ul>
+
+  </div>
     </nav>
   </header>
 </div>
@@ -46,4 +58,7 @@
     margin: 0;
     margin: 2px solid green;
   }
+  .cart{
+	width: 64px;
+}
 </style>
