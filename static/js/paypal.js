@@ -1,6 +1,8 @@
 import { loadScript } from "@paypal/paypal-js";
-export let cartTotal = 0.01;
+import { onMount } from "svelte";
+let totale;
 export async function init(){
+    onMount(()=>totale = localStorage.getItem("totale"))
     let paypal;
 
     try {
@@ -19,7 +21,7 @@ export async function init(){
                       purchase_units: [
                         {
                           amount: {
-                            value: cartTotal,
+                            value: totale,
                           },
                         },
                       ],

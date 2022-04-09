@@ -1,18 +1,12 @@
 <script>
-  import { onMount } from "svelte";
-  onMount(() => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-    } else {
-      document.getElementById("card").style.width = "60%";
-    }
-  });
+  import {initpage,biscotti} from '../../static/js/pasticceria.js'
+  initpage()
 </script>
 
 <svelte:head>
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
+ 
 </svelte:head>
 <h1>&nbsp;</h1>
 <h1 class="tit">Bicchierini di cioccolato riempiti con creme a scelta</h1>
@@ -23,7 +17,7 @@
            
         </div> -->
     <br />
-    <img class="imgcenter" src="/images/cionew.jpg" alt="" width="128" />
+    <img class="imgcenter" src="/images/Bicchierini al cioccolato.jpg" alt="" width="128" />
 
     <div>
       <div class="uk-card-body">
@@ -45,15 +39,23 @@
   </div>
 
   <h1>&nbsp;</h1>
+  <button class="uk-button uk-button-primary carbut" id="Bicchierini al cioccolato" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <h1>&nbsp;</h1>
+  <div class="testo">
   <p class="tit" style="color:rgb(195, 0, 255)">
     "Da ragazza sono rimasta folgorata da questi pasticcini atipici. Memore di
     quel gusto unico, ho voluto riprodurre questa specialità particolarmente
     golosa"
   </p>
 </div>
+<h1>&nbsp;</h1>
+</div>
 
 <style>
   .uk-card {
     width: 80%;
+  }
+  .imgcenter{
+    width: 40%;
   }
 </style>

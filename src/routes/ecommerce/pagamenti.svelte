@@ -1,6 +1,6 @@
 <script>
     import { dialogs } from "svelte-dialogs";
-    import {init} from '../../../static/js/paypal'
+    import {init} from '../../../static/js/paypal.js'
     // function pag(){
     //   dialogs.modal(htmlString)
     //   var satispay = SatispayWebButton.configure({

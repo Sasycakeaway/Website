@@ -145,7 +145,13 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
+.testo{
+  width: 70%;
+}
+
 .divv {
   margin: auto;
   width: 50%;

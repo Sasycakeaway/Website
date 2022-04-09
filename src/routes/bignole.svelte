@@ -1,26 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  import {pusha,init} from '/static/js/cart.js';
-import { Row, Col, Grid, Item } from 'svelte-layouts';
-import { dialogs } from "svelte-dialogs";
-  onMount(() => {
-    init();
-    if (
-      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-    } else {
-      document.getElementById("card").style.width = "60%";
-    }
-  });
-
-  function biscotti(e) {
-    dialogs.prompt("Quanti sacchetti da 250G vuoi?").then(output=>
-        pusha(e.path[0].id, output[0])
-    )
-    
-    
-  }
-
+  import {initpage,biscotti} from '../../static/js/pasticceria.js'
+  initpage()
 </script>
 
 <svelte:head>
@@ -33,7 +13,7 @@ import { dialogs } from "svelte-dialogs";
 <div align="center">
   <div class="uk-card uk-card-default " id="card">
     <br />
-    <img class="imgcenter" src="/images/Bignole.jpg" alt="" />
+    <img class="imgcenter" src="/images/Bignole.jpg" alt="" width="20" />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -50,16 +30,22 @@ import { dialogs } from "svelte-dialogs";
       </div>
     </div>
   </div>
+  <h3>&nbsp;</h3>
   <button class="uk-button uk-button-primary carbut" id="Bignole" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
   <h1>&nbsp;</h1>
+  <div class="testo">
   <p class="tit" style="color:rgb(195, 0, 255)">
     "Preparare dolci è molto più che saper eseguire ricette: è un vero e proprio
     gesto d’amore"
   </p>
 </div>
+</div>
 
 <style>
   .uk-card {
     width: 80%;
+  }
+  .imgcenter{
+    width: 50%;
   }
 </style>

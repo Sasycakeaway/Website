@@ -134,7 +134,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="/images/frollacrema.jpg" class="acc cardimg" alt="" />
+            <img src="/images/Tartellette di frolla con crema.jpg" class="acc cardimg" alt="" />
           </div>
         </div>
       </div>
