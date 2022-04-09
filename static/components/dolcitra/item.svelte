@@ -8,7 +8,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"
@@ -26,7 +26,7 @@
           <div class="uk-card-media-bottom">
             <img src="/images/zeppole.jpg" class="cardimg" alt="" />
           </div>
-          <h4>&nbsp;</h4>
+         
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"><h3 class="uk-card-title">Pastiera Napoletana</h3></a>
@@ -45,13 +45,11 @@
               scioglievolezza al palato è un tripudio di gioia per i sensi.
             </p>
           </div>
-          <h4>&nbsp;</h4>
-          <h4>&nbsp;</h4>
+
           <div class="uk-card-media-bottom">
             <img src="/images/pastiera.jpg" class="cardimg" alt="" />
           </div>
-          <h4>&nbsp;</h4>
-          <h4>&nbsp;</h4>
+
           <hr class="pasti" />
         </div>
       </div>
@@ -60,7 +58,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"><h3 class="uk-card-title">Cannoli Siciliani</h3></a>
@@ -84,7 +82,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"
@@ -103,7 +101,7 @@
           <div class="uk-card-media-bottom">
             <img src="/images/piccidde.jpg" class="cardimg" alt="" />
           </div>
-          <h4>&nbsp;</h4>
+        
         </div>
       </div>
     </div>
@@ -111,7 +109,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"><h3 class="uk-card-title">Pasticciotti Leccesi</h3></a>
@@ -137,7 +135,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"><h3 class="uk-card-title">Bonet piemontese</h3></a>
@@ -151,15 +149,11 @@
               bonet a fine pranzo… quando si dice chiudere in bellezza!.
             </p>
           </div>
-          <h2>&nbsp;</h2>
+ 
           <div class="uk-card-media-bottom">
             <img src="images/cantucci.jpeg" class="cardimg" alt="" />
           </div>
-          <h2>&nbsp;</h2>
-
-          <hr />
-          <hr />
-          <hr />
+      
         </div>
       </div>
     </div>
@@ -167,7 +161,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"><h3 class="uk-card-title">Tiramisù</h3></a>
@@ -183,12 +177,6 @@
           <div class="uk-card-media-bottom">
             <!--<img class="cardimg" src="images/canestrelli.jpeg" alt="">-->
           </div>
-          <h1>&nbsp;</h1>
-          <h1>&nbsp;</h1>
-          <h1>&nbsp;</h1>
-          <h1>&nbsp;</h1>
-          <h1>&nbsp;</h1>
-          <br class="cantucci" />
         </div>
       </div>
     </div>
@@ -196,7 +184,7 @@
       <div>
         <div
           class="uk-card uk-card-default"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
             <a href="#"

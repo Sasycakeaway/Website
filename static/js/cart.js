@@ -1,16 +1,19 @@
 import { writable } from "svelte/store";
-export let cart = []
+import {onMount} from 'svelte';
 export let totale = 0;
 export const cartstore = writable('cart');
 export const totstore = writable('totale');
+let cart = [];
 export function initcart() {
     if (localStorage.getItem('cart') == null) {
 
-        let cart = []
+      
     } else {
-        let cart = JSON.parse(localStorage.getItem('cart'))
+        cart = JSON.parse(localStorage.getItem('cart'))
     }
+    return cart;
 }
+
 export function pusha(ida, qty, prezzo) {
     let count=0
         for (var i = 0; i < cart.length; i++) {

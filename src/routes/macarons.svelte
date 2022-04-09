@@ -48,6 +48,6 @@
     width: 80%;
   }
   .imgcenter{
-    width:55%;
+    width: 400px;
   }
 </style>

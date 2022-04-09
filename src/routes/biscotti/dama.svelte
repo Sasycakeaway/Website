@@ -1,13 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  onMount(() => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-    } else {
-      document.getElementById("card").style.width = "60%";
-    }
-  });
+  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
+  initpage()
 </script>
 
 <svelte:head>
@@ -20,7 +13,7 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
-    <img src="/images/dama.jpeg" alt="" class="imgcenter" />
+    <img src="/images/Baci di dama.jpg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -37,14 +30,22 @@
   </div>
 
   <h1>&nbsp;</h1>
+  <button class="uk-button uk-button-primary carbut" id="Baci di dama" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <h1>&nbsp;</h1>
+  <div class="testo">
   <p class="tit" style="color:rgb(195, 0, 255)">
     "Dammi mille baci, poi cento, poi ancora mille, poi di nuovo cento.... un
     bacio tira l'altro!"
   </p>
 </div>
 
+</div>
+
 <style>
   .uk-card {
     width: 80%;
+  }
+  .imgcenter{
+    width: 400px;
   }
 </style>

@@ -1,13 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  onMount(() => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-    } else {
-      document.getElementById("card").style.width = "60%";
-    }
-  });
+  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
+  initpage()
 </script>
 
 <svelte:head>
@@ -20,7 +13,7 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default " id="card">
     <br />
-    <img src="/images/meliga.jpeg" alt="" class="imgcenter" />
+    <img src="/images/Paste di meliga.jpg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -39,14 +32,22 @@
   </div>
 
   <h1>&nbsp;</h1>
+  <button class="uk-button uk-button-primary carbut" id="Paste di meliga" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+
+  <h1>&nbsp;</h1>
+  <div class="testo">
   <p class="tit" style="color:rgb(195, 0, 255)">
     "Inzuppati in un buon bicchiere di vino passito o di moscato, difficilmente
     riuscirai più a farne a meno!"
   </p>
 </div>
+</div>
 
 <style>
   .uk-card {
     width: 80%;
+  }
+  .imgcenter{
+    width: 500px;
   }
 </style>

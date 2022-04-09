@@ -1,14 +1,8 @@
 <script>
-  import { onMount } from "svelte";
-  onMount(() => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-    } else {
-      document.getElementById("card").style.width = "60%";
-    }
-  });
+  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
+  initpage()
 </script>
+
 
 <svelte:head>
   <title>Home</title>
@@ -20,7 +14,7 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
-    <img src="/images/meringa.jpeg" alt="" class="imgcenter" />
+    <img src="/images/Meringhe.jpg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -41,14 +35,21 @@
   </div>
 
   <h1>&nbsp;</h1>
+  <button class="uk-button uk-button-primary carbut" id="Meringhe" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <h1>&nbsp;</h1>
+  <div class="testo">
   <p class="tit" style="color:rgb(195, 0, 255)">
     "E la meringa un giorno si sposò con la panna montata: uno dei matrimoni più
     riusciti e duraturi della pasticceria europea!"
   </p>
 </div>
+</div>
 
 <style>
   .uk-card {
     width: 80%;
+  }
+  .imgcenter{
+    width: 350px;
   }
 </style>

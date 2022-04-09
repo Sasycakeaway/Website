@@ -56,6 +56,6 @@
     width: 80%;
   }
   .imgcenter{
-    width: 40%;
+    width: 350px;
   }
 </style>

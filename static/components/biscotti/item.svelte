@@ -22,7 +22,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/meliga.jpeg" class="cardimg" alt="" />
+            <img src="images/Paste di meliga.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/dama.jpeg" class="cardimg" alt="" />
+            <img src="images/Baci di dama.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="images/brut.jpeg" class="cardimg" alt="" />
+            <img src="images/Brüt ma bon.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/meringa.jpeg" class="cardimg" alt="" />
+            <img src="images/Meringhe.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -118,7 +118,6 @@
             <img class="cardimg" src="images/nocciolotti.jpeg" alt="" />
           </div>
 
-          <hr class="noc" />
         </div>
       </div>
     </div>
@@ -129,7 +128,7 @@
           uk-height-viewport="expand: true;min-height: 600"
         >
           <div class="uk-card-body">
-            <a href="#"><h3 class="uk-card-title">Cantuccini</h3></a>
+            <a href="/biscotti/cantucci/"><h3 class="uk-card-title">Cantuccini</h3></a>
             <p>
               La storia di questi dolci secchi alle mandorle è antichissima: già
               i soldati romani mangiavano una specie di pane dolce, aromatizzato
@@ -141,10 +140,10 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="images/cantucci.jpeg" class="cardimg" alt="" />
+            <img src="/images/cantucci.jpeg" class="cardimg" alt="" />
           </div>
 
-          <hr class="cantucci" />
+
         </div>
       </div>
     </div>
@@ -165,7 +164,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/canestrelli.jpeg" alt="" />
+            <img class="cardimg" src="images/Canestrelli.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -177,7 +176,7 @@
           uk-height-viewport="expand: true;min-height: 600"
         >
           <div class="uk-card-body">
-            <a href="/biscotti/frolla"
+            <a href="/biscotti/frolla/"
               ><h3 class="uk-card-title">Biscotti di Frolla</h3></a
             >
             <p>
@@ -188,7 +187,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/frolla.jpeg" alt="" />
+            <img class="cardimg" src="images/Biscotti di frolla con gli aromi dell'orto.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -212,7 +211,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/assabesi.jpeg" alt="" />
+            <img class="cardimg" src="/images/Assabesi.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -221,10 +220,10 @@
       <div>
         <div
           class="uk-card uk-card-default uk-height-max-large"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 650"
         >
           <div class="uk-card-body">
-            <a href="#"><h3 class="uk-card-title">Krumiri</h3></a>
+            <a href="/biscotti/krumiri/"><h3 class="uk-card-title">Krumiri</h3></a>
             <p>
               Nati nel 1878, quando l’Italia era ormai unita, sono ispirati ai
               famosi mustacchi di re Vittorio Emanuele II e nel tempo sono
@@ -235,7 +234,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <!--<img class="acc" src="images/frollaorto.jpg" alt="">-->
+            <img class="acc" src="images/Krumiri.jpg" alt="" width="512px">
           </div>
         </div>
       </div>
@@ -244,7 +243,7 @@
       <div>
         <div
           class="uk-card uk-card-default uk-height-max-large"
-          uk-height-viewport="expand: true;min-height: 600"
+          uk-height-viewport="expand: true;min-height: 650"
         >
           <div class="uk-card-body">
             <a href="/biscotti/diamantini"
@@ -259,7 +258,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="acc" src="/images/diamantini.jpg" alt="" />
+            <img class="acc" src="/images/Diamantini.jpg" alt="" width="512px" />
           </div>
         </div>
       </div>

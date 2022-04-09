@@ -48,6 +48,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom" />
+          <img src="/images/Cupcake.jpg" alt="" class="cardimg"/>
         </div>
       </div>
     </div>
@@ -71,7 +72,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="/images/cookies.jpg" class="cardimg" alt="" />
+            <img src="/images/Cookies.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="/images/cakepop.jpg" alt="" />
+            <img class="cardimg" src="/images/Cakepop.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -132,7 +133,7 @@
           uk-height-viewport="expand: true;min-height: 670"
         >
           <div class="uk-card-body">
-            <a href="#"><h3 class="uk-card-title">Muffin</h3></a>
+            <a href="/american/muffin/"><h3 class="uk-card-title">Muffin</h3></a>
             <p>
               In principio il muffin era un dolcetto mignon, così piccolo da
               poter essere mangiato in un solo boccone. Attraversando l'oceano
@@ -143,6 +144,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom" />
+          <img src="/images/Muffin.jpg/" class="cardimg"/>
         </div>
       </div>
     </div>
@@ -153,7 +155,7 @@
           uk-height-viewport="expand: true;min-height: 670"
         >
           <div class="uk-card-body">
-            <a href="#"><h3 class="uk-card-title">Brownies</h3></a>
+            <a href="/american/brownies/"><h3 class="uk-card-title">Brownies</h3></a>
             <p>
               Sono ricchi e golosi quadratini di cioccolato, una via di mezzo
               tra un biscotto e una torta dal cuore morbido. Devono il loro nome
@@ -162,6 +164,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom" />
+          <img src="/images/Brownie.jpg" alt="" class="cardimg"/>
         </div>
       </div>
     </div>

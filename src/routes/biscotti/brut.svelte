@@ -1,13 +1,6 @@
 <script>
-  import { onMount } from "svelte";
-  onMount(() => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-    } else {
-      document.getElementById("card").style.width = "60%";
-    }
-  });
+  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
+  initpage()
 </script>
 
 <svelte:head>
@@ -20,7 +13,7 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
-    <img src="/images/brut.jpeg" alt="" class="imgcenter" />
+    <img src="/images/Brüt ma bon.jpg" alt="" class="imgcenter" />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -37,14 +30,22 @@
   </div>
 
   <h1>&nbsp;</h1>
+  <button class="uk-button uk-button-primary carbut" id="Brüt ma bon" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <h1>&nbsp;</h1>
+  <div class="testo">
   <p class="tit" style="color:rgb(195, 0, 255)">
     "A chi non è mai capitato di se​ntirsi almeno una volta un brutto
     anatroccolo? Ma spesso l'apparenza inganna!"
   </p>
 </div>
+<h1>&nbsp;</h1>
+</div>
 
 <style>
   .uk-card {
     width: 80%;
+  }
+  .imgcenter{
+    width: 400px;
   }
 </style>
