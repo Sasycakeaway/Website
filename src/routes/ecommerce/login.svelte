@@ -27,11 +27,9 @@
 <h1>&nbsp;</h1>
 <script>
 import { onMount } from 'svelte';
-import {cart} from '/static/js/cart.js'
 import md5 from 'md5'
 var user;
 var pass;
-console.log(cart)
 onMount(async () => {
     user=sessionStorage.getItem("username");
     pass=sessionStorage.getItem("password")
