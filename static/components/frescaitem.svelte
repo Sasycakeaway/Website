@@ -21,7 +21,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="/images/bignole.jpg" class="cardimg" alt="" />
+            <img src="/images/Bignole.jpg" class="cardimg" alt="" />
           </div>
           <!--  -->
         </div>
