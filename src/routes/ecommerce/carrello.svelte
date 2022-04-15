@@ -1,18 +1,19 @@
 <script>
     import { initcart } from '../../../static/js/cart.js';
     import {onMount} from 'svelte';
-    import VirtualList from 'svelte-tiny-virtual-list';
     import Stepper from '../../../static/components/stepper.svelte'
     let cart = [];
-    let start;
-	let end;
-    let totale;
     let verifica;
+    let totale;
+    function removeall() {
+        cart = []
+        totale = 0
+        localStorage.setItem("cart", JSON.stringify(cart))
+        localStorage.setItem("totale",totale)
+        verifica = check()
+    }
     function check() {
-        console.log("Entro")
-        console.log(JSON.stringify(cart) )
         if(JSON.stringify(cart) == "[]"){
-            console.log("OK")
             return "{}"
         }else{
             return JSON.stringify(cart)
@@ -24,14 +25,17 @@
         totale = localStorage.getItem('totale')
         verifica = check()
     })
+    function min(e) {
+        cart[e.detail.text].qty--;
+    }
+    function plu(e) {
+        cart[e.detail.text].qty++;
+    }
     function bin(e) {
-        console.log(e)
-        cart.forEach((value,i)=>{
-            if(value.id == e.path[0].id){
-                delete cart[i]
-                localStorage.setItem("cart",JSON.stringify(cart))
-            }
-        })
+        cart = cart.filter(prod => prod.id != e.path[0].id)
+        totale -= 5
+        localStorage.setItem("cart",JSON.stringify(cart))
+        document.getElementById(e.path[0].id+"item")
     }
     let itemSize = 300;
     </script>
@@ -43,18 +47,18 @@
 </svelte:head>
 <h1>&nbsp;</h1>
 {#if verifica == "{}"}
-<p>Ciao</p>
+<p align="center" >Carrello vuoto, aggiungi prodotti al carrello visitando le pagine del sito</p>
 {:else}
 <div class="list">
     
  
     <ul class="list-group">
         <li class="list-group-item" align="center">
-            <button class="uk-button uk-button-danger">Cancella tutti i prodotti nel carrello</button>
+            <button class="uk-button uk-button-danger" on:click={removeall}>Cancella tutti i prodotti nel carrello</button>
         </li>
-    {#each cart as prod}
+    {#each cart as prod,i}
         
-        <li class="list-group-item">
+        <li class="list-group-item" id={prod.id + "item"}>
             <div class="container">
                 <div class="row">
                   <div class="col" >
@@ -67,8 +71,11 @@
                             <div class="col">
                                 <p></p>
                                 <p>{prod.id}</p>
-                                <p>Peso: {prod.qty*250}g</p>
-                               
+                                {#if prod.id != "Cupcake" && prod.id != "Muffin" && prod.id != "Cakepop"}
+                                <p>Peso: {cart[i].qty*250}g</p>
+                                {:else}
+                                    <p>Quantità: {cart[i].qty}</p>
+                                {/if}
 
                             </div>
                             <div class="col">
@@ -84,7 +91,7 @@
                         </div>
                     </div>
         
-                    <Stepper qty={prod.qty} prod={prod.id}></Stepper>
+                    <Stepper qty={prod.qty} ida={i} prod={prod.id} on:minus={min} on:plus={plu}></Stepper>
              
                 </div>
                 </div>

@@ -3,17 +3,24 @@
     export let prod
     import { initcart } from '../../static/js/cart.js';
     import {onMount} from 'svelte';
+    import { createEventDispatcher } from 'svelte';
+
+const dispatch = createEventDispatcher();
+
     let cart = [];
     let totale;
+    export let ida;
     onMount(()=>{
         cart = initcart();
         totale = parseInt(localStorage.getItem('totale'));
         
-        console.log(totale)
     })
     function minus(e){
+        dispatch('minus', {
+        text: ida
+        });
         cart.forEach((value,i)=>{
-            console.log(i)
+           
             if(value.id == prod){
                 if(value.qty>1){
                     cart[i].qty--;
@@ -21,6 +28,12 @@
                     totale -= 5
                 }else{
                     alert("Vuoi cancellare il prodotto?")
+                    cart = cart.filter(prodnf =>{
+                    prodnf != prod
+                })
+                localStorage.setItem("cart",JSON.stringify(cart))
+                document.getElementById(e.path[0].id+"item")
+                location.reload()
                 }
             }
         })
@@ -29,8 +42,10 @@
     }
 
     function plus(e){
+        dispatch('plus', {
+        text: ida
+        });
         cart.forEach((value,i)=>{
-            console.log(i)
             if(value.id == prod){
                     cart[i].qty++;
                     qty++;

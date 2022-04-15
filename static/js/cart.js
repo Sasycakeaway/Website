@@ -19,7 +19,7 @@ export function pusha(ida, qty, prezzo) {
         for (var i = 0; i < cart.length; i++) {
                 if (cart[i].id == ida) {
                     count++;
-                    console.log("trovato")
+                 
                     cart[i].qty = cart[i].qty+ parseInt(qty)
              
             }
@@ -27,9 +27,7 @@ export function pusha(ida, qty, prezzo) {
     if (count == 0) {
         cart.push({id:ida,qty:parseInt(qty)})
     }
-    console.log(prezzo)
     totale += prezzo*parseInt(qty);
-    console.log(totale)
     totstore.set(totale);
     totstore.subscribe(value =>{
         localStorage.setItem("totale", value)

@@ -13,9 +13,26 @@ export function initpage(){
 }
 
 export function biscotti(e) {
-  console.log(e)
-  console.log(e.path[0].id)
-  dialogs.prompt("Quanti sacchetti da 250G vuoi?").then(output=>{
+
+  dialogs.prompt("Quanti sacchetti da 250G vuoi ordinare?").then(output=>{
+    try {
+      pusha(e.path[0].id, output[0],5)
+    } catch (error) {
+      console.log(error)
+    }
+       
+      
+  }
+     
+      
+  )
+  
+  
+}
+
+export function pezzi(e) {
+
+  dialogs.prompt("Quanti " + e.path[0].id + " vuoi ordinare?").then(output=>{
     try {
       pusha(e.path[0].id, output[0],5)
     } catch (error) {

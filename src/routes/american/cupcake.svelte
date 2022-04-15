@@ -1,5 +1,5 @@
 <script>
-  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
+  import {initpage,pezzi} from '../../../static/js/pasticceria.js'
   initpage()
 </script>
 
@@ -29,7 +29,7 @@
   </div>
 
   <h1>&nbsp;</h1>
-  <button class="uk-button uk-button-primary carbut" id="Cupcake" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <button class="uk-button uk-button-primary carbut" id="Cupcake" on:click={(event) => pezzi(event)}>Aggiungi al carrello</button>
   <h1>&nbsp;</h1>
   <!-- <p class="tit" style="color:rgb(195, 0, 255)">"Preparare dolci è molto più che saper eseguire ricette: è un vero e proprio gesto d’amore"</p> -->
 </div>
