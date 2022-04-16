@@ -27,9 +27,15 @@
     })
     function min(e) {
         cart[e.detail.text].qty--;
+        totale -= 15;
+        localStorage.setItem("cart",JSON.stringify(cart))
+        localStorage.setItem("totale",totale)
     }
     function plu(e) {
         cart[e.detail.text].qty++;
+        totale += 15;
+        localStorage.setItem("cart",JSON.stringify(cart))
+        localStorage.setItem("totale",totale)
     }
     function bin(e) {
         cart = cart.filter(prod => prod.id != e.path[0].id)
@@ -108,8 +114,10 @@
 
 
 
-
+{#if verifica != "{}"}
     <div align="center">
      <a href="/pagamenti"><button class="uk-button uk-button-primary">Completa l'ordine</button></a>
      </div>
-     <h1>&nbsp;</h1>
+     
+{/if}
+<h1>&nbsp;</h1>

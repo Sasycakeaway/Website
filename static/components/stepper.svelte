@@ -2,6 +2,7 @@
     export let qty;
     export let prod
     import { initcart } from '../../static/js/cart.js';
+    import { dialogs } from "svelte-dialogs";
     import {onMount} from 'svelte';
     import { createEventDispatcher } from 'svelte';
 
@@ -27,13 +28,20 @@ const dispatch = createEventDispatcher();
                     qty--;
                     totale -= 5
                 }else{
-                    alert("Vuoi cancellare il prodotto?")
-                    cart = cart.filter(prodnf =>{
-                    prodnf != prod
-                })
-                localStorage.setItem("cart",JSON.stringify(cart))
-                document.getElementById(e.path[0].id+"item")
-                location.reload()
+                    dialogs.confirm("Vuoi eliminare il prodotto?","Si","No").then((resp)=>{
+                        console.log(resp)
+                        if(resp){
+                            cart = cart.filter(prodnf =>{
+                                prodnf != prod
+                            })
+                            localStorage.setItem("cart",JSON.stringify(cart))
+                            document.getElementById(e.path[0].id+"item")
+                            location.reload()
+                            totale -= 5;
+                        }
+                     
+                    })
+          
                 }
             }
         })
