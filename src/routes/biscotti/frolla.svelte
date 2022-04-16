@@ -1,6 +1,6 @@
 <script>
-  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
-  initpage()
+  import { initpage, biscotti } from "../../../static/js/pasticceria.js";
+  initpage();
 </script>
 
 <svelte:head>
@@ -13,7 +13,11 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
-    <img src="/images/Biscotti di frolla con gli aromi dell'orto.jpg" alt="" class="imgcenter" />
+    <img
+      src="/images/Biscotti di frolla con gli aromi dell'orto.jpg"
+      alt=""
+      class="imgcenter"
+    />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -29,22 +33,26 @@
   </div>
 
   <h1>&nbsp;</h1>
-  <button class="uk-button uk-button-primary carbut" id="Biscotti di frolla con gli aromi dell'orto" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <button
+    class="uk-button uk-button-primary carbut"
+    id="Biscotti di frolla con gli aromi dell'orto"
+    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+  >
   <h1>&nbsp;</h1>
   <div class="testo">
-  <p class="tit" style="color:rgb(195, 0, 255)">
-    "Timo, limone con una spruzzata di cristalli di zucchero, un gusto
-    travolgente!"
-  </p>
-</div>
-<h1>&nbsp;</h1>
+    <p class="tit" style="color:rgb(195, 0, 255)">
+      "Timo, limone con una spruzzata di cristalli di zucchero, un gusto
+      travolgente!"
+    </p>
+  </div>
+  <h1>&nbsp;</h1>
 </div>
 
 <style>
   .uk-card {
     width: 80%;
   }
-  .imgcenter{
+  .imgcenter {
     width: 400px;
   }
 </style>

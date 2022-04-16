@@ -1,49 +1,36 @@
 import { onMount } from "svelte";
-import {pusha,initcart} from '/static/js/cart.js';
+import { pusha, initcart } from "/static/js/cart.js";
 import { dialogs } from "svelte-dialogs";
-export function initpage(){
+export function initpage() {
   onMount(() => {
-  initcart();
-  if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
-
-  } else {
-    document.getElementById("card").style.width = "60%";
-  }
-});
+    initcart();
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+    } else {
+      document.getElementById("card").style.width = "60%";
+    }
+  });
 }
 
 export function biscotti(e) {
-
-  dialogs.prompt("Quanti sacchetti da 250G vuoi ordinare?").then(output=>{
+  dialogs.prompt("Quanti sacchetti da 250G vuoi ordinare?").then((output) => {
     try {
-      pusha(e.path[0].id, output[0],5)
+      pusha(e.path[0].id, output[0], 5);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-       
-      
-  }
-     
-      
-  )
-  
-  
+  });
 }
 
 export function pezzi(e) {
-
-  dialogs.prompt("Quanti " + e.path[0].id + " vuoi ordinare?").then(output=>{
-    try {
-      pusha(e.path[0].id, output[0],5)
-    } catch (error) {
-      console.log(error)
-    }
-       
-      
-  }
-     
-      
-  )
-  
-  
+  dialogs
+    .prompt("Quanti " + e.path[0].id + " vuoi ordinare?")
+    .then((output) => {
+      try {
+        pusha(e.path[0].id, output[0], 5);
+      } catch (error) {
+        console.log(error);
+      }
+    });
 }

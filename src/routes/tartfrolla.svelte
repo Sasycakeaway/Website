@@ -1,6 +1,6 @@
 <script>
-  import {initpage,biscotti} from '../../static/js/pasticceria.js'
-  initpage()
+  import { initpage, biscotti } from "../../static/js/pasticceria.js";
+  initpage();
 </script>
 
 <svelte:head>
@@ -13,7 +13,11 @@
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <br />
-    <img class="imgcenter" src="/images/Tartellette di frolla con crema.jpg" alt="" />
+    <img
+      class="imgcenter"
+      src="/images/Tartellette di frolla con crema.jpg"
+      alt=""
+    />
     <div>
       <div class="uk-card-body">
         <p class="det">
@@ -30,22 +34,26 @@
     </div>
   </div>
   <h1>&nbsp;</h1>
-  <button class="uk-button uk-button-primary carbut" id="Tartellette di frolla con crema" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <button
+    class="uk-button uk-button-primary carbut"
+    id="Tartellette di frolla con crema"
+    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+  >
 
   <h1>&nbsp;</h1>
   <div class="testo">
-  <p class="tit" style="color:rgb(195, 0, 255)">
-    "E qui si scatena la mia fantasia negli accostamenti tra creme e frutta per
-    creare delle piccole opere d'arte"
-  </p>
-</div>
+    <p class="tit" style="color:rgb(195, 0, 255)">
+      "E qui si scatena la mia fantasia negli accostamenti tra creme e frutta
+      per creare delle piccole opere d'arte"
+    </p>
+  </div>
 </div>
 
 <style>
   .uk-card {
     width: 80%;
   }
-  .imgcenter{
+  .imgcenter {
     width: 400px;
   }
 </style>

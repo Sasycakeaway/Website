@@ -1,6 +1,6 @@
 <script>
-  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
-  initpage()
+  import { initpage, biscotti } from "../../../static/js/pasticceria.js";
+  initpage();
 </script>
 
 <svelte:head>
@@ -32,22 +32,26 @@
   </div>
 
   <h1>&nbsp;</h1>
-  <button class="uk-button uk-button-primary carbut" id="Paste di meliga" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <button
+    class="uk-button uk-button-primary carbut"
+    id="Paste di meliga"
+    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+  >
 
   <h1>&nbsp;</h1>
   <div class="testo">
-  <p class="tit" style="color:rgb(195, 0, 255)">
-    "Inzuppati in un buon bicchiere di vino passito o di moscato, difficilmente
-    riuscirai più a farne a meno!"
-  </p>
-</div>
+    <p class="tit" style="color:rgb(195, 0, 255)">
+      "Inzuppati in un buon bicchiere di vino passito o di moscato,
+      difficilmente riuscirai più a farne a meno!"
+    </p>
+  </div>
 </div>
 
 <style>
   .uk-card {
     width: 80%;
   }
-  .imgcenter{
+  .imgcenter {
     width: 500px;
   }
 </style>

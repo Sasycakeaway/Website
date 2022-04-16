@@ -1,6 +1,6 @@
 <script>
-  import {initpage,pezzi} from '../../../static/js/pasticceria.js'
-  initpage()
+  import { initpage, pezzi } from "../../../static/js/pasticceria.js";
+  initpage();
 </script>
 
 <svelte:head>
@@ -27,7 +27,11 @@
   </div>
 
   <h1>&nbsp;</h1>
-  <button class="uk-button uk-button-primary carbut" id="Cakepop" on:click={(event) => pezzi(event)}>Aggiungi al carrello</button>
+  <button
+    class="uk-button uk-button-primary carbut"
+    id="Cakepop"
+    on:click={(event) => pezzi(event)}>Aggiungi al carrello</button
+  >
   <h1>&nbsp;</h1>
   <!-- <p class="tit" style="color:rgb(195, 0, 255)">"Preparare dolci è molto più che saper eseguire ricette: è un vero e proprio gesto d’amore"</p> -->
 </div>
@@ -36,7 +40,7 @@
   .uk-card {
     width: 80%;
   }
-  .imgcenter{
+  .imgcenter {
     width: 350px;
   }
 </style>

@@ -1,8 +1,7 @@
 <script>
-  import {initpage,biscotti} from '../../../static/js/pasticceria.js'
-  initpage()
+  import { initpage, biscotti } from "../../../static/js/pasticceria.js";
+  initpage();
 </script>
-
 
 <svelte:head>
   <title>Home</title>
@@ -35,21 +34,25 @@
   </div>
 
   <h1>&nbsp;</h1>
-  <button class="uk-button uk-button-primary carbut" id="Meringhe" on:click={(event) => biscotti(event)}>Aggiungi al carrello</button>
+  <button
+    class="uk-button uk-button-primary carbut"
+    id="Meringhe"
+    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+  >
   <h1>&nbsp;</h1>
   <div class="testo">
-  <p class="tit" style="color:rgb(195, 0, 255)">
-    "E la meringa un giorno si sposò con la panna montata: uno dei matrimoni più
-    riusciti e duraturi della pasticceria europea!"
-  </p>
-</div>
+    <p class="tit" style="color:rgb(195, 0, 255)">
+      "E la meringa un giorno si sposò con la panna montata: uno dei matrimoni
+      più riusciti e duraturi della pasticceria europea!"
+    </p>
+  </div>
 </div>
 
 <style>
   .uk-card {
     width: 80%;
   }
-  .imgcenter{
+  .imgcenter {
     width: 350px;
   }
 </style>

@@ -24,9 +24,12 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="/images/Zeppole di San Giovanni.jpg" class="cardimg" alt="" />
+            <img
+              src="/images/Zeppole di San Giovanni.jpg"
+              class="cardimg"
+              alt=""
+            />
           </div>
-         
         </div>
       </div>
     </div>
@@ -37,7 +40,9 @@
           uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
-            <a href="/Dolci_Regionali/pastiera"><h3 class="uk-card-title">Pastiera Napoletana</h3></a>
+            <a href="/Dolci_Regionali/pastiera"
+              ><h3 class="uk-card-title">Pastiera Napoletana</h3></a
+            >
             <p>
               E' il dolce che a Pasqua contende il ruolo di re della tavola alla
               Colomba. Originaria di Napoli ha radici antichissime. Grano cotto,
@@ -61,7 +66,9 @@
           uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
-            <a href="/Dolci_Regionali/cannoli/"><h3 class="uk-card-title">Cannoli Siciliani</h3></a>
+            <a href="/Dolci_Regionali/cannoli/"
+              ><h3 class="uk-card-title">Cannoli Siciliani</h3></a
+            >
             <p>
               Principe indiscusso della pasticceria siciliana, il cannolo è
               entrato a pieno titolo nella lista dei prodotti agroalimentari
@@ -99,9 +106,12 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="/images/Piccidde’t castelluccese.jpg" class="cardimg" alt="" />
+            <img
+              src="/images/Piccidde’t castelluccese.jpg"
+              class="cardimg"
+              alt=""
+            />
           </div>
-        
         </div>
       </div>
     </div>
@@ -112,7 +122,9 @@
           uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
-            <a href="/Dolci_Regionali/pasticciotti/"><h3 class="uk-card-title">Pasticciotti Leccesi</h3></a>
+            <a href="/Dolci_Regionali/pasticciotti/"
+              ><h3 class="uk-card-title">Pasticciotti Leccesi</h3></a
+            >
             <p>
               Da oltre duecento anni Salento fa rima con pasticciotto, dolce in
               pasta frolla farcito di crema pasticcera e cotto in forno che
@@ -126,7 +138,11 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="/images/Pasticciotti Leccesi.jpg" alt="" />
+            <img
+              class="cardimg"
+              src="/images/Pasticciotti Leccesi.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -138,7 +154,9 @@
           uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
-            <a href="/Dolci_Regionali/bonet/"><h3 class="uk-card-title">Bonet piemontese</h3></a>
+            <a href="/Dolci_Regionali/bonet/"
+              ><h3 class="uk-card-title">Bonet piemontese</h3></a
+            >
             <p>
               Il tipico budino della tradizione piemontese fatto con uova,
               zucchero, cacao, latte, liquore (nella ricetta originale veniva
@@ -149,11 +167,10 @@
               bonet a fine pranzo… quando si dice chiudere in bellezza!.
             </p>
           </div>
- 
+
           <div class="uk-card-media-bottom">
             <img src="images/Bonet piemontese.jpg" class="cardimg" alt="" />
           </div>
-      
         </div>
       </div>
     </div>
@@ -164,7 +181,9 @@
           uk-height-viewport="expand: true;min-height: 700"
         >
           <div class="uk-card-body">
-            <a href="/Dolci_Regionali/tiramisu/"><h3 class="uk-card-title">Tiramisù</h3></a>
+            <a href="/Dolci_Regionali/tiramisu/"
+              ><h3 class="uk-card-title">Tiramisù</h3></a
+            >
             <p>
               "Il tiramisù si può definire il dolce italiano per eccellenza,
               l'unico dolce al caffè di grande successo mondiale". In questa
@@ -175,7 +194,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/Tiramisù.jpg" alt="">
+            <img class="cardimg" src="images/Tiramisù.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -202,7 +221,11 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="/images/Strudel tradizionale di Mele.jpg" alt="" />
+            <img
+              class="cardimg"
+              src="/images/Strudel tradizionale di Mele.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>

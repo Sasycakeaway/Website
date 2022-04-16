@@ -41,7 +41,7 @@
   .uk-card {
     width: 80%;
   }
-  .imgcenter{
+  .imgcenter {
     width: 50%;
   }
 </style>
