@@ -1,3 +1,8 @@
+<script>
+  import { apebox } from '../../js/pasticceria.js';
+  import  Checkbox  from '../../components/apebox/check.svelte';
+  import { dialogs } from 'svelte-dialogs';
+</script>
 <link rel="stylesheet" href="/css/apebox.css" />
 <div class="tot">
   <div
@@ -11,7 +16,7 @@
           uk-height-viewport="expand: true;min-height: 1200"
         >
           <div class="uk-card-body">
-            <img src="/images/nord.jpg" class="cardimg" alt="" />
+            <img src="/images/Benvenuti al nord.jpg" class="cardimg" alt="" />
             <h4>&nbsp;</h4>
             <h3 class="uk-card-title nomi">APEBOX "BENVENUTI AL NORD"</h3>
             <h4>&nbsp;</h4>
@@ -24,6 +29,7 @@
               <li>TOCCHETTI DI FRICO SU PANE NERO</li>
             </ul>
             <p class="testisp">12 &euro;</p>
+            <button class="uk-button uk-button-primary carbut" id="Benvenuti al nord" on:click={(event) => apebox(event)}>Aggiungi al carrello</button>
           </div>
         </div>
       </div>
@@ -35,7 +41,7 @@
           uk-height-viewport="expand: true;min-height: 1200"
         >
           <div class="uk-card-body">
-            <img src="/images/sud.jpg" class="cardimg" alt="" />
+            <img src="/images/Benvenuti al sud.jpg" class="cardimg" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title">APEBOX "BENVENUTI AL SUD"</h3>
@@ -49,6 +55,8 @@
               <li>TETTE DELLE MONACHE SALATE</li>
             </ul>
             <p class="testisp">15 &euro;</p>
+            <button class="uk-button uk-button-primary carbut" id="Benvenuti al sud" on:click={(event) => apebox(event)}>Aggiungi al carrello</button>
+
           </div>
         </div>
       </div>
@@ -60,7 +68,7 @@
           uk-height-viewport="expand: true;min-height: 1200"
         >
           <div class="uk-card-body">
-            <img src="/images/grandeabbuffata.jpg" class="abimg" alt="" />
+            <img src="/images/La grande abbuffata.jpg" class="abimg" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title">APEBOX "LA GRANDE ABBUFFATA"</h3>
@@ -74,6 +82,8 @@
               <li>QUICHE LORREIN</li>
             </ul>
             <p class="testisp">15 &euro;</p>
+            <button class="uk-button uk-button-primary carbut" id="La grande abbuffata" on:click={(event) => apebox(event)}>Aggiungi al carrello</button>
+
           </div>
         </div>
       </div>
@@ -85,7 +95,7 @@
           uk-height-viewport="expand: true;min-height: 1110"
         >
           <div class="uk-card-body">
-            <img src="/images/vegetariano.jpg" alt="" />
+            <img src="/images/Il vegetariano.jpg" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title">APEBOX "IL VEGETARIANO"</h3>
@@ -100,6 +110,8 @@
               <li>BRUTTI E BUONI SALATI</li>
             </ul>
             <p class="testisp">12 &euro;</p>
+            <button class="uk-button uk-button-primary carbut" id="Il vegetariano" on:click={(event) => apebox(event)}>Aggiungi al carrello</button>
+
           </div>
         </div>
       </div>
@@ -111,7 +123,7 @@
           uk-height-viewport="expand: true;min-height: 1110"
         >
           <div class="uk-card-body">
-            <img src="/images/trasformista.png" alt="" />
+            <img src="/images/Il trasformista.png" alt="" />
             <h4>&nbsp;</h4>
             <p />
             <h3 class="uk-card-title trasf">APEBOX "IL TRASFORMISTA"</h3>
@@ -121,6 +133,7 @@
               Il box lo trasformi tu come vuoi con gli ingredienti degli altri
               box a scelta!
             </p>
+            <button class="uk-button uk-button-primary carbut" id="Il trasformista"  on:click={() => dialogs.modal(Checkbox)}>Aggiungi al carrello</button>
           </div>
         </div>
       </div>
@@ -134,9 +147,8 @@
           <div class="uk-card-body">
             <h1>&nbsp;</h1>
 
-            <a href="/tartfrolla"
-              ><h3 class=" testisp">Si possono accompagnare i box con:</h3></a
-            >
+            
+            <h3 class=" testisp">Si possono accompagnare i box con:</h3>
             <h6>&nbsp;</h6>
             <ul class="uk-list uk-list-disc sud">
               <li>PROSECCO cantine Maschio 20 cl - &euro;2.50</li>

@@ -24,13 +24,34 @@ export function biscotti(e) {
 }
 
 export function pezzi(e) {
-  dialogs
-    .prompt("Quanti " + e.path[0].id + " vuoi ordinare?")
-    .then((output) => {
+  dialogs.prompt("Quanti " + e.path[0].id + " vuoi ordinare?").then((output) => {
       try {
         pusha(e.path[0].id, output[0], 5);
       } catch (error) {
-        console.log(error);
       }
     });
+}
+
+export function apebox(e) {
+  dialogs.prompt("Quanti box vuoi ordinare?").then((output) => {
+    try {
+      switch (e.path[0].id) {
+        case "Benvenuti al nord":
+          pusha(e.path[0].id, output[0], 12);
+          break;
+        case "Il vegetariano":
+          pusha(e.path[0].id, output[0], 12);
+          break;
+        case "Il trasformista":
+          pusha(e.path[0].id, output[0], 18);
+          break;
+        default:
+          pusha(e.path[0].id, output[0], 15);
+          break;
+      }
+      
+    } catch (error) {
+      console.log(error);
+    }
+  });
 }

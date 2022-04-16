@@ -86,7 +86,7 @@
                     <div class="col">
                       <p />
                       <p>{prod.id}</p>
-                      {#if prod.id != "Cupcake" && prod.id != "Muffin" && prod.id != "Cakepop"}
+                      {#if prod.id != "Cupcake" && prod.id != "Muffin" && prod.id != "Cakepop" && prod.id != "Zeppole di San Giovanni"}
                         <p>Peso: {cart[i].qty * 250}g</p>
                       {:else}
                         <p>Quantità: {cart[i].qty}</p>
@@ -126,6 +126,7 @@
 <div align="center">
   <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
     <h3>Prezzo totale:</h3>
+    <br>
     <div class="container">
       <div class="row">
         <div class="col">
