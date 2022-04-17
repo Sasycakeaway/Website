@@ -17,9 +17,9 @@
         >
           <div class="uk-card-body">
             <img src="/images/Benvenuti al nord.jpg" class="cardimg" alt="" />
-            <h4>&nbsp;</h4>
+            
             <h3 class="uk-card-title nomi">APEBOX "BENVENUTI AL NORD"</h3>
-            <h4>&nbsp;</h4>
+            
             <ul class="uk-list uk-list-disc">
               <li style="opacity:0" />
               <li>SELEZIONE DI FORMAGGI E AFFETTATI DEL NORD ITALIA</li>
@@ -42,7 +42,7 @@
         >
           <div class="uk-card-body">
             <img src="/images/Benvenuti al sud.jpg" class="cardimg" alt="" />
-            <h4>&nbsp;</h4>
+            
             <p />
             <h3 class="uk-card-title">APEBOX "BENVENUTI AL SUD"</h3>
 
@@ -69,7 +69,7 @@
         >
           <div class="uk-card-body">
             <img src="/images/La grande abbuffata.jpg" class="abimg" alt="" />
-            <h4>&nbsp;</h4>
+            
             <p />
             <h3 class="uk-card-title">APEBOX "LA GRANDE ABBUFFATA"</h3>
 
@@ -96,7 +96,7 @@
         >
           <div class="uk-card-body">
             <img src="/images/Il vegetariano.jpg" alt="" />
-            <h4>&nbsp;</h4>
+            
             <p />
             <h3 class="uk-card-title">APEBOX "IL VEGETARIANO"</h3>
 
@@ -124,10 +124,10 @@
         >
           <div class="uk-card-body">
             <img src="/images/Il trasformista.png" alt="" />
-            <h4>&nbsp;</h4>
+            
             <p />
             <h3 class="uk-card-title trasf">APEBOX "IL TRASFORMISTA"</h3>
-            <h4>&nbsp;</h4>
+            
 
             <p>
               Il box lo trasformi tu come vuoi con gli ingredienti degli altri
@@ -145,11 +145,10 @@
           uk-height-viewport="expand: true;min-height: 1110"
         >
           <div class="uk-card-body">
-            <h1>&nbsp;</h1>
+          
 
             
             <h3 class=" testisp">Si possono accompagnare i box con:</h3>
-            <h6>&nbsp;</h6>
             <ul class="uk-list uk-list-disc sud">
               <li>PROSECCO cantine Maschio 20 cl - &euro;2.50</li>
               <li>BOLLICINE cantine Maschio Ros&egrave; 20cl - &euro;2.50</li>
@@ -161,11 +160,11 @@
               </li>
               <li>BARBERA cantine Bordone 750 cl - &euro; 6.00</li>
             </ul>
-            <h4>&nbsp;</h4>
+           
             <h3 class="testisp">
               Puoi regalarti anche i dolcini di Sasy&lsquo;s
             </h3>
-            <h4>&nbsp;</h4>
+            
             <ul class="uk-list uk-list-disc sud">
               <li>TIRAMIS&Uacute;</li>
               <li>PANNA COTTA</li>

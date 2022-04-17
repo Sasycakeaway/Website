@@ -34,7 +34,12 @@
   }
   function bin(e) {
     cart = cart.filter((prod) => prod.id != e.path[0].id);
-    totale -= 5;
+    
+    if(prod.id != "Il trasformista")
+      totale -= 5;
+    else 
+      totale -= 18;
+
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("totale", totale);
     document.getElementById(e.path[0].id + "item");
@@ -74,11 +79,20 @@
           <div class="container">
             <div class="row">
               <div class="col">
+                {#if prod.id != "Il trasformista"}
                 <img
                   src={"/images/" + prod.id + ".jpg"}
                   alt="Foto del prodotto"
                   class="imgcart"
                 />
+                {:else}
+                <img
+                src={"/images/Il trasformista.png"}
+                alt="Foto del prodotto"
+                class="imgcart"
+                width="256px"
+              />
+                {/if}
               </div>
               <div class="col">
                 <div class="container">
@@ -86,8 +100,10 @@
                     <div class="col">
                       <p />
                       <p>{prod.id}</p>
-                      {#if prod.id != "Cupcake" && prod.id != "Muffin" && prod.id != "Cakepop" && prod.id != "Zeppole di San Giovanni"}
+                      {#if prod.id != "Cupcake" && prod.id != "Muffin" && prod.id != "Cakepop" && prod.id != "Zeppole di San Giovanni" && prod.id == "Il Trasformista"}
                         <p>Peso: {cart[i].qty * 250}g</p>
+                      {:else if prod.id == "Il trasformista"}
+                        <p>{JSON.stringify(prod.ingredienti).replace("[","").replace("]","").replace('"','')}</p>
                       {:else}
                         <p>Quantità: {cart[i].qty}</p>
                       {/if}
@@ -106,7 +122,7 @@
                     </div>
                   </div>
                 </div>
-
+                {#if prod.id != "Il trasformista"}
                 <Stepper
                   qty={prod.qty}
                   ida={i}
@@ -114,6 +130,7 @@
                   on:minus={min}
                   on:plus={plu}
                 />
+                {/if}
               </div>
             </div>
           </div>
@@ -136,7 +153,11 @@
         </div>
         <div class="col">
           {#each cart as prod}
+            {#if prod.id != "Il trasformista"}
             <p>{prod.qty * 5}&euro;</p>
+            {:else}
+            <p>18&euro;</p>
+            {/if}
           {/each}
         </div>
       </div>
