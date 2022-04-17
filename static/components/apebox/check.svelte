@@ -5,7 +5,7 @@
     let totale;
     onMount(() => {
       cart = initcart();
-      totale = parseInt(localStorage.getItem("totale"));
+      totale = localStorage.getItem("totale");
       if(totale = null)
         totale = 0;
     });

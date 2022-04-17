@@ -52,11 +52,17 @@ export function pushatra(prodotti) {
     });
     console.log("Totale prima")
     console.log(totale)
-    totale += 18;
+    totale = totale + 18;
     console.log("Totale dopo")
     console.log(totale)
-    localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("totale", totale);
+    totstore.set(totale);
+    totstore.subscribe((value) => {
+      localStorage.setItem("totale", value);
+    });
+    cartstore.set(JSON.stringify(cart));
+    cartstore.subscribe((value) => {
+      localStorage.setItem("cart", value);
+    });
   };
   console.log(cart)
 }

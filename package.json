@@ -10,7 +10,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
-  "type":"module",
+  "type": "module",
   "devDependencies": {
     "@beyonk/svelte-carousel": "^2.9.0",
     "@rollup/plugin-typescript": "^8.3.2",
@@ -39,9 +39,12 @@
     "@paypal/paypal-js": "^5.0.4",
     "@sveltejs/adapter-static": "^1.0.0-next.28",
     "@sveltejs/svelte-virtual-list": "^3.0.1",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.4",
     "clipboard-copy": "^4.0.1",
     "cookie": "^0.4.1",
     "crypto-js": "^4.1.1",
+    "cssnano": "^5.1.7",
     "firebase": "^9.6.10",
     "lightbox2": "^2.11.3",
     "md5": "^2.3.0",
@@ -53,6 +56,7 @@
     "svelte-grid-layout": "^1.0.3",
     "svelte-layouts": "^0.9.5",
     "svelte-seo": "^1.4.0",
-    "svelte-youtube": "^0.0.2"
+    "svelte-youtube": "^0.0.2",
+    "tailwindcss": "^3.0.24"
   }
 }

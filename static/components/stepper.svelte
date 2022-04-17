@@ -1,6 +1,6 @@
-<script>
-  export let qty;
-  export let prod;
+<script lang="ts">
+  export let qty:number;
+  export let prod:string;
   import { initcart } from "../../static/js/cart";
   import { dialogs } from "svelte-dialogs";
   import { onMount } from "svelte";
@@ -8,19 +8,19 @@
 
   const dispatch = createEventDispatcher();
 
-  let cart = [];
-  let totale;
-  export let ida;
+  let cart:Array<Object> = [];
+  let totale: number;
+  export let ida:string;
   onMount(() => {
     cart = initcart();
-    totale = parseInt(localStorage.getItem("totale"));
+    totale = localStorage.getItem("totale");
   });
   function minus(e) {
     cart.forEach(async (value, i) => {
       if (value.id == prod) {
         if (value.qty > 1) {
           cart[i].qty--;
-          if(cart[i].id != "Il trasformista" && cart[i].id != "Benvenuti al nord"){
+          if(prod != "Il trasformista" && prod != "Benvenuti al nord" && prod != "Benvenuti al sud" && prod != "Il vegetariano" && prod != "La grande abbuffata"){
             cart[i].prezzo -= 5
             totale -= 5;
           }else{
@@ -55,10 +55,34 @@
           let resp = await dialogs.confirm("Vuoi eliminare il prodotto?");
           if (resp) {
             console.log(prod);
-            cart.splice(i, 1);
+            
             console.log(cart);
             document.getElementById(e.path[0].id + "item");
+            console.log(prod)
+            if(prod != "Il trasformista" && prod != "Benvenuti al nord" && prod != "Benvenuti al sud" && prod != "Il vegetariano" && prod != "La grande abbuffata"){
+            cart[i].prezzo -= 5
             totale -= 5;
+          }else{
+            switch (cart[i].id) {
+              case "Benvenuti al nord":
+                cart[i].prezzo -= 12;
+                totale -= 12;
+                break;
+              case "Il vegetariano":
+                cart[i].prezzo -= 12;
+                totale -= 12;
+                break;
+              case "Il trasformista":
+                cart[i].prezzo -= 18;
+                totale -= 18;
+                break;
+              default:
+                totale -= 15;
+                cart[i].prezzo -= 15;
+                break;
+            }
+          }
+          cart.splice(i, 1);
             localStorage.setItem("cart", JSON.stringify(cart));
             localStorage.setItem("totale", totale);
             dispatch("minus", {

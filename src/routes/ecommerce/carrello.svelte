@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import { initcart } from "../../../static/js/cart";
   import { onMount } from "svelte";
   import Stepper from "../../../static/components/stepper.svelte";
-  let cart = [];
-  let verifica;
-  let totale;
+  let cart: Array<Object> = [];
+  let verifica: string;
+  let totale: number;
   function removeall() {
     cart = [];
     totale = 0;
@@ -21,25 +21,30 @@
   }
   onMount(() => {
     cart = initcart();
-    totale = parseInt(localStorage.getItem("totale"));
+    totale = localStorage.getItem("totale");
     verifica = check();
   });
   function min(e) {
     cart[e.detail.text].qty--;
-    if(cart[e.detail.text].id != "Il trasformista" && cart[e.detail.text].id != "Benvenuti al nord")
-            cart[e.detail.text].prezzo -= 5
-          else{
+    if(cart[e.detail.text].id != "Il trasformista" && cart[e.detail.text].id != "Benvenuti al nord"){
+      cart[e.detail.text].prezzo -= 5;
+      totale -= 5
+    }else{
             switch (cart[e.detail.text].id) {
               case "Benvenuti al nord":
+                cart[e.detail.text].prezzo -= 12;
                 totale -= 12;
                 break;
               case "Il vegetariano":
+                cart[e.detail.text].prezzo -= 12;
                 totale -= 12;
                 break;
               case "Il trasformista":
+                cart[e.detail.text].prezzo -= 18;
                 totale -= 18;
                 break;
               default:
+                cart[e.detail.text].prezzo -= 15;
                 totale -= 15;
                 break;
             }
@@ -51,27 +56,34 @@
     totale += 5;
   }
   function bin(e) {
-    cart.forEach(prod =>{
-      if(prod.id != "Il trasformista" && prod.id != "Benvenuti al nord")
-            totale -= 5;
+    let temp:number;
+    cart.forEach((prod,i) =>{
+      if(prod.id == e.path[0].id){
+        temp = i;
+      }
+    })
+    console.log(temp)
+    console.log(cart[temp].prezzo)
+      if(e.path[0].id != "Il trasformista" && e.path[0].id != "Benvenuti al nord" && e.path[0].id != "Benvenuti al sud" && e.path[0].id != "Il vegetariano" && e.path[0].id != "La grande abbuffata")
+            totale -= cart[temp].prezzo;
           else{
-            switch (prod.id) {
+            switch (e.path[0].id) {
               case "Benvenuti al nord":
-                totale -= 12;
+                totale -= cart[temp].prezzo;
                 break;
               case "Il vegetariano":
-                totale -= 12;
+                totale -= cart[temp].prezzo;
                 break;
               case "Il trasformista":
                 totale -= 18;
                 break;
               default:
-                totale -= 15;
+                totale -= cart[temp].prezzo;
                 break;
             }
             
           }
-    })
+    
     cart = cart.filter((prod) => prod.id != e.path[0].id);
    
 
