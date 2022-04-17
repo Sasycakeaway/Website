@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
-    import { initcart } from "../../../static/js/cart.js";
+    import { initcart,pushatra } from "../../../static/js/cart";
     let cart;
     let totale;
     onMount(() => {
       cart = initcart();
-      totale = localStorage.getItem("totale");
+      totale = parseInt(localStorage.getItem("totale"));
+      if(totale = null)
+        totale = 0;
     });
     import { DialogContent } from "svelte-dialogs";
     let trasformista = [];
@@ -16,27 +18,7 @@
     "Flan di zucchine con salsa di toma", "Tartellette alla crema di piselli e bacon", "Insalata di riso alla cantonese", 
     "Quiche lorrein", "Tartellette alla crema di parmigiano", "Brutti e buoni salati"];
     function checktra() {
-      trasformista = []
-      prodotti.forEach(prod =>{
-        if(document.getElementById(prod).checked)
-          trasformista.push(prod)
-      })
-      if(trasformista.length == 0){
-        alert("Non hai selezionato nessun ingrediente, il trasformista non è stato aggiunto al carrello.");
-      }else if(trasformista.length > 6){
-        alert("Sono stati selezionati più di 6 ingredienti, rimuovere quelli in eccesso.");
-        trasformista = [];
-      }else{
-        cart.push({
-          id:"Il trasformista",
-          ingredienti:trasformista,
-          prezzo: 18
-        });
-        totale += 18;
-        localStorage.setItem("cart", JSON.stringify(cart));
-        localStorage.setItem("totale", totale);
-      };
-      console.log(cart)
+      pushatra(prodotti)
     }
 </script>
   <svelte:head>

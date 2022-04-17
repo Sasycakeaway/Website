@@ -1,5 +1,5 @@
 <script>
-  import { initcart } from "../../../static/js/cart.js";
+  import { initcart } from "../../../static/js/cart";
   import { onMount } from "svelte";
   import Stepper from "../../../static/components/stepper.svelte";
   let cart = [];

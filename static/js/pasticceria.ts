@@ -1,5 +1,5 @@
 import { onMount } from "svelte";
-import { pusha, initcart } from "/static/js/cart.js";
+import { pusha, initcart } from "./cart";
 import { dialogs } from "svelte-dialogs";
 export function initpage() {
   onMount(() => {

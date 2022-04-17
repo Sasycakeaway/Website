@@ -1,5 +1,5 @@
 <script>
-  import { apebox } from '../../js/pasticceria.js';
+  import { apebox } from '../../js/pasticceria';
   import  Checkbox  from '../../components/apebox/check.svelte';
   import { dialogs } from 'svelte-dialogs';
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { initpage, biscotti } from "../../../static/js/pasticceria.js";
+  import { initpage, biscotti } from "../../../static/js/pasticceria";
   initpage();
 </script>
 

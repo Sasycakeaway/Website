@@ -1,7 +1,7 @@
 <script>
   export let qty;
   export let prod;
-  import { initcart } from "../../static/js/cart.js";
+  import { initcart } from "../../static/js/cart";
   import { dialogs } from "svelte-dialogs";
   import { onMount } from "svelte";
   import { createEventDispatcher } from "svelte";
