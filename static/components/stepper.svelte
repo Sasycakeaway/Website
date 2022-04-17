@@ -19,10 +19,33 @@
     cart.forEach(async (value, i) => {
       if (value.id == prod) {
         if (value.qty > 1) {
-          console.log("OK");
           cart[i].qty--;
+          if(cart[i].id != "Il trasformista" && cart[i].id != "Benvenuti al nord"){
+            cart[i].prezzo -= 5
+            totale -= 5;
+          }else{
+            switch (cart[i].id) {
+              case "Benvenuti al nord":
+                cart[i].prezzo -= 12;
+                totale -= 12;
+                break;
+              case "Il vegetariano":
+                cart[i].prezzo -= 12;
+                totale -= 12;
+                break;
+              case "Il trasformista":
+                cart[i].prezzo -= 18;
+                totale -= 18;
+                break;
+              default:
+                totale -= 15;
+                cart[i].prezzo -= 15;
+                break;
+            }
+          }
+            
           qty--;
-          totale -= 5;
+          
           localStorage.setItem("cart", JSON.stringify(cart));
           localStorage.setItem("totale", totale);
           dispatch("minus", {

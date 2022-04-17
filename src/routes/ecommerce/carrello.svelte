@@ -21,24 +21,59 @@
   }
   onMount(() => {
     cart = initcart();
-    totale = localStorage.getItem("totale");
+    totale = parseInt(localStorage.getItem("totale"));
     verifica = check();
   });
   function min(e) {
     cart[e.detail.text].qty--;
-    totale -= 5;
+    if(cart[e.detail.text].id != "Il trasformista" && cart[e.detail.text].id != "Benvenuti al nord")
+            cart[e.detail.text].prezzo -= 5
+          else{
+            switch (cart[e.detail.text].id) {
+              case "Benvenuti al nord":
+                totale -= 12;
+                break;
+              case "Il vegetariano":
+                totale -= 12;
+                break;
+              case "Il trasformista":
+                totale -= 18;
+                break;
+              default:
+                totale -= 15;
+                break;
+            }
+            location.reload()
+          }
   }
   function plu(e) {
     cart[e.detail.text].qty++;
     totale += 5;
   }
   function bin(e) {
+    cart.forEach(prod =>{
+      if(prod.id != "Il trasformista" && prod.id != "Benvenuti al nord")
+            totale -= 5;
+          else{
+            switch (prod.id) {
+              case "Benvenuti al nord":
+                totale -= 12;
+                break;
+              case "Il vegetariano":
+                totale -= 12;
+                break;
+              case "Il trasformista":
+                totale -= 18;
+                break;
+              default:
+                totale -= 15;
+                break;
+            }
+            
+          }
+    })
     cart = cart.filter((prod) => prod.id != e.path[0].id);
-    
-    if(prod.id != "Il trasformista")
-      totale -= 5;
-    else 
-      totale -= 18;
+   
 
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("totale", totale);
@@ -153,11 +188,7 @@
         </div>
         <div class="col">
           {#each cart as prod}
-            {#if prod.id != "Il trasformista"}
-            <p>{prod.qty * 5}&euro;</p>
-            {:else}
-            <p>18&euro;</p>
-            {/if}
+            <p>{prod.prezzo}&euro;</p>
           {/each}
         </div>
       </div>

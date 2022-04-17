@@ -22,7 +22,7 @@ export function pusha(ida, qty, prezzo) {
     }
   }
   if (count == 0) {
-    cart.push({ id: ida, qty: parseInt(qty) });
+    cart.push({ id: ida, qty: parseInt(qty),prezzo:prezzo*parseInt(qty) });
   }
   totale += prezzo * parseInt(qty);
   totstore.set(totale);

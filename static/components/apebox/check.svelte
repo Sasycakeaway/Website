@@ -29,7 +29,8 @@
       }else{
         cart.push({
           id:"Il trasformista",
-          ingredienti:trasformista
+          ingredienti:trasformista,
+          prezzo: 18
         });
         totale += 18;
         localStorage.setItem("cart", JSON.stringify(cart));
