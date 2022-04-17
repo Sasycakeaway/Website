@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-export let totale:number = 0;
+export let totale: number = 0;
 export const cartstore = writable("cart");
 export const totstore = writable("totale");
 let cart = [];
@@ -11,7 +11,7 @@ export function initcart() {
   return cart;
 }
 
-export function pusha(ida:string, qty:number, prezzo:number) {
+export function pusha(ida: string, qty: number, prezzo: number) {
   let count = 0;
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].id == ida) {
@@ -21,7 +21,7 @@ export function pusha(ida:string, qty:number, prezzo:number) {
     }
   }
   if (count == 0) {
-    cart.push({ id: ida, qty: qty, prezzo:prezzo*qty });
+    cart.push({ id: ida, qty: qty, prezzo: prezzo * qty });
   }
   totale += prezzo * qty;
   totstore.set(totale);
@@ -34,27 +34,30 @@ export function pusha(ida:string, qty:number, prezzo:number) {
   });
 }
 export function pushatra(prodotti) {
-  let trasformista = []
-  prodotti.forEach(prod =>{
-    if(document.getElementById(prod).checked)
-      trasformista.push(prod)
-  })
-  if(trasformista.length == 0){
-    alert("Non hai selezionato nessun ingrediente, il trasformista non è stato aggiunto al carrello.");
-  }else if(trasformista.length > 6){
-    alert("Sono stati selezionati più di 6 ingredienti, rimuovere quelli in eccesso.");
+  let trasformista = [];
+  prodotti.forEach((prod) => {
+    if (document.getElementById(prod).checked) trasformista.push(prod);
+  });
+  if (trasformista.length == 0) {
+    alert(
+      "Non hai selezionato nessun ingrediente, il trasformista non è stato aggiunto al carrello."
+    );
+  } else if (trasformista.length > 6) {
+    alert(
+      "Sono stati selezionati più di 6 ingredienti, rimuovere quelli in eccesso."
+    );
     trasformista = [];
-  }else{
+  } else {
     cart.push({
-      id:"Il trasformista",
-      ingredienti:trasformista,
-      prezzo: 18
+      id: "Il trasformista",
+      ingredienti: trasformista,
+      prezzo: 18,
     });
-    console.log("Totale prima")
-    console.log(totale)
+    console.log("Totale prima");
+    console.log(totale);
     totale = totale + 18;
-    console.log("Totale dopo")
-    console.log(totale)
+    console.log("Totale dopo");
+    console.log(totale);
     totstore.set(totale);
     totstore.subscribe((value) => {
       localStorage.setItem("totale", value);
@@ -63,6 +66,6 @@ export function pushatra(prodotti) {
     cartstore.subscribe((value) => {
       localStorage.setItem("cart", value);
     });
-  };
-  console.log(cart)
+  }
+  console.log(cart);
 }

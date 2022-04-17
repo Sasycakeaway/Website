@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let qty:number;
-  export let prod:string;
+  export let qty: number;
+  export let prod: string;
   import { initcart } from "../../static/js/cart";
   import { dialogs } from "svelte-dialogs";
   import { onMount } from "svelte";
@@ -8,9 +8,9 @@
 
   const dispatch = createEventDispatcher();
 
-  let cart:Array<Object> = [];
+  let cart: Array<Object> = [];
   let totale: number;
-  export let ida:string;
+  export let ida: string;
   onMount(() => {
     cart = initcart();
     totale = localStorage.getItem("totale");
@@ -20,10 +20,16 @@
       if (value.id == prod) {
         if (value.qty > 1) {
           cart[i].qty--;
-          if(prod != "Il trasformista" && prod != "Benvenuti al nord" && prod != "Benvenuti al sud" && prod != "Il vegetariano" && prod != "La grande abbuffata"){
-            cart[i].prezzo -= 5
+          if (
+            prod != "Il trasformista" &&
+            prod != "Benvenuti al nord" &&
+            prod != "Benvenuti al sud" &&
+            prod != "Il vegetariano" &&
+            prod != "La grande abbuffata"
+          ) {
+            cart[i].prezzo -= 5;
             totale -= 5;
-          }else{
+          } else {
             switch (cart[i].id) {
               case "Benvenuti al nord":
                 cart[i].prezzo -= 12;
@@ -43,9 +49,9 @@
                 break;
             }
           }
-            
+
           qty--;
-          
+
           localStorage.setItem("cart", JSON.stringify(cart));
           localStorage.setItem("totale", totale);
           dispatch("minus", {
@@ -55,34 +61,40 @@
           let resp = await dialogs.confirm("Vuoi eliminare il prodotto?");
           if (resp) {
             console.log(prod);
-            
+
             console.log(cart);
             document.getElementById(e.path[0].id + "item");
-            console.log(prod)
-            if(prod != "Il trasformista" && prod != "Benvenuti al nord" && prod != "Benvenuti al sud" && prod != "Il vegetariano" && prod != "La grande abbuffata"){
-            cart[i].prezzo -= 5
-            totale -= 5;
-          }else{
-            switch (cart[i].id) {
-              case "Benvenuti al nord":
-                cart[i].prezzo -= 12;
-                totale -= 12;
-                break;
-              case "Il vegetariano":
-                cart[i].prezzo -= 12;
-                totale -= 12;
-                break;
-              case "Il trasformista":
-                cart[i].prezzo -= 18;
-                totale -= 18;
-                break;
-              default:
-                totale -= 15;
-                cart[i].prezzo -= 15;
-                break;
+            console.log(prod);
+            if (
+              prod != "Il trasformista" &&
+              prod != "Benvenuti al nord" &&
+              prod != "Benvenuti al sud" &&
+              prod != "Il vegetariano" &&
+              prod != "La grande abbuffata"
+            ) {
+              cart[i].prezzo -= 5;
+              totale -= 5;
+            } else {
+              switch (cart[i].id) {
+                case "Benvenuti al nord":
+                  cart[i].prezzo -= 12;
+                  totale -= 12;
+                  break;
+                case "Il vegetariano":
+                  cart[i].prezzo -= 12;
+                  totale -= 12;
+                  break;
+                case "Il trasformista":
+                  cart[i].prezzo -= 18;
+                  totale -= 18;
+                  break;
+                default:
+                  totale -= 15;
+                  cart[i].prezzo -= 15;
+                  break;
+              }
             }
-          }
-          cart.splice(i, 1);
+            cart.splice(i, 1);
             localStorage.setItem("cart", JSON.stringify(cart));
             localStorage.setItem("totale", totale);
             dispatch("minus", {

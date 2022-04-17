@@ -26,66 +26,73 @@
   });
   function min(e) {
     cart[e.detail.text].qty--;
-    if(cart[e.detail.text].id != "Il trasformista" && cart[e.detail.text].id != "Benvenuti al nord"){
+    if (
+      cart[e.detail.text].id != "Il trasformista" &&
+      cart[e.detail.text].id != "Benvenuti al nord"
+    ) {
       cart[e.detail.text].prezzo -= 5;
-      totale -= 5
-    }else{
-            switch (cart[e.detail.text].id) {
-              case "Benvenuti al nord":
-                cart[e.detail.text].prezzo -= 12;
-                totale -= 12;
-                break;
-              case "Il vegetariano":
-                cart[e.detail.text].prezzo -= 12;
-                totale -= 12;
-                break;
-              case "Il trasformista":
-                cart[e.detail.text].prezzo -= 18;
-                totale -= 18;
-                break;
-              default:
-                cart[e.detail.text].prezzo -= 15;
-                totale -= 15;
-                break;
-            }
-            location.reload()
-          }
+      totale -= 5;
+    } else {
+      switch (cart[e.detail.text].id) {
+        case "Benvenuti al nord":
+          cart[e.detail.text].prezzo -= 12;
+          totale -= 12;
+          break;
+        case "Il vegetariano":
+          cart[e.detail.text].prezzo -= 12;
+          totale -= 12;
+          break;
+        case "Il trasformista":
+          cart[e.detail.text].prezzo -= 18;
+          totale -= 18;
+          break;
+        default:
+          cart[e.detail.text].prezzo -= 15;
+          totale -= 15;
+          break;
+      }
+      location.reload();
+    }
   }
   function plu(e) {
     cart[e.detail.text].qty++;
     totale += 5;
   }
   function bin(e) {
-    let temp:number;
-    cart.forEach((prod,i) =>{
-      if(prod.id == e.path[0].id){
+    let temp: number;
+    cart.forEach((prod, i) => {
+      if (prod.id == e.path[0].id) {
         temp = i;
       }
-    })
-    console.log(temp)
-    console.log(cart[temp].prezzo)
-      if(e.path[0].id != "Il trasformista" && e.path[0].id != "Benvenuti al nord" && e.path[0].id != "Benvenuti al sud" && e.path[0].id != "Il vegetariano" && e.path[0].id != "La grande abbuffata")
-            totale -= cart[temp].prezzo;
-          else{
-            switch (e.path[0].id) {
-              case "Benvenuti al nord":
-                totale -= cart[temp].prezzo;
-                break;
-              case "Il vegetariano":
-                totale -= cart[temp].prezzo;
-                break;
-              case "Il trasformista":
-                totale -= 18;
-                break;
-              default:
-                totale -= cart[temp].prezzo;
-                break;
-            }
-            
-          }
-    
+    });
+    console.log(temp);
+    console.log(cart[temp].prezzo);
+    if (
+      e.path[0].id != "Il trasformista" &&
+      e.path[0].id != "Benvenuti al nord" &&
+      e.path[0].id != "Benvenuti al sud" &&
+      e.path[0].id != "Il vegetariano" &&
+      e.path[0].id != "La grande abbuffata"
+    )
+      totale -= cart[temp].prezzo;
+    else {
+      switch (e.path[0].id) {
+        case "Benvenuti al nord":
+          totale -= cart[temp].prezzo;
+          break;
+        case "Il vegetariano":
+          totale -= cart[temp].prezzo;
+          break;
+        case "Il trasformista":
+          totale -= 18;
+          break;
+        default:
+          totale -= cart[temp].prezzo;
+          break;
+      }
+    }
+
     cart = cart.filter((prod) => prod.id != e.path[0].id);
-   
 
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("totale", totale);
@@ -127,18 +134,18 @@
             <div class="row">
               <div class="col">
                 {#if prod.id != "Il trasformista"}
-                <img
-                  src={"/images/" + prod.id + ".jpg"}
-                  alt="Foto del prodotto"
-                  class="imgcart"
-                />
+                  <img
+                    src={"/images/" + prod.id + ".jpg"}
+                    alt="Foto del prodotto"
+                    class="imgcart"
+                  />
                 {:else}
-                <img
-                src={"/images/Il trasformista.png"}
-                alt="Foto del prodotto"
-                class="imgcart"
-                width="256px"
-              />
+                  <img
+                    src={"/images/Il trasformista.png"}
+                    alt="Foto del prodotto"
+                    class="imgcart"
+                    width="256px"
+                  />
                 {/if}
               </div>
               <div class="col">
@@ -150,7 +157,12 @@
                       {#if prod.id != "Cupcake" && prod.id != "Muffin" && prod.id != "Cakepop" && prod.id != "Zeppole di San Giovanni" && prod.id == "Il Trasformista"}
                         <p>Peso: {cart[i].qty * 250}g</p>
                       {:else if prod.id == "Il trasformista"}
-                        <p>{JSON.stringify(prod.ingredienti).replace("[","").replace("]","").replace('"','')}</p>
+                        <p>
+                          {JSON.stringify(prod.ingredienti)
+                            .replace("[", "")
+                            .replace("]", "")
+                            .replace('"', "")}
+                        </p>
                       {:else}
                         <p>Quantità: {cart[i].qty}</p>
                       {/if}
@@ -170,13 +182,13 @@
                   </div>
                 </div>
                 {#if prod.id != "Il trasformista"}
-                <Stepper
-                  qty={prod.qty}
-                  ida={i}
-                  prod={prod.id}
-                  on:minus={min}
-                  on:plus={plu}
-                />
+                  <Stepper
+                    qty={prod.qty}
+                    ida={i}
+                    prod={prod.id}
+                    on:minus={min}
+                    on:plus={plu}
+                  />
                 {/if}
               </div>
             </div>
@@ -190,7 +202,7 @@
 <div align="center">
   <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
     <h3>Prezzo totale:</h3>
-    <br>
+    <br />
     <div class="container">
       <div class="row">
         <div class="col">

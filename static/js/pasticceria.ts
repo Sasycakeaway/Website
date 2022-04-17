@@ -24,11 +24,12 @@ export function biscotti(e) {
 }
 
 export function pezzi(e) {
-  dialogs.prompt("Quanti " + e.path[0].id + " vuoi ordinare?").then((output) => {
+  dialogs
+    .prompt("Quanti " + e.path[0].id + " vuoi ordinare?")
+    .then((output) => {
       try {
         pusha(e.path[0].id, output[0], 5);
-      } catch (error) {
-      }
+      } catch (error) {}
     });
 }
 
@@ -49,7 +50,6 @@ export function apebox(e) {
           pusha(e.path[0].id, output[0], 15);
           break;
       }
-      
     } catch (error) {
       console.log(error);
     }
