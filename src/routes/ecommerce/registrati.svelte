@@ -1,7 +1,7 @@
 <script lang="ts">
   const endpoint =
     "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
-  var user:string, pass:string, passcheck:string, tel, nascita:string, cf:string;
+  var user:string, pass:string, passcheck:string, tel, nascita:string, cf:string,telefono:string;
   import md5 from "md5";
   function registrati() {
     if (pass == passcheck) {
@@ -11,6 +11,7 @@
           type: "write",
           username: md5(user),
           password: md5(pass),
+          telefono: telefono,
           nascita: nascita,
           cf: cf,
         }),
@@ -68,7 +69,16 @@
     </div>
     <div class="uk-margin">
       <input
-        id="password2"
+        id="telefono"
+        class="uk-input"
+        type="text"
+        placeholder="Numbero di telefono"
+        bind:value={telefono}
+      />
+    </div>
+    <div class="uk-margin">
+      <input
+        id="nascita"
         class="uk-input"
         type="date"
         placeholder="Data di nascita"
@@ -77,7 +87,7 @@
     </div>
     <div class="uk-margin">
       <input
-        id="password2"
+        id="cf"
         class="uk-input"
         type="text"
         placeholder="Codice fiscale"

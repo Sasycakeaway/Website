@@ -1,5 +1,11 @@
+import aes
 import json
 import boto3
+import os
+
+
+key = str.encode("Fromboliere12345")
+iv = str.encode("Fromboliere12345")
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('sasy_s_cake_away')
 def lambda_handler(event, context):
@@ -38,10 +44,9 @@ def lambda_handler(event, context):
             Item={
                 'username': first['username'],
                 'password': first['password'],
-                'telefono': first['telefono'],
-                'nascita': first['nascita'],
-                'cf': first['cf'],
-                'indirizzo': first['indirizzo']
+                'telefono': str(aes.AES(key).encrypt_ctr(str.encode(first['telefono']), iv)),
+                'nascita': str(aes.AES(key).encrypt_ctr(str.encode(first['nascita']), iv)),
+                'cf': str(aes.AES(key).encrypt_ctr(str.encode(first['cf']), iv))
             }
         )
     return { 'statusCode': 200,
@@ -53,4 +58,5 @@ def lambda_handler(event, context):
                 }, 
                 'body': json.dumps(response)}
     
+
 
