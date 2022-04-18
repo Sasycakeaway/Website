@@ -4,8 +4,8 @@ import boto3
 import os
 
 
-key = str.encode("Fromboliere12345")
-iv = str.encode("Fromboliere12345")
+key = str.encode("pass")
+iv = str.encode("pass")
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('sasy_s_cake_away')
 def lambda_handler(event, context):
