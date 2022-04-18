@@ -228,7 +228,7 @@
 <br />
 {#if verifica != "{}"}
   <div align="center">
-    <a href="/pagamenti"
+    <a href="/ecommerce/pagamenti"
       ><button class="uk-button uk-button-primary">Completa l'ordine</button></a
     >
   </div>

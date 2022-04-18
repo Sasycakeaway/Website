@@ -1,8 +1,8 @@
 import { loadScript } from "@paypal/paypal-js";
-import { onMount } from "svelte";
+
 let totale;
-export async function init() {
-  onMount(() => (totale = localStorage.getItem("totale")));
+export async function init(totale:string,nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean) {
+  
   let paypal;
 
   try {
@@ -16,10 +16,12 @@ export async function init() {
 
   if (paypal) {
     try {
+      
       await paypal
         .Buttons({
+          
           createOrder: function (data, actions) {
-            // Set up the transaction
+            
             return actions.order.create({
               purchase_units: [
                 {
@@ -31,13 +33,12 @@ export async function init() {
             });
           },
           onApprove: function (data, actions) {
-            // Capture order after payment approved
+            console.log("approve")
             return actions.order.capture().then(function (details) {
               alert("Payment successful!");
             });
           },
           onError: function (err) {
-            // Log error if something goes wrong during approval
             alert("Something went wrong");
             console.log("Something went wrong", err);
           },
@@ -48,4 +49,4 @@ export async function init() {
     }
   }
 }
-init();
+

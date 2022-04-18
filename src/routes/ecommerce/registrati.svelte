@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
   const endpoint =
     "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
-  var user, pass, passcheck, tel, nascita, cf, indirizzo;
+  var user:string, pass:string, passcheck:string, tel, nascita:string, cf:string;
   import md5 from "md5";
-  console.log(md5("Ciao"));
   function registrati() {
     if (pass == passcheck) {
       fetch(endpoint, {
@@ -12,7 +11,6 @@
           type: "write",
           username: md5(user),
           password: md5(pass),
-          telefono: tel,
           nascita: nascita,
           cf: cf,
         }),
@@ -34,6 +32,8 @@
 <svelte:head>
   <link rel="stylesheet" href="css/login.css" />
 </svelte:head>
+<br>
+<div align="center">
 <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma">
   <fieldset class="uk-fieldset">
     <div align="center">
@@ -70,15 +70,6 @@
       <input
         id="password2"
         class="uk-input"
-        type="text"
-        placeholder="Numero di telefono"
-        bind:value={tel}
-      />
-    </div>
-    <div class="uk-margin">
-      <input
-        id="password2"
-        class="uk-input"
         type="date"
         placeholder="Data di nascita"
         bind:value={nascita}
@@ -107,3 +98,5 @@
     </div>
   </fieldset>
 </div>
+</div>
+<br>
