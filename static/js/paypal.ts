@@ -18,7 +18,7 @@ export async function init(totale:string,nome:string,cognome:string,indirizzo:st
     try {
       
       await paypal
-        .Buttons({
+      .Buttons({
           
           createOrder: function (data, actions) {
             

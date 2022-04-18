@@ -2,11 +2,18 @@
   import { dialogs } from "svelte-dialogs";
   import { init } from "../../../static/js/paypal";
   import { onMount } from 'svelte';
-  let nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean;
+  let nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean,totale:string;
   onMount(()=>{
-    init(localStorage.getItem("totale"),nome,cognome,indirizzo,cap,domicilio);
+    totale = localStorage.getItem("totale")
   })
-  
+  function pagamento() {
+    if(nome != null && cognome != null && indirizzo != null && cap != null){
+      init(totale,nome,cognome,indirizzo,cap,domicilio);
+      document.getElementById("conf").style.visibility = "hidden"
+    }   
+    else
+      alert("Compila tutti i campi richiesti");
+  }
 </script>
 
 <svelte:head>
@@ -45,6 +52,10 @@
   <div align="center" />
 </fieldset>
 </div>
+<div align="center" id="conf">
+<button class="uk-button uk-button-primary"  on:click={pagamento}>Procedi al pagamento</button>
+</div>
+
 <div id="paypal" align="center" />
 <h1>&nbsp;</h1>
 
