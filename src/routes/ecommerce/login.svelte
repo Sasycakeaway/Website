@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import md5 from "md5";
-  var user;
-  var pass;
+  var user:string;
+  var pass:string;
   onMount(async () => {
     user = sessionStorage.getItem("username");
     pass = sessionStorage.getItem("password");
     if (user != null && pass != null) login();
   });
 
-  const endpoint =
+  const endpoint:string =
     "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
 
   function login() {
@@ -38,10 +38,8 @@
         } else {
           location.href = "/ecommerce/area";
           sessionStorage.setItem("logged", "true");
-          sessionStorage.setItem("username", user);
-          sessionStorage.setItem("password", pass);
-          sessionStorage.setItem("telefono", data.Item.telefono);
-          sessionStorage.setItem("cf", data.Item.cf);
+          sessionStorage.setItem("username", md5(user));
+          sessionStorage.setItem("password", md5(user));
         }
       })
       .catch((error) => {

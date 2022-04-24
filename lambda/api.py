@@ -46,17 +46,21 @@ def lambda_handler(event, context):
                 'password': first['password'],
                 'telefono': str(aes.AES(key).encrypt_ctr(str.encode(first['telefono']), iv)),
                 'nascita': str(aes.AES(key).encrypt_ctr(str.encode(first['nascita']), iv)),
-                'cf': str(aes.AES(key).encrypt_ctr(str.encode(first['cf']), iv))
+                'cf': str(aes.AES(key).encrypt_ctr(str.encode(first['cf']), iv)),
+                'ordini': []
             }
         )
-    return { 'statusCode': 200,
-            'headers': {
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
-                'Content-Type': 'application/json'
-                }, 
-                'body': json.dumps(response)}
+        return { 'statusCode': 200,
+                'headers': {
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
+                    'Content-Type': 'application/json'
+                    }, 
+                    'body': json.dumps(response)}
+    elif first['type'] == "neworder":
+
+    
     
 
 

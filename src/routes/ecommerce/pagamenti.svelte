@@ -1,19 +1,32 @@
 <script lang="ts">
+  
   import { dialogs } from "svelte-dialogs";
-  import { init } from "../../../static/js/paypal";
+  import md5 from "md5";
+  import { init,getorder, getvariable } from "../../../static/js/paypal";
   import { onMount } from 'svelte';
-  let nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean,totale:string;
+  let nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean,totale:string,user:string,pass:string;
   onMount(()=>{
-    totale = localStorage.getItem("totale")
+    user = sessionStorage.getItem("username");
+    pass = sessionStorage.getItem("password");
+    totale = localStorage.getItem("totale");
   })
   function pagamento() {
     if(nome != null && cognome != null && indirizzo != null && cap != null){
+      let ordine = {
+        "nome":nome,
+        "cognome":cognome,
+        "indirizzo":indirizzo,
+        "cap": cap,
+        "domicilio":domicilio
+      }
+      getvariable(user,pass,getorder(user,pass),ordine);
       init(totale,nome,cognome,indirizzo,cap,domicilio);
       document.getElementById("conf").style.visibility = "hidden"
     }   
     else
       alert("Compila tutti i campi richiesti");
   }
+ 
 </script>
 
 <svelte:head>
