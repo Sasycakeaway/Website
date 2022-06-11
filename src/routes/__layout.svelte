@@ -1,6 +1,26 @@
 <script>
   import Header from "$lib/header/Header.svelte";
   import "../app.css";
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  import { getPerformance } from "firebase/performance";
+  import {onMount} from 'svelte';
+  var analytics, perf;
+  const firebaseConfig = {
+    apiKey: "AIzaSyAE_uqiqEDqQkaaIzZ-6L2pTQ_6uU6-anM",
+    authDomain: "sasy-s-cake-away-bc051.firebaseapp.com",
+    projectId: "sasy-s-cake-away-bc051",
+    storageBucket: "sasy-s-cake-away-bc051.appspot.com",
+    messagingSenderId: "650417814398",
+    appId: "1:650417814398:web:78791de6ca784c5b24d12f",
+    measurementId: "G-VNSBH37Q9R",
+  };
+  const app = initializeApp(firebaseConfig);
+  onMount(()=>{
+    analytics = getAnalytics(app);
+    perf = getPerformance(app);
+  });
+
 </script>
 
 <svelte:head>

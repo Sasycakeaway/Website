@@ -19,7 +19,7 @@
         "cap": cap,
         "domicilio":domicilio
       }
-      getvariable(user,pass,getorder(user,pass),ordine);
+      //getvariable(user,pass,getorder(user,pass),ordine);
       init(totale,nome,cognome,indirizzo,cap,domicilio);
       document.getElementById("conf").style.visibility = "hidden"
     }   

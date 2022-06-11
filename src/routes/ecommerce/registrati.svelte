@@ -1,32 +1,38 @@
 <script lang="ts">
-  const endpoint =
-    "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
+  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+  import { doc, setDoc, getFirestore, collection, addDoc } from "firebase/firestore"; 
+  import { dialogs } from "svelte-dialogs";
+  const auth = getAuth();
+  const db = getFirestore();
   var user:string, pass:string, passcheck:string, tel, nascita:string, cf:string,telefono:string;
   import md5 from "md5";
   function registrati() {
-    if (pass == passcheck) {
-      fetch(endpoint, {
-        method: "POST",
-        body: JSON.stringify({
-          type: "write",
-          username: md5(user),
-          password: md5(pass),
-          telefono: telefono,
-          nascita: nascita,
-          cf: cf,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-          location.href = "/ecommerce/login";
-        })
-        .catch((error) => {
-          alert("Errore del server, contattare Sasy's");
-        });
-    } else {
-      alert("Le password non corrispondono");
+    createUserWithEmailAndPassword(auth, user, pass)
+  .then(async(userCredential) => {
+    // Signed in 
+    const user_raw = userCredential.user;
+    try {
+      await setDoc(doc(db, "users", user), {
+      "telefono": telefono,
+      "nascita": nascita,
+      "cf": cf
+    });
+    dialogs.alert("Account creato con successo").then(()=>{
+      //location.href="/ecommerce/area";
+    });
+    } catch (error) {
+      console.log(error);
+      dialogs.alert("Errore durante la creazione dell'account");
     }
+
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(error);
+    dialogs.alert("Account già esistente");
+  });
   }
 </script>
 

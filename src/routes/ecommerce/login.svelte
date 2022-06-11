@@ -1,6 +1,9 @@
 <script lang="ts">
+  import {dialogs} from 'svelte-dialogs';
   import { onMount } from "svelte";
   import md5 from "md5";
+  import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+  const auth = getAuth();
   var user:string;
   var pass:string;
   onMount(async () => {
@@ -9,42 +12,21 @@
     if (user != null && pass != null) login();
   });
 
-  const endpoint:string =
-    "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
-
   function login() {
-    console.log(user);
-    console.log(pass);
-    fetch(endpoint, {
-      method: "POST", // or 'PUT'
-      /*headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin' : '*',
-    'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
-    'Access-Control-Allow-Headers': 'Content-Type'
-  },*/
-      //mode: 'no-cors',
-      body: JSON.stringify({
-        type: "read",
-        username: md5(user),
-        password: md5(pass),
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data.Item);
-        if (data.Item == null) {
-          alert("Account non esistente");
-        } else {
-          location.href = "/ecommerce/area";
-          sessionStorage.setItem("logged", "true");
-          sessionStorage.setItem("username", md5(user));
-          sessionStorage.setItem("password", md5(user));
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    signInWithEmailAndPassword(auth, user, pass)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(userCredential.user);
+    sessionStorage.setItem("user", userCredential.user.email);
+    location.href="/ecommerce/area";
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(error);
+    dialogs.alert("Login fallito");
+  });
   }
 </script>
 

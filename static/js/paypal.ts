@@ -1,4 +1,5 @@
 import { loadScript } from "@paypal/paypal-js";
+import { addDoc, collection, getFirestore } from "firebase/firestore"; 
 const endpoint:string = "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
 let totale;
 let user:string,pass:string,newordini:Array<object>;
@@ -59,8 +60,20 @@ export async function init(totale:string,nome:string,cognome:string,indirizzo:st
           },
           onApprove: function (data, actions) {
             console.log("approve")
-            return actions.order.capture().then(function (details) {
+            return actions.order.capture().then(async function (details) {
+              const db = getFirestore();
               alert("Payment successful!");
+              await addDoc(
+                collection(db, "users", user, "ordini"),
+                {
+                  "nome": nome,
+                  "cognome": cognome,
+                  "indirizzo": indirizzo,
+                  "cap": cap,
+                  "domicilio": domicilio,
+                  "totale": totale
+                }
+              );
             });
           },
           onError: function (err) {
@@ -75,32 +88,12 @@ export async function init(totale:string,nome:string,cognome:string,indirizzo:st
   }
 }
 export function getorder(user:string,pass:string) {
-  fetch(endpoint, {
-    method: "POST", 
-    body: JSON.stringify({
-      type: "read",
-      username: user,
-      password: pass,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data.Item);
-      if (data.Item == null) {
-        alert("Account non esistente");
-      } else {
-        console.log(data.Item.ordini)
-        return data.Item.ordini
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+ 
   }
 
 export function getvariable(username:string,password:string,ordinipass,ordineora:object){
-user = username;
-password = pass;
-newordini = ordinipass;
-newordini.push(ordineora)
+  user = username;
+  password = pass;
+  newordini = ordinipass;
+  newordini.push(ordineora);
 }
