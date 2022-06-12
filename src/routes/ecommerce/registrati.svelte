@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
 <br>
 <div align="center">
@@ -116,3 +116,7 @@
 </div>
 </div>
 <br>
+
+
+
+

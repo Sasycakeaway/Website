@@ -86,7 +86,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="/images/macarons.jpg" class="cardimg" alt="" />
+            <img src="/images/Macarons.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>

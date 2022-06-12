@@ -62,7 +62,7 @@
       </div>
       <div>
         <a href="/ecommerce/registrati"
-          ><button class="uk-button uk-button-primary" href="/registrati"
+          ><button class="uk-button uk-button-primary" href="/ecommerce/registrati"
             >Registrati</button
           ></a
         >
