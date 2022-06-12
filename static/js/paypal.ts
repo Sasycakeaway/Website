@@ -1,5 +1,7 @@
 import { loadScript } from "@paypal/paypal-js";
-import { addDoc, collection, getFirestore } from "firebase/firestore"; 
+import {  collection, getFirestore, updateDoc, arrayRemove, arrayUnion, doc } from "firebase/firestore"; 
+import { dialogs } from 'svelte-dialogs';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 const endpoint:string = "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
 let totale;
 let user:string,pass:string,newordini:Array<object>;
@@ -62,18 +64,28 @@ export async function init(totale:string,nome:string,cognome:string,indirizzo:st
             console.log("approve")
             return actions.order.capture().then(async function (details) {
               const db = getFirestore();
+              const auth = getAuth();
               alert("Payment successful!");
-              await addDoc(
-                collection(db, "users", user, "ordini"),
-                {
-                  "nome": nome,
-                  "cognome": cognome,
-                  "indirizzo": indirizzo,
-                  "cap": cap,
-                  "domicilio": domicilio,
-                  "totale": totale
+              
+              onAuthStateChanged(auth, async(user) => {
+                if (user) {
+                    let email = user.email;
+                    const ordinidb = doc(db, "users", `${email}`);
+                    await updateDoc(ordinidb, {
+                     ordini: arrayUnion(JSON.stringify( {
+                      "nome": nome,
+                      "cognome": cognome,
+                      "indirizzo": indirizzo,
+                      "cap": cap,
+                      "domicilio": domicilio,
+                      "totale": totale,
+                      "id": Math.floor(Date.now() / 1000)
+                    }))
+                    });
+                } else {
+                    dialogs.alert("Devi eseguire l'accesso per accedere a questa pagina");
                 }
-              );
+                });
             });
           },
           onError: function (err) {

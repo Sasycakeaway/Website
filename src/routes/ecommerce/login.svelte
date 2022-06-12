@@ -2,14 +2,18 @@
   import {dialogs} from 'svelte-dialogs';
   import { onMount } from "svelte";
   import md5 from "md5";
-  import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
   const auth = getAuth();
   var user:string;
   var pass:string;
   onMount(async () => {
-    user = sessionStorage.getItem("username");
-    pass = sessionStorage.getItem("password");
-    if (user != null && pass != null) login();
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        location.href = "/ecommerce/area";
+      }
+    });
   });
 
   function login() {
@@ -49,7 +53,7 @@
     <div class="uk-margin">
       <input
         class="uk-input"
-        type="text"
+        type="password"
         placeholder="Password"
         bind:value={pass}
       />

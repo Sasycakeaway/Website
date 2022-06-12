@@ -33,8 +33,9 @@
 
 
 <div class="container">
-    <fieldset class="uk-fieldset">
+    <fieldset class="uk-fieldset field">
         <center>
+            <br/>
             <legend class="uk-legend">Il mio profilo</legend>
         </center>
         <div class="uk-margin">
@@ -61,6 +62,11 @@
 </div>
 <style>
     .container{
+        margin: 20px;
+        background-color: white;
+        border-radius: 8px;
+    }
+    .field{
         margin: 20px;
     }
 </style>

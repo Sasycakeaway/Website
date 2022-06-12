@@ -26,8 +26,9 @@
     </div>
   </a>
   </div>
-
+ 
   <div>
+    <a href="/ecommerce/area/ordini">
     <div class="uk-card uk-card-default ">
       <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -45,7 +46,9 @@
         <p>Consulta lo storico degli ordini effettuati</p>
       </div>
     </div>
+  </a>
   </div>
+  
 </div>
 
 <style>

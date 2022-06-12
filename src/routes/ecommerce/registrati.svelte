@@ -1,11 +1,10 @@
 <script lang="ts">
   import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-  import { doc, setDoc, getFirestore, collection, addDoc } from "firebase/firestore"; 
+  import { doc, setDoc, getFirestore } from "firebase/firestore"; 
   import { dialogs } from "svelte-dialogs";
   const auth = getAuth();
   const db = getFirestore();
   var user:string, pass:string, passcheck:string, tel, nascita:string, cf:string,telefono:string;
-  import md5 from "md5";
   function registrati() {
     createUserWithEmailAndPassword(auth, user, pass)
   .then(async(userCredential) => {
@@ -18,7 +17,8 @@
       "cf": cf
     });
     dialogs.alert("Account creato con successo").then(()=>{
-      //location.href="/ecommerce/area";
+      sessionStorage.clear();
+      location.href="/ecommerce/area";
     });
     } catch (error) {
       console.log(error);
@@ -44,7 +44,7 @@
 <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma">
   <fieldset class="uk-fieldset">
     <div align="center">
-      <legend class="uk-legend">Sasy's Cake Away login</legend>
+      <legend class="uk-legend">Registra un account su Sasy's Cake Away</legend>
     </div>
     <div class="uk-margin">
       <input
