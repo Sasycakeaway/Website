@@ -1,36 +1,20 @@
 <script lang="ts">
   import {dialogs} from 'svelte-dialogs';
   import { onMount } from "svelte";
-  import md5 from "md5";
-  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-  const auth = getAuth();
   var user:string;
   var pass:string;
   onMount(async () => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const uid = user.uid;
-        location.href = "/ecommerce/area";
-      }
-    });
+
   });
 
   function login() {
-    signInWithEmailAndPassword(auth, user, pass)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    console.log(userCredential.user);
-    sessionStorage.setItem("user", userCredential.user.email);
-    location.href="/ecommerce/area";
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log(error);
-    dialogs.alert("Login fallito");
-  });
+    fetch("http://127.0.0.1:8000/db.php?type=login&email=" + user + "&password=" + pass)
+      .then(response => response.json())
+      .then(data => {
+        if(data == 1){
+          
+        }
+      });
   }
 </script>
 
