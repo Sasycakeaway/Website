@@ -1,4 +1,5 @@
 <?php
+
 function getuser($email){
     $conf = include('configuration.php');
     $servername = $conf['hostname'];
@@ -29,6 +30,47 @@ function getuser($email){
         return "0";
     }
     mysqli_close($conn);
+}
+
+function getuserbypass($email, $passCheck){
+
+    $conf = include('configuration.php');
+    $servername = $conf['hostname'];
+    $username = $conf['username'];
+    $password = $conf['password'];
+    $dbname = $conf['dbname'];
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    $userall = json_decode(getuser($email));
+    if(is_null($userall->{'pass'})){
+        echo "0";   
+    }else{
+        if (password_verify($passCheck, $userall->{'pass'})) {
+            if($email != null){
+                $sql = "SELECT * FROM sys.Utenti WHERE PK_Email = \"$email\"";
+                if ($result = mysqli_query($conn, $sql)) {
+                  while ($row = mysqli_fetch_row($result)) {
+                    $user = (object) [
+                        'cf' => str_decryptaesgcm($row[0], $password, "base64"),
+                        'nascita' => str_decryptaesgcm($row[1],$password,"base64"),
+                        'telefono' => str_decryptaesgcm($row[2], $password, "base64")
+                    ];
+                    $userRsp = json_encode($user);
+                    return $userRsp;
+                  }
+                  mysqli_free_result($result);
+                }
+            }else{
+                return "0";
+            }
+            mysqli_close($conn);
+        } else {
+            echo '0';
+        }
+    }
+
 }
 
 function adduser(){
@@ -63,6 +105,7 @@ function adduser(){
 }
 
 function decrypt($pass, $email){
+
     $user = json_decode(getuser($email));
     $user_decrypt = (object) [
         'cf' => str_decryptaesgcm($user->{'cf'}, $pass, "base64"),
@@ -74,6 +117,7 @@ function decrypt($pass, $email){
 }
 
 function getorder($email, $pass){
+
     $conf = include('configuration.php');
     $servername = $conf['hostname'];
     $username = $conf['username'];
@@ -85,23 +129,23 @@ function getorder($email, $pass){
         die("Connection failed: " . mysqli_connect_error());
     }
     if($email != null){
-        $sql = "SELECT sys.Ordini.PK_ID, sys.Ordini.Nome, sys.Ordini.Cognome, sys.Ordini.Indirizzo, sys.Ordini.CAP, sys.Ordini.Domicilio, sys.Ordini.Email, sys.Utenti.PK_CF, sys.Utenti.Telefono
-        FROM  sys.Ordini CROSS JOIN
-                 sys.Utenti
+        $sql = "SELECT sys.Utenti.PK_CF, sys.Utenti.Telefono, sys.Ordini.PK_ID, sys.Ordini.Nome, sys.Ordini.Cognome, sys.Ordini.CAP, sys.Ordini.Indirizzo, sys.Ordini.Domicilio, sys.Ordini.Email
+        FROM  sys.Ordini INNER JOIN
+                 sys.Utenti ON sys.Ordini.Email = sys.Utenti.PK_Email
         WHERE (sys.Ordini.Email = N'$email')";
         $ordini = array();
         if ($result = mysqli_query($conn, $sql)) {
             while ($row = mysqli_fetch_row($result)) {
                 array_push($ordini, json_encode((object) [
-                    'cf' => str_decryptaesgcm($row[7], $pass, "base64"),
+                    'cf' => str_decryptaesgcm($row[0], $pass, "base64"),
                     'email' => $email,
-                    'id' => $row[0],
-                    'nome' => str_decryptaesgcm($row[1], $pass, "base64"),
-                    'cognome' => str_decryptaesgcm($row[2], $pass, "base64"),
-                    'indirizzo' => str_decryptaesgcm($row[3], $pass, "base64"),
-                    'cap' => str_decryptaesgcm($row[4], $pass, "base64"),
-                    'domicilio' => $row[5],
-                    'telefono' => str_decryptaesgcm($row[8], $pass, "base64")
+                    'id' => $row[2],
+                    'nome' => str_decryptaesgcm($row[3], $pass, "base64"),
+                    'cognome' => str_decryptaesgcm($row[4], $pass, "base64"),
+                    'indirizzo' => str_decryptaesgcm($row[6], $pass, "base64"),
+                    'cap' => str_decryptaesgcm($row[5], $pass, "base64"),
+                    'domicilio' => $row[7],
+                    'telefono' => str_decryptaesgcm($row[1], $pass, "base64")
                 ]));
               }
               return '[' . implode(",", array_unique($ordini,SORT_REGULAR)) . ']';
@@ -116,6 +160,7 @@ function getorder($email, $pass){
 }
 
 function getorderbyid($email, $pass, $idorder){
+
     $conf = include('configuration.php');
     $servername = $conf['hostname'];
     $username = $conf['username'];
@@ -127,27 +172,26 @@ function getorderbyid($email, $pass, $idorder){
         die("Connection failed: " . mysqli_connect_error());
     }
     if($email != null){
-        $sql = "SELECT sys.Ordini.PK_ID, sys.Ordini.Nome, sys.Ordini.Cognome, sys.Ordini.Indirizzo, sys.Ordini.CAP, sys.Ordini.Domicilio, sys.Ordini.Email, sys.Utenti.PK_CF, sys.Utenti.Telefono
-        FROM  sys.Ordini CROSS JOIN
-                 sys.Utenti
-        WHERE (sys.Ordini.Email = N'$email')
-        AND (sys.Ordini.PK_ID = N'$idorder')";
+        $sql = "SELECT sys.Utenti.PK_CF, sys.Utenti.Telefono, sys.Ordini.PK_ID, sys.Ordini.Nome, sys.Ordini.Cognome, sys.Ordini.CAP, sys.Ordini.Indirizzo, sys.Ordini.Domicilio, sys.Ordini.Email
+        FROM  sys.Ordini INNER JOIN
+                 sys.Utenti ON sys.Ordini.Email = sys.Utenti.PK_Email
+        WHERE (sys.Ordini.Email = N'$email') AND (sys.Ordini.PK_ID = N'$idorder')";
         $ordini = array();
         if ($result = mysqli_query($conn, $sql)) {
             while ($row = mysqli_fetch_row($result)) {
                 array_push($ordini, json_encode((object) [
-                    'cf' => str_decryptaesgcm($row[7], $pass, "base64"),
+                    'cf' => str_decryptaesgcm($row[0], $pass, "base64"),
                     'email' => $email,
-                    'id' => $row[0],
-                    'nome' => str_decryptaesgcm($row[1], $pass, "base64"),
-                    'cognome' => str_decryptaesgcm($row[2], $pass, "base64"),
-                    'indirizzo' => str_decryptaesgcm($row[3], $pass, "base64"),
-                    'cap' => str_decryptaesgcm($row[4], $pass, "base64"),
-                    'domicilio' => $row[5],
-                    'telefono' => str_decryptaesgcm($row[8], $pass, "base64")
+                    'id' => $row[2],
+                    'nome' => str_decryptaesgcm($row[3], $pass, "base64"),
+                    'cognome' => str_decryptaesgcm($row[4], $pass, "base64"),
+                    'indirizzo' => str_decryptaesgcm($row[6], $pass, "base64"),
+                    'cap' => str_decryptaesgcm($row[5], $pass, "base64"),
+                    'domicilio' => $row[7],
+                    'telefono' => str_decryptaesgcm($row[1], $pass, "base64")
                 ]));
-              }
-              return '[' . implode(",", array_unique($ordini,SORT_REGULAR)) . ']';
+              };
+            return '[' . implode(",", $ordini) . ']';
             mysqli_free_result($result);
           }
           
@@ -159,6 +203,7 @@ function getorderbyid($email, $pass, $idorder){
 }
 
 function putorder($id, $nome, $cognome, $indirizzo, $cap, $domicilio, $email){
+
     $conf = include('configuration.php');
     $servername = $conf['hostname'];
     $username = $conf['username'];
@@ -175,4 +220,5 @@ function putorder($id, $nome, $cognome, $indirizzo, $cap, $domicilio, $email){
     }
     mysqli_close($conn);
 }
+
 ?>

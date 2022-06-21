@@ -1,18 +1,23 @@
 <script lang="ts">
   import {dialogs} from 'svelte-dialogs';
-  import { onMount } from "svelte";
   var user:string;
   var pass:string;
-  onMount(async () => {
-
-  });
-
   function login() {
     fetch("http://127.0.0.1:8000/db.php?type=login&email=" + user + "&password=" + pass)
       .then(response => response.json())
       .then(data => {
         if(data == 1){
-          
+          fetch("http://localhost:8000/db.php?type=getuserbypass&email=" + user + "&password=" + pass)
+          .then(response => response.json())
+          .then(jsondata => {
+            console.log(jsondata);
+            sessionStorage.setItem("dettagliCliente", JSON.stringify(jsondata));
+            location.href = "/ecommerce/area";
+            sessionStorage.setItem("user", user);
+          })
+
+        }else{
+          dialogs.alert("Login fallito, controllare la password oppure creare un account");
         }
       });
   }

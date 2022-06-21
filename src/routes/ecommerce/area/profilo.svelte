@@ -1,32 +1,13 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { doc, getDoc, getFirestore } from "firebase/firestore";
-    import { getAuth, onAuthStateChanged } from "firebase/auth";
     import { dialogs } from 'svelte-dialogs';
     let email: String | null, cf: String, nascita: String, telefono: String;
-    const db = getFirestore();
     onMount(async()=>{
-        const auth = getAuth();
-        onAuthStateChanged(auth, async(user) => {
-        if (user) {
-            email = user.email;
-            const docRef = doc(db, "users", `${email}`);
-            const docSnap = await getDoc(docRef);
-
-            if (docSnap.exists()) {
-                let data = docSnap.data();
-                cf = data.cf;
-                nascita = data.nascita;
-                telefono = data.telefono;
-            } else {
-                dialogs.alert("Account non trovato");
-            }
-
-        } else {
-            dialogs.alert("Devi eseguire l'accesso per accedere a questa pagina");
-        }
-        });
-  
+       email = sessionStorage.getItem("user");
+       let dettagli = JSON.parse(sessionStorage.getItem("dettagliCliente"));
+        cf = dettagli.cf;
+        nascita = dettagli.nascita;
+        telefono = dettagli.telefono;
     });
    
 </script>

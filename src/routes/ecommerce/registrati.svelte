@@ -1,38 +1,47 @@
 <script lang="ts">
-  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-  import { doc, setDoc, getFirestore } from "firebase/firestore"; 
   import { dialogs } from "svelte-dialogs";
-  const auth = getAuth();
-  const db = getFirestore();
-  var user:string, pass:string, passcheck:string, tel, nascita:string, cf:string,telefono:string;
+  var user:string, pass:string, passcheck:string, nascita:string, cf:string,telefono:string;
   function registrati() {
-    createUserWithEmailAndPassword(auth, user, pass)
-  .then(async(userCredential) => {
-    // Signed in 
-    const user_raw = userCredential.user;
-    try {
-      await setDoc(doc(db, "users", user), {
-      "telefono": telefono,
-      "nascita": nascita,
-      "cf": cf
-    });
-    dialogs.alert("Account creato con successo").then(()=>{
-      sessionStorage.clear();
-      location.href="/ecommerce/area";
-    });
-    } catch (error) {
+    console.log({
+        "email": user,
+        "password": pass,
+        "telefono": telefono,
+        "cf": cf,
+        "nascita": nascita
+      });
+    sessionStorage.clear();
+    if(pass == passcheck){
+      fetch('http://localhost:8000/db.php?type=adduser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "email": user,
+        "password": pass,
+        "telefono": telefono,
+        "cf": cf,
+        "nascita": nascita
+      }),
+    })
+    .then(async(data) => {
+      if(await data.text() == "1"){
+        dialogs.alert("Account registrato correttamente").then(()=>{
+          location.href="/ecommerce/login";
+        });
+      }else{
+        dialogs.alert("Impossibile completare la registrazione, errore nel server API, segnalare il problema alla email di supporto");
+      }
+      
+    })
+    .catch((error) => {
       console.log(error);
-      dialogs.alert("Errore durante la creazione dell'account");
+      dialogs.alert("Impossibile completare la registrazione, errore nel server API, segnalare il problema alla email di supporto");
+    });
+    }else{
+      dialogs.alert("Le password non corrispondono, riprovare");
     }
 
-
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log(error);
-    dialogs.alert("Account già esistente");
-  });
   }
 </script>
 
