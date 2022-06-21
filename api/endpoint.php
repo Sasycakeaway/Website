@@ -115,6 +115,49 @@ function getorder($email, $pass){
     mysqli_close($conn);
 }
 
+function getorderbyid($email, $pass, $idorder){
+    $conf = include('configuration.php');
+    $servername = $conf['hostname'];
+    $username = $conf['username'];
+    $password = $conf['password'];
+    $dbname = $conf['dbname'];
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    global $cfTemp;
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    if($email != null){
+        $sql = "SELECT sys.Ordini.PK_ID, sys.Ordini.Nome, sys.Ordini.Cognome, sys.Ordini.Indirizzo, sys.Ordini.CAP, sys.Ordini.Domicilio, sys.Ordini.Email, sys.Utenti.PK_CF, sys.Utenti.Telefono
+        FROM  sys.Ordini CROSS JOIN
+                 sys.Utenti
+        WHERE (sys.Ordini.Email = N'$email')
+        AND (sys.Ordini.PK_ID = N'$idorder')";
+        $ordini = array();
+        if ($result = mysqli_query($conn, $sql)) {
+            while ($row = mysqli_fetch_row($result)) {
+                array_push($ordini, json_encode((object) [
+                    'cf' => str_decryptaesgcm($row[7], $pass, "base64"),
+                    'email' => $email,
+                    'id' => $row[0],
+                    'nome' => str_decryptaesgcm($row[1], $pass, "base64"),
+                    'cognome' => str_decryptaesgcm($row[2], $pass, "base64"),
+                    'indirizzo' => str_decryptaesgcm($row[3], $pass, "base64"),
+                    'cap' => str_decryptaesgcm($row[4], $pass, "base64"),
+                    'domicilio' => $row[5],
+                    'telefono' => str_decryptaesgcm($row[8], $pass, "base64")
+                ]));
+              }
+              return '[' . implode(",", array_unique($ordini,SORT_REGULAR)) . ']';
+            mysqli_free_result($result);
+          }
+          
+
+    }else{
+        return "0";
+    }
+    mysqli_close($conn);
+}
+
 function putorder($id, $nome, $cognome, $indirizzo, $cap, $domicilio, $email){
     $conf = include('configuration.php');
     $servername = $conf['hostname'];

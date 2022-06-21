@@ -34,6 +34,12 @@ switch ($type_request) {
         $key = $_GET["key"];
         echo decrypt($key, $email);
         break;
+    case 'getorderbyid':
+        $email = $_GET["email"];
+        $passCheck = $_GET["password"];
+        $id = $_GET["id"];
+        echo getorderbyid($email, $passCheck, $id);
+        break;
     case 'getorder':
         $email = $_GET["email"];
         $passCheck = $_GET["password"];
