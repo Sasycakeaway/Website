@@ -12,14 +12,25 @@
           .then(jsondata => {
             console.log(jsondata);
             sessionStorage.setItem("dettagliCliente", JSON.stringify(jsondata));
-            location.href = "/ecommerce/area";
-            sessionStorage.setItem("user", user);
+            fetch("http://localhost:8000/db.php?type=getorder&email=" + user + "&password=" + pass)
+            .then(response => response.json())
+            .then(async(parsed) =>{
+                sessionStorage.setItem("ordini", JSON.stringify(parsed));
+                console.log(parsed);
+                await sessionStorage.setItem("user", user);
+                location.href = "/ecommerce/area";
+                
+            });
+
           })
 
         }else{
           dialogs.alert("Login fallito, controllare la password oppure creare un account");
         }
-      });
+      }).catch(err => {
+        console.error(err);
+        dialogs.alert("Login fallito, controllare la password oppure creare un account");
+      })
   }
 </script>
 

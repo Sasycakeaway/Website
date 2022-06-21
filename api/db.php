@@ -2,10 +2,10 @@
 
 include('./aes.php');
 include('endpoint.php');
-header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS, PATCH, DELETE');
 header('Access-Control-Allow-Credentials: true');
-header('Access-Control-Max-Age: 86400');
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header('Access-Control-Allow-Headers: Authorization, Content-Type, x-xsrf-token, x_csrftoken, Cache-Control, X-Requested-With');
 
 $type_request = $_GET["type"];
 
@@ -37,32 +37,33 @@ switch ($type_request) {
         }
         break;
     case 'decrypt':
-    
         $email = $_GET["email"];
         $key = $_GET["key"];
         echo decrypt($key, $email);
         break;
     case 'getorderbyid':
-    
         $email = $_GET["email"];
         $passCheck = $_GET["password"];
         $id = $_GET["id"];
         echo getorderbyid($email, $passCheck, $id);
         break;
     case 'getorder':
-    
         $email = $_GET["email"];
         $passCheck = $_GET["password"];
         echo getorder($email, $passCheck);
         break;
     case 'putorder':
-    
         $conf = include('configuration.php');
         $rawdata = file_get_contents("php://input");
         $decoded = json_decode($rawdata);
         putorder($decoded->{"id"}, str_encryptaesgcm($decoded->{"nome"}, $conf['password'], "base64"), 
         str_encryptaesgcm($decoded->{"cognome"}, $conf['password'], "base64"), str_encryptaesgcm($decoded->{"indirizzo"},$conf['password'], "base64"), 
         str_encryptaesgcm($decoded->{"cap"}, $conf['password'], "base64"), $decoded->{"domicilio"}, $decoded->{"email"});
+        break;
+    case 'updateuser':
+        $email = $_GET["email"];
+        $pass = $_GET["password"];
+        updateuser($email, $pass);
         break;
     default:
         echo "Route doesn't exist";

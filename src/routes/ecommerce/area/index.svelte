@@ -1,4 +1,12 @@
 <script>
+  import { onMount } from 'svelte';
+  onMount(()=>{
+    let user = sessionStorage.getItem("user");
+    if(sessionStorage.getItem("user") == null){
+      location.href="/ecommerce/login";
+    }
+  });
+
 </script>
 
 <svelte:head />
