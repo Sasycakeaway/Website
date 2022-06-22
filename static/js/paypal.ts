@@ -1,12 +1,13 @@
 import { loadScript } from "@paypal/paypal-js";
 import { dialogs } from 'svelte-dialogs';
+import { v4 as uuidv4 } from 'uuid';
 let totale: number;
 let user:string,pass:string,newordini:Array<object>;
 function putorder(nome: string, cognome: string, indirizzo: string, cap: string, domicilio: boolean, email: string){
   fetch("http://localhost:8000/db.php?type=putorder", {
     method: "POST", 
     body: JSON.stringify({
-      id: new Date().getTime(),
+      id: uuidv4() + (new Date().getTime()).toString(),
       nome: nome,
       cognome: cognome,
       indirizzo: indirizzo,

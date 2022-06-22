@@ -78,14 +78,13 @@ const connection = mysql.createConnection({
 // Get all user record with cipher
 app.get("/getuser/:id", (req, res) => {
     try {
-        console.log(req.params.id);
         connection.query(
-            `SELECT * FROM sys.Utenti WHERE PK_Email = "${req.params.id}"`,
+            `CALL sys.GetUserbyEmail('${req.params.id}')`,
             function(err, results, fields) {
                 if(err){
                     console.log(err);
                 }else{
-                    res.send(results);
+                    res.send(results[0][0]);
                 }
               
             }
@@ -102,12 +101,15 @@ app.post("/adduser", (req, res) => {
 
     try {
         let cf = myCipher(req.body.cf);
+        console.log(cf);
         let nascita = myCipher(req.body.nascita);
+        console.log(nascita);
         let telefono = myCipher(req.body.telefono);
+        console.log(telefono);
         let pass = req.body.password;
+        console.log(pass);
         connection.query(
-            `INSERT INTO Utenti
-            VALUES ('${cf}', '${nascita}', '${telefono}', '${req.body.email}', '${pass}')`,
+            `CALL Adduser('${cf}', '${nascita}', '${telefono}', '${req.body.email}', '${pass}')`,
             function(err, results, fields) {
                 if(err){
                     console.log(err);
@@ -131,7 +133,7 @@ app.post("/login", (req, res) => {
         let email = req.body.email;
         let password = req.body.password;
         connection.query(
-            `SELECT * FROM sys.Utenti WHERE PK_Email = "${email}"`,
+            `CALL sys.GetUserbyEmail('${email}')`,
             function(err, results, fields) {
                 if(err){
                     console.log(err);
@@ -139,7 +141,7 @@ app.post("/login", (req, res) => {
                     if(results.length == 0){
                         res.send(JSON.stringify({status: "0"}));
                     }else{
-                        if(results[0].PK_Password == password){
+                        if(results[0][0].PK_Password == password){
                             res.send(JSON.stringify({status: "1"}));
                         }else{
                             res.send(JSON.stringify({status: "0"}));
@@ -163,12 +165,12 @@ app.post("/getuserbypass", (req, res) => {
         let email = req.body.email;
         let password = req.body.password;
         connection.query(
-            `SELECT * FROM sys.Utenti WHERE PK_Email = "${email}"`,
+            `CALL sys.GetUserbyEmail('${email}')`,
             function(err, results, fields) {
                 if(err){
                     console.log(err);
                 }else{
-                    if(results[0].PK_Password == password){
+                    if(results[0][0].PK_Password == password){
                         let cf = myDecipher(results[0].PK_CF);
                         let nascita = myDecipher(results[0].Nascita);
                         let telefono = myDecipher(results[0].Telefono);
@@ -221,14 +223,14 @@ app.post("/getordersbypass", (req, res) => {
         let email = req.body.email;
         let password = req.body.password;
         connection.query(
-            `SELECT * FROM sys.Utenti WHERE PK_Email = "${email}"`,
+            `CALL sys.GetUserbyEmail('${email}')`,
             function(err, results, fields) {
                 if(err){
                     res.send(JSON.stringify({status: 0}));
                     console.log(err);
                 }else{
                     if(results.length != 0){
-                    if(results[0].PK_Password == password){
+                    if(results[0][0].PK_Password == password){
                         connection.query(
                             `CALL GetOrderbyEmail('${req.body.email}')`,
                             function(err, results, fields) {
@@ -287,16 +289,15 @@ app.post("/addorder", (req, res) => {
         let totale = req.body.totale;
 
         connection.query(
-            `SELECT * FROM sys.Utenti WHERE PK_Email = "${email}"`,
+            `CALL sys.GetUserbyEmail('${email}')`,
             function(err, results, fields) {
                 if(err){
                     res.send(JSON.stringify({status: 0}));
                     console.log(err);
                 }else{
-                    if(results[0].PK_Password == password){
+                    if(results[0][0].PK_Password == password){
                         connection.query(
-                            `INSERT INTO Ordini
-                            VALUES ('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}')`,
+                            `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}')`,
                             function(err, results, fields) {
                                 if(err){
                                     res.send(JSON.stringify({status: "0"}));
@@ -308,6 +309,7 @@ app.post("/addorder", (req, res) => {
                             }
                           );
                     }else{
+                        console.log("OKN");
                         res.send(JSON.stringify({status: "0"}));
                     }
                 }
