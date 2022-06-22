@@ -375,19 +375,32 @@ app.post("/changepass", (req, res) => {
         if(err){
             res.send(JSON.stringify({status: "0"}));
         }else{
-            connection.query(`CALL sys.UpdatePass('${email}', '${pass}', '${uuid}')`, function(err, results, fields) {
+            connection.query(`CALL sys.GetPassChange('${uuid}', '${email}')`, function(err, results, fields) {
                 if(err){
                     console.log(err);
                     res.send(JSON.stringify({status: "0"}));
                 }else{
-                    if(results.affectedRows == 0){
+                    if(results[0].length == 0){
                         res.send(JSON.stringify({status: "0"}));
                     }else{
-                        res.send(JSON.stringify({status: "1"}));
+                        connection.query(`CALL sys.UpdatePass('${email}', '${pass}', '${uuid}')`, function(err, results, fields) {
+                            if(err){
+                                console.log(err);
+                                res.send(JSON.stringify({status: "0"}));
+                            }else{
+                                if(results.affectedRows == 0){
+                                    res.send(JSON.stringify({status: "0"}));
+                                }else{
+                                    res.send(JSON.stringify({status: "1"}));
+                                }
+                                
+                            }
+                        });
                     }
                     
                 }
             });
+
         }
     })
 

@@ -7,8 +7,7 @@
     import md5 from 'md5';
     let email: string, pass: string, passcheck: string, uuid: string;
     function requestRestore(){
-        console.log(pass)
-        if(pass == passcheck){
+        if(pass == passcheck && pass != null && uuid != null){
             fetch(ENDPOINT, {
         method: 'POST', // or 'PUT'
         headers: {
@@ -34,7 +33,7 @@
             dialogs.alert("Errore durante la creazione della richiesta");
         }); 
         }else{
-            dialogs.alert("Le password non corrispondono");
+            dialogs.alert("Le password non corrispondono oppure alcuni campi sono mancanti");
         }
 
     };
