@@ -88,21 +88,20 @@
   }}
 />
 <Head />
-<h5>&nbsp;</h5>
+<br/>
 <div class="prodi">
   <Prod />
 </div>
 <div align="center">
-  <h1>&nbsp;</h1>
+
   <button class="uk-button uk-button-primary uk-button-large but"
     >Scopri i nostri prodotti</button
   >
-  <h1>&nbsp;</h1>
   <p class="info">
     Per prenotazioni ed ordini chiama il 333/9273367 oppure scrivi a
     Sasy.vitrani@gmail.com
   </p>
-  <h1>&nbsp;</h1>
+  <br/>
   <iframe
     width="1280"
     height="720"
@@ -113,13 +112,12 @@
     allowfullscreen
     id="ifname"
   />
-  <h1>&nbsp;</h1>
+  <br/>
   <h4>Sasy's su LIVE SOCIAL</h4>
-  <h4>&nbsp;</h4>
   <p>
     La mia storia di imprenditrice appassionata, raccontata a Francesca Corso ai
     microfoni di Radio Veronica One
   </p>
   <a> www.radioveronicaone.it</a> - <a>www.radiolivesocial.it</a>
 </div>
-<h5>&nbsp;</h5>
+<br/>

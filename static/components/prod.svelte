@@ -119,7 +119,6 @@
       </a>
     </div>
   </div>
-  <h1>&nbsp;</h1>
 </div>
 
 <style>
