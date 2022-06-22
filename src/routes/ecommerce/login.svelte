@@ -89,6 +89,11 @@
         bind:value={pass}
       />
     </div>
+    <div class="uk-margin">
+      <center>
+        <a href="/ecommerce/recovery">Ho dimenticato la password</a>
+      </center>
+    </div>
     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
       <div>
         <button class="uk-button uk-button-primary" on:click={login}

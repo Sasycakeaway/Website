@@ -2,6 +2,8 @@
   const ENDPOINT = "http://localhost:3001/adduser";
   import { dialogs } from "svelte-dialogs";
   import md5 from 'md5';
+  import emailjs from '@emailjs/browser';
+  import {onMount} from 'svelte';
   var user:string, pass:string, passcheck:string, nascita:string, cf:string,telefono:string;
   function registrati() {
     if(pass == passcheck){
@@ -20,8 +22,10 @@
     })
     .then(response => response.json())
     .then(async(data) => {
-      console.log(data);
       if(data.status == "1"){
+        await emailjs.send("service_s11ial4","template_4x1knko",{
+          email: user
+        });
         await sessionStorage.clear();
         location.href="/ecommerce/login";
       }else{
@@ -34,9 +38,10 @@
     }else{
       dialogs.alert("Le password non corrispondono");
     }
-
-
-  }
+  };
+  onMount(()=>{
+    emailjs.init("tfSXJVz0VLhWR2I_5");
+  });
 </script>
 
 <svelte:head>

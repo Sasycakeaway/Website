@@ -3,6 +3,11 @@
   const ENDPOINT = "http://localhost:3001/login";
   import {dialogs} from 'svelte-dialogs';
   import { onMount } from 'svelte';
+  function logout(){
+    localStorage.clear();
+    sessionStorage.clear();
+    location.href="/";
+  }
   onMount(()=>{
     let user = sessionStorage.getItem("email");
     let pass = sessionStorage.getItem("password");
@@ -80,9 +85,12 @@
     </div>
   </a>
   </div>
-  
-</div>
 
+</div>
+<center>
+  <button class="uk-button uk-button-danger" on:click={logout}>Effettua il logout</button>
+</center>
+<br/>
 <style>
   .container{
     margin: 20px;

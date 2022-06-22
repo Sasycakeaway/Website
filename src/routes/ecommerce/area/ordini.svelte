@@ -36,6 +36,7 @@
                     .then(response => response.json())
                     .then(data => {
                         ordini = data;
+                        console.log(ordini);
                         loading = false;
                     })
                     .catch((error) => {
@@ -65,6 +66,12 @@
                 <p>CAP: {order.cap}</p>
                 <p>Consegna a domicilio: {order.domicilio}</p>
                 <p>Totale: {order.totale}</p>
+                <p>Prodotti acquistati</p>
+                <ul>
+                {#each JSON.parse(order.cart) as cart}
+                    <li>{cart.id} - Quantità {cart.qty}</li>
+                {/each}
+                </ul>
             </div>
         </li>
         {/each}

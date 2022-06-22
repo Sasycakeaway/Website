@@ -138,7 +138,7 @@ app.post("/login", (req, res) => {
                 if(err){
                     console.log(err);
                 }else{
-                    if(results.length == 0){
+                    if(results[0].length == 0){
                         res.send(JSON.stringify({status: "0"}));
                     }else{
                         if(results[0][0].PK_Password == password){
@@ -171,9 +171,9 @@ app.post("/getuserbypass", (req, res) => {
                     console.log(err);
                 }else{
                     if(results[0][0].PK_Password == password){
-                        let cf = myDecipher(results[0].PK_CF);
-                        let nascita = myDecipher(results[0].Nascita);
-                        let telefono = myDecipher(results[0].Telefono);
+                        let cf = myDecipher(results[0][0].PK_CF);
+                        let nascita = myDecipher(results[0][0].Nascita);
+                        let telefono = myDecipher(results[0][0].Telefono);
                         res.send(JSON.stringify({
                             cf: cf,
                             nascita: nascita,
@@ -229,7 +229,7 @@ app.post("/getordersbypass", (req, res) => {
                     res.send(JSON.stringify({status: 0}));
                     console.log(err);
                 }else{
-                    if(results.length != 0){
+                    if(results[0].length != 0){
                     if(results[0][0].PK_Password == password){
                         connection.query(
                             `CALL GetOrderbyEmail('${req.body.email}')`,
@@ -240,17 +240,22 @@ app.post("/getordersbypass", (req, res) => {
                                 }else{
                                     console.log(results[0][0]);
                                     if(results[0].length == 0){
-                                        res.send(JSON.stringify({}));
+                                        res.send(JSON.stringify([]));
                                     }else{
-                                        res.send(JSON.stringify({
-                                            id: results[0][0].PK_ID,
-                                            nome: myDecipher(results[0][0].Nome),
-                                            cognome: myDecipher(results[0][0].Cognome),
-                                            indirizzo: myDecipher(results[0][0].Indirizzo),
-                                            cap: myDecipher(results[0][0].CAP),
-                                            domicilio: myDecipher(results[0][0].Domicilio),
-                                            totale: results[0][0].Totale
-                                        }));
+                                        let orders = [];
+                                        results[0].forEach(order => {
+                                            orders.push({
+                                                id: order.PK_ID,
+                                                nome: myDecipher(order.Nome),
+                                                cognome: myDecipher(order.Cognome),
+                                                indirizzo: myDecipher(order.Indirizzo),
+                                                cap: myDecipher(order.CAP),
+                                                domicilio: myDecipher(order.Domicilio),
+                                                totale: order.Totale,
+                                                cart: order.Cart
+                                            })
+                                        });
+                                        res.send(JSON.stringify(orders));
                                     }
 
                                 }
@@ -276,8 +281,10 @@ app.post("/getordersbypass", (req, res) => {
 
 // Add order to DB
 app.post("/addorder", (req, res) => {
+    console.log(req.body);
     try {
-
+        console.log(req.body);
+        console.log(req.body.email);
         let email = req.body.email;
         let password = req.body.password;
         let id = req.body.id;
@@ -287,7 +294,7 @@ app.post("/addorder", (req, res) => {
         let cap = myCipher(req.body.cap);
         let domicilio = myCipher(req.body.domicilio);
         let totale = req.body.totale;
-
+        let cart = JSON.stringify(req.body.cart);
         connection.query(
             `CALL sys.GetUserbyEmail('${email}')`,
             function(err, results, fields) {
@@ -300,7 +307,7 @@ app.post("/addorder", (req, res) => {
                     }else{
                         if(results[0][0].PK_Password == password){
                             connection.query(
-                                `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}')`,
+                                `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}', '${cart}')`,
                                 function(err, results, fields) {
                                     if(err){
                                         res.send(JSON.stringify({status: "0"}));
@@ -325,6 +332,65 @@ app.post("/addorder", (req, res) => {
         res.send(JSON.stringify({status: "0"}));
         console.log(error);
     }
+});
+
+app.post("/newpass", (req, res) => {
+    try {
+        let email = req.body.email;
+        let uuid = req.body.uuid;
+        connection.query(
+            `CALL sys.GetUserbyEmail('${email}')`,
+            function(err, results, fields) {
+                if(err){
+                    console.log(err);
+                }else{
+                    if(results[0].length == 0){
+                        res.send(JSON.stringify({status: "0"}));
+                    }else{
+                        connection.query(`CALL sys.NewPass('${email}', '${uuid}')`, function(err, results, fields){
+                            if(err){
+                                console.error(err);
+                                res.send(JSON.stringify({status: "0"}));
+                            }else{
+                                res.send(JSON.stringify({status: "1"}))
+                            }
+                        });
+                    }
+                }
+              
+            }
+          );
+    } catch (error) {
+        console.log(error);
+        res.status(500).send(JSON.stringify({status: "0"}))
+    }
+ 
+});
+
+app.post("/changepass", (req, res) => {
+    let email = req.body.email;
+    let pass = req.body.password;
+    let uuid = req.body.uuid;
+    connection.query(`SELECT * FROM sys.RecoveryPassword WHERE UUID = '${uuid}'`, function(err,results, fields) {
+        if(err){
+            res.send(JSON.stringify({status: "0"}));
+        }else{
+            connection.query(`CALL sys.UpdatePass('${email}', '${pass}', '${uuid}')`, function(err, results, fields) {
+                if(err){
+                    console.log(err);
+                    res.send(JSON.stringify({status: "0"}));
+                }else{
+                    if(results.affectedRows == 0){
+                        res.send(JSON.stringify({status: "0"}));
+                    }else{
+                        res.send(JSON.stringify({status: "1"}));
+                    }
+                    
+                }
+            });
+        }
+    })
+
 });
 
 app.use(function(err, req, res, next) {
