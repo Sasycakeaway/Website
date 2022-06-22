@@ -1,9 +1,33 @@
 <script>
+  import md5 from 'md5';
+  const ENDPOINT = "http://localhost:3001/login";
+  import {dialogs} from 'svelte-dialogs';
   import { onMount } from 'svelte';
   onMount(()=>{
-    let user = sessionStorage.getItem("user");
-    if(sessionStorage.getItem("user") == null){
-      location.href="/ecommerce/login";
+    let user = sessionStorage.getItem("email");
+    let pass = sessionStorage.getItem("password");
+    if(user == null || pass == null){
+      location.href = "/ecommerce/login";
+    }else{
+      fetch(ENDPOINT, {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "email": user,
+        "password": pass
+      }),
+    })
+    .then(response => response.json())
+    .then(async(data) => {
+      if(data.status != "1"){
+        location.href="/ecommerce/login";
+      }
+    })
+    .catch((error) => {
+      dialogs.alert("Errore di connessione al server API, contattare l'assistenza");
+    });
     }
   });
 

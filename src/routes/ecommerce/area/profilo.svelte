@@ -1,47 +1,58 @@
 <script lang="ts">
+    const ENDPOINT = "http://localhost:3001/login";
+    const ENDPOINT2 = "http://localhost:3001/getuserbypass";
     import { onMount } from 'svelte';
     import { dialogs } from 'svelte-dialogs';
     let email: String | null, cf: String, nascita: String, telefono: String, pass: String, newemail: String;
     onMount(async()=>{
-        if(sessionStorage.getItem("user") == undefined){
-            location.href="/ecommerce/login";
-        }
-       email = sessionStorage.getItem("user");
-       newemail = email;
-       let dettagli = JSON.parse(sessionStorage.getItem("dettagliCliente"));
-       console.log(dettagli);
-        cf = dettagli.cf;
-        nascita = dettagli.nascita;
-        telefono = dettagli.telefono;
-        console.log(dettagli.cf);
-    });
-
-    function update() {
-        console.log('http://localhost:8000/db.php?type=updateuser&email=' + email + "&password=" + pass);
-        fetch('http://localhost:8000/db.php?type=updateuser&email=' + email + "&password=" + pass, {
-        method: 'POST', // or 'PUT'
+        let user = sessionStorage.getItem("email");
+        newemail = user;
+        let pass = sessionStorage.getItem("password");
+        if(user == null || pass == null){
+            location.href = "/ecommerce/login";
+        }else{
+        const dati = {
+            "email": user,
+            "password": pass
+        };
+        fetch(ENDPOINT, {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            "user": newemail,
-            "telefono": telefono,
-            "cf": cf,
-            "nascita": nascita
-        }),
+        body: JSON.stringify(dati),
         })
-        .then(response => response.text())
-        .then(data => {
-        console.log('Success:', data);
-        dialogs.alert("Dati aggiornati");
+        .then(response => response.json())
+        .then(async(data) => {
+        if(data.status != "1"){
+            location.href="/ecommerce/login";
+        }else{
+
+            fetch(ENDPOINT2, {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dati),
+            })
+            .then(response => response.json())
+            .then(data => {
+                cf = data.cf;
+                telefono = data.telefono,
+                nascita = data.nascita
+            })
+            .catch((error) => {
+            console.error('Error:', error);
+            });
+
+        }
         })
         .catch((error) => {
-        console.error('Error:', error);
-        dialogs.alert("Errore nell'aggiornamento dei dati");
+        dialogs.alert("Errore di connessione al server API, contattare l'assistenza");
         });
-
     }
-   
+    });
+
 </script>
 
 

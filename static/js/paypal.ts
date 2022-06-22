@@ -1,35 +1,24 @@
 import { loadScript } from "@paypal/paypal-js";
-import {  collection, getFirestore, updateDoc, arrayRemove, arrayUnion, doc } from "firebase/firestore"; 
 import { dialogs } from 'svelte-dialogs';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-const endpoint:string = "https://lot4n3buq1.execute-api.eu-south-1.amazonaws.com/default/pydb";
-let totale;
+let totale: number;
 let user:string,pass:string,newordini:Array<object>;
-function putorder(){
-  fetch(endpoint, {
+function putorder(nome: string, cognome: string, indirizzo: string, cap: string, domicilio: boolean, email: string){
+  fetch("http://localhost:8000/db.php?type=putorder", {
     method: "POST", 
     body: JSON.stringify({
-      type: "create",
-      username: user,
-      password: pass,
-      ordini: newordini
+      id: new Date().getTime(),
+      nome: nome,
+      cognome: cognome,
+      indirizzo: indirizzo,
+      cap: cap,
+      domicilio: domicilio,
+      email: email,
+      totale: totale
     }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data.Item);
-      if (data.Item == null) {
-        alert("Account non esistente");
-      } else {
-        console.log(data.Item.ordini)
-        return data.Item.ordini
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  }).then(async(response) => console.log(await response.text()))
+  .catch(err => console.error(err));
 }
-export async function init(totale:string,nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean) {
+export async function init(totale:string,nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean, email: string) {
   
   let paypal;
 
@@ -63,29 +52,9 @@ export async function init(totale:string,nome:string,cognome:string,indirizzo:st
           onApprove: function (data, actions) {
             console.log("approve")
             return actions.order.capture().then(async function (details) {
-              const db = getFirestore();
-              const auth = getAuth();
               alert("Payment successful!");
               
-              onAuthStateChanged(auth, async(user) => {
-                if (user) {
-                    let email = user.email;
-                    const ordinidb = doc(db, "users", `${email}`);
-                    await updateDoc(ordinidb, {
-                     ordini: arrayUnion(JSON.stringify( {
-                      "nome": nome,
-                      "cognome": cognome,
-                      "indirizzo": indirizzo,
-                      "cap": cap,
-                      "domicilio": domicilio,
-                      "totale": totale,
-                      "id": Math.floor(Date.now() / 1000)
-                    }))
-                    });
-                } else {
-                    dialogs.alert("Devi eseguire l'accesso per accedere a questa pagina");
-                }
-                });
+              putorder(nome,cognome, indirizzo, cap, domicilio,email);
             });
           },
           onError: function (err) {

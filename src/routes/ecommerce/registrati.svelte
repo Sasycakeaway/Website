@@ -1,46 +1,40 @@
 <script lang="ts">
+  const ENDPOINT = "http://localhost:3001/adduser";
   import { dialogs } from "svelte-dialogs";
+  import md5 from 'md5';
   var user:string, pass:string, passcheck:string, nascita:string, cf:string,telefono:string;
   function registrati() {
-    console.log({
-        "email": user,
-        "password": pass,
-        "telefono": telefono,
-        "cf": cf,
-        "nascita": nascita
-      });
-    sessionStorage.clear();
     if(pass == passcheck){
-      fetch('http://localhost:8000/db.php?type=adduser', {
-      method: 'POST',
+      fetch(ENDPOINT, {
+      method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        "email": user,
-        "password": pass,
-        "telefono": telefono,
-        "cf": cf,
-        "nascita": nascita
+        email: user,
+        password: md5(pass),
+        telefono: telefono,
+        cf: cf,
+        nascita: nascita
       }),
     })
+    .then(response => response.json())
     .then(async(data) => {
-      if(await data.text() == "1"){
-        dialogs.alert("Account registrato correttamente").then(()=>{
-          location.href="/ecommerce/login";
-        });
+      console.log(data);
+      if(data.status == "1"){
+        await sessionStorage.clear();
+        location.href="/ecommerce/login";
       }else{
-        dialogs.alert("Impossibile completare la registrazione, errore nel server API, segnalare il problema alla email di supporto");
+        dialogs.alert("Account esistente");
       }
-      
     })
     .catch((error) => {
-      console.log(error);
-      dialogs.alert("Impossibile completare la registrazione, errore nel server API, segnalare il problema alla email di supporto");
+      dialogs.alert("Errore durante la connessione al server API, contattare l'assistenza");
     });
     }else{
-      dialogs.alert("Le password non corrispondono, riprovare");
+      dialogs.alert("Le password non corrispondono");
     }
+
 
   }
 </script>

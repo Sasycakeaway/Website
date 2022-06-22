@@ -1,23 +1,56 @@
 <script lang="ts">
+    const ENDPOINT = "http://localhost:3001/getordersbypass";
+    const LOGINENDPOINT = "http://localhost:3001/login";
     import { Circle3 } from 'svelte-loading-spinners'
-    import VirtualList from 'svelte-tiny-virtual-list';
     import { onMount } from 'svelte';
     import { dialogs } from 'svelte-dialogs';
     let ordini: Array<Object> = [], loading: boolean = true;
     onMount(async()=>{
-        ordini = await JSON.parse(sessionStorage.getItem("ordini"));
-        console.log(ordini);
-        loading = false;
+        let user = sessionStorage.getItem("email");
+        let pass = sessionStorage.getItem("password");
+        fetch(LOGINENDPOINT, {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "email": user,
+                "password": pass
+            }),
+            })
+            .then(response => response.json())
+            .then(async(data) => {
+            if(data.status != "1"){
+                location.href = "/ecommerce/login";
+            }else{
+                fetch(ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        'email': user,
+                        'password': pass
+                    }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        ordini = data;
+                        loading = false;
+                    })
+                    .catch((error) => {
+                        dialogs.alert("Errore di connessione al server API, contattare l'assistenza");
+                        console.error('Error:', error);
+                    });
+
+            }
+            })
+            .catch((error) => {
+                dialogs.alert("Errore di connessione al server API, contattare l'assistenza");
+            });
+       
     });
 </script>
-<svelte:head>
-    <!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
-
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
-</svelte:head>
 <br/>
 {#if loading == false}
 <div class="container">

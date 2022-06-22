@@ -4,23 +4,15 @@
   import md5 from "md5";
   import { init,getorder, getvariable } from "../../../static/js/paypal";
   import { onMount } from 'svelte';
-  let nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean,totale:string,user:string,pass:string;
+  let nome:string,cognome:string,indirizzo:string,cap:string,domicilio:boolean = false,totale:string,user:string,pass:string;
   onMount(()=>{
-    user = sessionStorage.getItem("username");
-    pass = sessionStorage.getItem("password");
+    user = sessionStorage.getItem("user");
     totale = localStorage.getItem("totale");
   })
   function pagamento() {
     if(nome != null && cognome != null && indirizzo != null && cap != null){
-      let ordine = {
-        "nome":nome,
-        "cognome":cognome,
-        "indirizzo":indirizzo,
-        "cap": cap,
-        "domicilio":domicilio
-      }
-      //getvariable(user,pass,getorder(user,pass),ordine);
-      init(totale,nome,cognome,indirizzo,cap,domicilio);
+      console.log(domicilio.toString());
+      init(totale,nome,cognome,indirizzo,cap,domicilio.toString(), user);
       document.getElementById("conf").style.visibility = "hidden"
     }   
     else
