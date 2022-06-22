@@ -295,23 +295,28 @@ app.post("/addorder", (req, res) => {
                     res.send(JSON.stringify({status: 0}));
                     console.log(err);
                 }else{
-                    if(results[0][0].PK_Password == password){
-                        connection.query(
-                            `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}')`,
-                            function(err, results, fields) {
-                                if(err){
-                                    res.send(JSON.stringify({status: "0"}));
-                                    console.log(err);
-                                }else{
-                                    res.send(JSON.stringify({status: "1"}));
-                                }
-                              
-                            }
-                          );
-                    }else{
-                        console.log("OKN");
+                    if(results[0].length == 0){
                         res.send(JSON.stringify({status: "0"}));
+                    }else{
+                        if(results[0][0].PK_Password == password){
+                            connection.query(
+                                `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}')`,
+                                function(err, results, fields) {
+                                    if(err){
+                                        res.send(JSON.stringify({status: "0"}));
+                                        console.log(err);
+                                    }else{
+                                        res.send(JSON.stringify({status: "1"}));
+                                    }
+                                  
+                                }
+                              );
+                        }else{
+                            console.log("OKN");
+                            res.send(JSON.stringify({status: "0"}));
+                        }
                     }
+                   
                 }
               
             }
