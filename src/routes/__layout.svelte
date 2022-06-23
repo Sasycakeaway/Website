@@ -4,7 +4,8 @@
   import { initializeApp } from "firebase/app";
   import { getAnalytics } from "firebase/analytics";
   import { getPerformance } from "firebase/performance";
-  import {onMount} from 'svelte';
+  import { onMount } from "svelte";
+  import { dialogs } from "svelte-dialogs";
   var analytics, perf;
   const firebaseConfig = {
     apiKey: "AIzaSyAE_uqiqEDqQkaaIzZ-6L2pTQ_6uU6-anM",
@@ -16,11 +17,18 @@
     measurementId: "G-VNSBH37Q9R",
   };
   const app = initializeApp(firebaseConfig);
-  onMount(()=>{
+  onMount(() => {
     analytics = getAnalytics(app);
     perf = getPerformance(app);
+    dialogs.config({
+      global: {
+        closeButtonText: "close me",
+        resetButton: false,
+        cancelButtonText: "Annulla",
+        submitButtonText: "Aggiungi al carrello",
+      },
+    });
   });
-
 </script>
 
 <svelte:head>

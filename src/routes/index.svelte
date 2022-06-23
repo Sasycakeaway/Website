@@ -11,7 +11,6 @@
       document.getElementById("ifname").style.width = "300px";
       document.getElementById("ifname").style.height = "200px";
     }
-
   });
 </script>
 
@@ -88,13 +87,12 @@
   }}
 />
 <Head />
-<br/>
+<br />
 <div class="prodi">
   <Prod />
 </div>
-<br/>
+<br />
 <div align="center">
-
   <button class="uk-button uk-button-primary uk-button-large but"
     >Scopri i nostri prodotti</button
   >
@@ -102,7 +100,7 @@
     Per prenotazioni ed ordini chiama il 333/9273367 oppure scrivi a
     Sasy.vitrani@gmail.com
   </p>
-  <br/>
+  <br />
   <iframe
     width="1280"
     height="720"
@@ -113,7 +111,7 @@
     allowfullscreen
     id="ifname"
   />
-  <br/>
+  <br />
   <h4>Sasy's su LIVE SOCIAL</h4>
   <p>
     La mia storia di imprenditrice appassionata, raccontata a Francesca Corso ai
@@ -121,4 +119,4 @@
   </p>
   <a> www.radioveronicaone.it</a> - <a>www.radiolivesocial.it</a>
 </div>
-<br/>
+<br />

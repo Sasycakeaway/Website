@@ -1,21 +1,22 @@
+
 // Import library
 import mysql from 'mysql2';
-import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
 import fs from 'fs';
-
-// Init express app
+import express from 'express';
+import hpp from 'hpp';
+const port = 3001;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 app.use(cors());
+app.use(hpp());
 app.use(helmet());
 app.use(compression());
-const port = 3001;
 
 // Read credential for SQL and cipher
 let user, pass, host, dbname;
@@ -98,7 +99,6 @@ app.get("/getuser/:id", (req, res) => {
 
 // Add user to DB
 app.post("/adduser", (req, res) => {
-
     try {
         let cf = myCipher(req.body.cf);
         console.log(cf);
@@ -109,7 +109,7 @@ app.post("/adduser", (req, res) => {
         let pass = req.body.password;
         console.log(pass);
         connection.query(
-            `CALL Adduser('${cf}', '${nascita}', '${telefono}', '${req.body.email}', '${pass}')`,
+            `CALL Adduser('${cf}', '${nascita}', '${telefono}', '${req.body.email}', '${pass}', '${req.body.timestamp}')`,
             function(err, results, fields) {
                 if(err){
                     console.log(err);
@@ -203,7 +203,6 @@ app.post("/getorders", (req, res) => {
                     console.log(err);
                     res.send(JSON.stringify({status: "0"}));
                 }else{
-                    console.log(results);
                     res.send(JSON.stringify(results));
                 }
               
@@ -238,7 +237,6 @@ app.post("/getordersbypass", (req, res) => {
                                     res.send(JSON.stringify({status: 0}));
                                     console.log(err);
                                 }else{
-                                    console.log(results[0][0]);
                                     if(results[0].length == 0){
                                         res.send(JSON.stringify([]));
                                     }else{
@@ -252,7 +250,8 @@ app.post("/getordersbypass", (req, res) => {
                                                 cap: myDecipher(order.CAP),
                                                 domicilio: myDecipher(order.Domicilio),
                                                 totale: order.Totale,
-                                                cart: order.Cart
+                                                cart: order.Cart,
+                                                timestamp: order.Timestamp
                                             })
                                         });
                                         res.send(JSON.stringify(orders));
@@ -295,6 +294,7 @@ app.post("/addorder", (req, res) => {
         let domicilio = myCipher(req.body.domicilio);
         let totale = req.body.totale;
         let cart = JSON.stringify(req.body.cart);
+        let timestamp = req.body.timestamp;
         connection.query(
             `CALL sys.GetUserbyEmail('${email}')`,
             function(err, results, fields) {
@@ -307,7 +307,7 @@ app.post("/addorder", (req, res) => {
                     }else{
                         if(results[0][0].PK_Password == password){
                             connection.query(
-                                `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}', '${cart}')`,
+                                `CALL Addorder('${id}', '${nome}', '${cognome}', '${indirizzo}', '${cap}', '${domicilio}', '${email}', '${totale}', '${cart}', '${timestamp}')`,
                                 function(err, results, fields) {
                                     if(err){
                                         res.send(JSON.stringify({status: "0"}));
@@ -421,16 +421,45 @@ app.post("/deleterequest", (req, res) => {
     });
 });
 
+app.get("/allordertime", (req, res) => {
+  connection.query(
+    `CALL sys.GetOrderTime()`,
+    function(err, results, fields) {
+        if(err){
+            console.log(err);
+            res.send([]);
+        }else{
+            res.send(results[0]);
+        }
+      
+    }
+  );
+});
+
+app.get("/alluserstime", (req, res) => {
+  connection.query(
+    `CALL sys.GetUsersTime()`,
+    function(err, results, fields) {
+        if(err){
+            console.log(err);
+            res.send([]);
+        }else{
+            res.send(results[0]);
+        }
+      
+    }
+  );
+});
+
+
 app.use(function(err, req, res, next) {
-    console.log(err.stack);
-    res.status(500).send('Server error');
-  });
+  console.log(err.stack);
+  res.status(500).send('Server error');
+});
 
-  
+
 app.use(function(req, res, next) {
-    res.status(404).send('404 not found');
+  res.status(404).send('404 not found');
 });
 
-app.listen(port, () => {
-    console.log(`Sasy's cake away listening on port ${port}`);
-});
+app.listen(port, () => console.log("Sasy's cake away server is running on port " + port))

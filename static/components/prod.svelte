@@ -31,7 +31,6 @@
         </a>
       </div>
     </div>
-    
   </div>
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>
@@ -61,7 +60,6 @@
         </a>
       </div>
     </div>
-    
   </div>
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>
@@ -91,7 +89,6 @@
         </a>
       </div>
     </div>
-    
   </div>
   <div class="pure-u-1 pure-u-sm-1-4">
     <div>

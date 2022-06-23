@@ -1,6 +1,25 @@
 import { onMount } from "svelte";
 import { pusha, initcart } from "./cart";
-import { dialogs } from "svelte-dialogs";
+import { dialogs, PromptOptions } from "svelte-dialogs";
+const opts: PromptOptions = {
+  title: "",
+  text: "",
+  titleClass: "",
+  closeButton: false,
+  closeOnBg: true,
+  onShow: () => {},
+  onHidden: () => {},
+  onHide: () => {},
+  onShown: () => {},
+  transitions: {
+    in: {
+      transition: "blur",
+      props: {
+        duration: 80,
+      },
+    },
+  },
+};
 export function initpage() {
   onMount(() => {
     initcart();
@@ -14,13 +33,15 @@ export function initpage() {
 }
 
 export function biscotti(e) {
-  dialogs.prompt("Quanti sacchetti da 250G vuoi ordinare?").then((output) => {
-    try {
-      pusha(e.path[0].id, output[0], 5);
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  dialogs
+    .prompt("Quanti sacchetti da 250G vuoi ordinare?", opts)
+    .then((output) => {
+      try {
+        pusha(e.path[0].id, output[0], 5);
+      } catch (error) {
+        console.log(error);
+      }
+    });
 }
 
 export function pezzi(e) {

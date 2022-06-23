@@ -1,67 +1,69 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import md5 from 'md5';
+  import { onMount } from "svelte";
+  import md5 from "md5";
   const ENDPOINT = "http://localhost:3001/login";
-  import {dialogs} from 'svelte-dialogs';
-  var user:string;
-  var pass:string;
+  import { dialogs } from "svelte-dialogs";
+  var user: string;
+  var pass: string;
 
-  onMount(()=>{
+  onMount(() => {
     user = sessionStorage.getItem("email");
     pass = sessionStorage.getItem("password");
     console.log(user);
     console.log(pass);
-    if(user != null && pass != null){
+    if (user != null && pass != null) {
       fetch(ENDPOINT, {
-      method: 'POST', // or 'PUT'
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        "email": user,
-        "password": pass
-      }),
-    })
-    .then(response => response.json())
-    .then(async(data) => {
-      console.log(data.status);
-      if(data.status == "1"){
-        location.href = "/ecommerce/area";
-      }else{
-        dialogs.alert("Login fallito, riprovare o creare un account");
-      }
-    })
-    .catch((error) => {
-      dialogs.alert("Errore di connessione al server API, contattare l'assistenza");
-    });
-
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: user,
+          password: pass,
+        }),
+      })
+        .then((response) => response.json())
+        .then(async (data) => {
+          console.log(data.status);
+          if (data.status == "1") {
+            location.href = "/ecommerce/area";
+          } else {
+            dialogs.alert("Login fallito, riprovare o creare un account");
+          }
+        })
+        .catch((error) => {
+          dialogs.alert(
+            "Errore di connessione al server API, contattare l'assistenza"
+          );
+        });
     }
   });
   function login() {
     fetch(ENDPOINT, {
-      method: 'POST', // or 'PUT'
+      method: "POST", // or 'PUT'
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        "email": user,
-        "password": md5(pass)
+        email: user,
+        password: md5(pass),
       }),
     })
-    .then(response => response.json())
-    .then(async(data) => {
-      if(data.status == "1"){
-        await sessionStorage.setItem("email", user);
-        await sessionStorage.setItem("password", md5(pass));
-        location.href = "/ecommerce/area";
-      }else{
-        dialogs.alert("Login fallito, riprovare o creare un account");
-      }
-    })
-    .catch((error) => {
-      dialogs.alert("Errore di connessione al server API, contattare l'assistenza");
-    });
-
+      .then((response) => response.json())
+      .then(async (data) => {
+        if (data.status == "1") {
+          await sessionStorage.setItem("email", user);
+          await sessionStorage.setItem("password", md5(pass));
+          location.href = "/ecommerce/area";
+        } else {
+          dialogs.alert("Login fallito, riprovare o creare un account");
+        }
+      })
+      .catch((error) => {
+        dialogs.alert(
+          "Errore di connessione al server API, contattare l'assistenza"
+        );
+      });
   }
 </script>
 
@@ -102,8 +104,9 @@
       </div>
       <div>
         <a href="/ecommerce/registrati"
-          ><button class="uk-button uk-button-primary" href="/ecommerce/registrati"
-            >Registrati</button
+          ><button
+            class="uk-button uk-button-primary"
+            href="/ecommerce/registrati">Registrati</button
           ></a
         >
       </div>

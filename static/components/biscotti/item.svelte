@@ -239,7 +239,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/Krumiri.jpg" alt=""  />
+            <img class="cardimg" src="images/Krumiri.jpg" alt="" />
           </div>
         </div>
       </div>
