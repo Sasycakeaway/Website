@@ -403,7 +403,22 @@ app.post("/changepass", (req, res) => {
 
         }
     })
+});
 
+app.post("/deleterequest", (req, res) => {
+    let uuid = req.body.id;
+    connection.query(`CALL RemoveRequest('${uuid}')`, function(err, results, fields) {
+        if(err){
+            console.log(err);
+        }else{
+            if(results.affectedRows != 0){
+                res.send(JSON.stringify({status: "1"}));
+            }else{
+                res.send(JSON.stringify({status: "0"}));
+            }
+            
+        }
+    });
 });
 
 app.use(function(err, req, res, next) {
