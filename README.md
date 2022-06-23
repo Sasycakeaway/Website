@@ -1,38 +1,22 @@
-# create-svelte
+# Sasy's Cake Away
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<center>
+<br/>
+<img src="static/favicon.png"/>
+</center>
+<br/>
+Benvenuti sulla repository del sito di Sasy's Cake Away, qui è presente tutto lo sviluppo del sito con l'e-commerce
 
-## Creating a project
+## Dettagli tecnici
 
-If you're seeing this, you've probably already done this step. Congrats!
+Il sito usa Express.js come web server, è scritto con Sveltekit come frontend e il backend(API) è scritto con javascript + Database MySQL.
+Il sito è protetto da diversi tipi di attacco con Cloudflare e risiede in Germania su una VPS Contabo.
 
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Compilazione
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
+./build.sh # per usare il server API
+# oppure
+npm install
 npm run build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
