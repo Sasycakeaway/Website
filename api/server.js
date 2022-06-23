@@ -8,7 +8,7 @@ import compression from 'compression';
 import fs from 'fs';
 import express from 'express';
 import hpp from 'hpp';
-const port = 3001;
+const port = 80;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

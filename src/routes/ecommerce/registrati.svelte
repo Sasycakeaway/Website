@@ -30,12 +30,13 @@
       })
         .then((response) => response.json())
         .then(async (data) => {
-          if (data.status == "1") {
-            await emailjs.send("service_s11ial4", "template_4x1knko", {
+          await emailjs.send("service_s11ial4", "template_4x1knko", {
               email: user,
             });
             await sessionStorage.clear();
-            location.href = "/ecommerce/login";
+          if (data.status == "1") {
+            dialogs.alert("Account creato correttamente").then(()=> location.href = "/ecommerce/login");
+
           } else {
             dialogs.alert("Account esistente");
           }
