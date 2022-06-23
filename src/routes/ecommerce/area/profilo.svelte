@@ -1,20 +1,20 @@
-<script lang="ts">
+<script>
   const ENDPOINT = "http://localhost:3001/login";
   const ENDPOINT2 = "http://localhost:3001/getuserbypass";
   import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
-  let email: String | null,
-    cf: String,
-    nascita: String,
-    telefono: String,
-    pass: String,
-    newemail: String;
+  let email,
+    cf,
+    nascita,
+    telefono,
+    pass,
+    newemail;
   onMount(async () => {
     let user = sessionStorage.getItem("email");
     newemail = user;
     let pass = sessionStorage.getItem("password");
     if (user == null || pass == null) {
-      location.href = "/ecommerce/login";
+      location.href = "/ecommerce/login.html";
     } else {
       const dati = {
         email: user,
@@ -30,7 +30,7 @@
         .then((response) => response.json())
         .then(async (data) => {
           if (data.status != "1") {
-            location.href = "/ecommerce/login";
+            location.href = "/ecommerce/login.html";
           } else {
             fetch(ENDPOINT2, {
               method: "POST", // or 'PUT'

@@ -1,17 +1,17 @@
-<script lang="ts">
+<script>
   import { dialogs } from "svelte-dialogs";
   import md5 from "md5";
   import { init, getorder, getvariable } from "../../../static/js/paypal";
   import { onMount } from "svelte";
-  let nome: string,
-    cognome: string,
-    indirizzo: string,
-    cap: string,
-    domicilio: boolean = false,
-    totale: string,
-    user: string,
-    pass: string,
-    cart: any;
+  let nome,
+    cognome,
+    indirizzo,
+    cap,
+    domicilio = false,
+    totale,
+    user,
+    pass,
+    cart;
   onMount(() => {
     user = sessionStorage.getItem("email");
     totale = localStorage.getItem("totale");

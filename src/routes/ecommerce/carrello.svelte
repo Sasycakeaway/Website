@@ -1,10 +1,10 @@
-<script lang="ts">
+<script >
   import { initcart } from "../../../static/js/cart";
   import { onMount } from "svelte";
   import Stepper from "../../../static/components/stepper.svelte";
-  let cart: Array<Object> = [];
-  let verifica: string;
-  let totale: number;
+  let cart = [];
+  let verifica;
+  let totale;
   function removeall() {
     cart = [];
     totale = 0;
@@ -59,7 +59,7 @@
     totale += 5;
   }
   function bin(e) {
-    let temp: number;
+    let temp;
     cart.forEach((prod, i) => {
       if (prod.id == e.path[0].id) {
         temp = i;

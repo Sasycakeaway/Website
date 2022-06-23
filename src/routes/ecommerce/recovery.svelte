@@ -1,10 +1,10 @@
-<script lang="ts">
+<script>
   const ENDPOINT = "http://localhost:3001/newpass";
   import { dialogs } from "svelte-dialogs";
   import { v4 as uuidv4 } from "uuid";
   import { onMount } from "svelte";
   import emailjs from "@emailjs/browser";
-  let email: string;
+  let email;
   function requestRestore() {
     let id = uuidv4();
     fetch(ENDPOINT, {

@@ -1,7 +1,7 @@
-<script lang="ts">
+<script>
   const ENDPOINT = "http://localhost:3001/deleterequest";
   import { dialogs } from "svelte-dialogs";
-  let id: string;
+  let id;
   function requestRestore() {
     fetch(ENDPOINT, {
       method: "POST", // or 'PUT'

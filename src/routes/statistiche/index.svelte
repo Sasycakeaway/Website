@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
     let users = 0;
-    let ordertimes: Array<number> = [];
-    let ordertimestamps: Array<number> = [];
-    let timestamps: Array<string> = [];
-    let userstime: Array<number> = [];
+    let ordertimes = [];
+    let ordertimestamps = [];
+    let timestamps = [];
+    let userstime = [];
     let ordini = 0;
     import { onMount } from 'svelte';
     const USEREND = "http://localhost:3001/alluserstime";

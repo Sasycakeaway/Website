@@ -1,15 +1,15 @@
-<script lang="ts">
+<script >
   const ENDPOINT = "http://localhost:3001/adduser";
   import { dialogs } from "svelte-dialogs";
   import md5 from "md5";
   import emailjs from "@emailjs/browser";
   import { onMount } from "svelte";
-  var user: string,
-    pass: string,
-    passcheck: string,
-    nascita: string,
-    cf: string,
-    telefono: string;
+  var user,
+    pass,
+    passcheck,
+    nascita,
+    cf,
+    telefono;
   function registrati() {
     let regDate = new Date();
     let isodate = regDate.toISOString().split('T')[0];
@@ -35,7 +35,7 @@
             });
             await sessionStorage.clear();
           if (data.status == "1") {
-            dialogs.alert("Account creato correttamente").then(()=> location.href = "/ecommerce/login");
+            dialogs.alert("Account creato correttamente").then(()=> location.href = "/ecommerce/login.html");
 
           } else {
             dialogs.alert("Account esistente");

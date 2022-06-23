@@ -1,11 +1,11 @@
-<script lang="ts">
+<script>
   const ENDPOINT = "http://localhost:3001/getordersbypass";
   const LOGINENDPOINT = "http://localhost:3001/login";
   import { Circle3 } from "svelte-loading-spinners";
   import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
-  let ordini: Array<Object> = [],
-    loading: boolean = true;
+  let ordini = [],
+    loading = true;
   onMount(async () => {
     let user = sessionStorage.getItem("email");
     let pass = sessionStorage.getItem("password");
@@ -22,7 +22,7 @@
       .then((response) => response.json())
       .then(async (data) => {
         if (data.status != "1") {
-          location.href = "/ecommerce/login";
+          location.href = "/ecommerce/login.html";
         } else {
           fetch(ENDPOINT, {
             method: "POST",

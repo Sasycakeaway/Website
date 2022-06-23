@@ -145,7 +145,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom" />
-          <img src="/images/Muffin.jpg/" class="cardimg" />
+          <img src="/images/Muffin.jpg" class="cardimg" />
         </div>
       </div>
     </div>

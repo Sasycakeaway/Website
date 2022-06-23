@@ -1,11 +1,11 @@
-<script lang="ts">
+<script>
   const ENDPOINT = "http://localhost:3001/changepass";
   import { dialogs } from "svelte-dialogs";
   import { v4 as uuidv4 } from "uuid";
   import { onMount } from "svelte";
   import emailjs from "@emailjs/browser";
   import md5 from "md5";
-  let email: string, pass: string, passcheck: string, uuid: string;
+  let email, pass, passcheck, uuid;
   function requestRestore() {
     if (pass == passcheck && pass != null && uuid != null) {
       fetch(ENDPOINT, {

@@ -1,16 +1,14 @@
-<script lang="ts">
+<script>
   import { onMount } from "svelte";
   import md5 from "md5";
   const ENDPOINT = "http://localhost:3001/login";
   import { dialogs } from "svelte-dialogs";
-  var user: string;
-  var pass: string;
+  var user;
+  var pass;
 
   onMount(() => {
     user = sessionStorage.getItem("email");
     pass = sessionStorage.getItem("password");
-    console.log(user);
-    console.log(pass);
     if (user != null && pass != null) {
       fetch(ENDPOINT, {
         method: "POST", // or 'PUT'
@@ -26,7 +24,7 @@
         .then(async (data) => {
           console.log(data.status);
           if (data.status == "1") {
-            location.href = "/ecommerce/area";
+            location.href = "/ecommerce/area.html";
           } else {
             dialogs.alert("Login fallito, riprovare o creare un account");
           }
@@ -54,7 +52,7 @@
         if (data.status == "1") {
           await sessionStorage.setItem("email", user);
           await sessionStorage.setItem("password", md5(pass));
-          location.href = "/ecommerce/area";
+          location.href = "/ecommerce/area.html";
         } else {
           dialogs.alert("Login fallito, riprovare o creare un account");
         }

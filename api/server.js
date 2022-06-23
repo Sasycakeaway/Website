@@ -8,14 +8,22 @@ import compression from 'compression';
 import fs from 'fs';
 import express from 'express';
 import hpp from 'hpp';
-const port = 80;
+const port = 3001;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
 app.use(cors());
 app.use(hpp());
-app.use(helmet());
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.frameguard());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.xssFilter());
+app.use(helmet.permittedCrossDomainPolicies());
+app.use(helmet.referrerPolicy());
+app.use(helmet.originAgentCluster());
 app.use(compression());
 
 // Read credential for SQL and cipher
@@ -451,6 +459,7 @@ app.get("/alluserstime", (req, res) => {
   );
 });
 
+app.use("/", express.static("./site"));
 
 app.use(function(err, req, res, next) {
   console.log(err.stack);

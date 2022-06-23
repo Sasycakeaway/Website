@@ -1,6 +1,6 @@
-<script lang="ts">
-  export let qty: number;
-  export let prod: string;
+<script>
+  export let qty;
+  export let prod;
   import { initcart } from "../../static/js/cart";
   import { dialogs } from "svelte-dialogs";
   import { onMount } from "svelte";
@@ -8,9 +8,9 @@
 
   const dispatch = createEventDispatcher();
 
-  let cart: Array<Object> = [];
-  let totale: number;
-  export let ida: string;
+  let cart = [];
+  let totale;
+  export let ida;
   onMount(() => {
     cart = initcart();
     totale = localStorage.getItem("totale");
