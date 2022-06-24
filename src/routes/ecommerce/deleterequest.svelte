@@ -1,5 +1,5 @@
 <script>
-  const ENDPOINT = "http://localhost:3001/deleterequest";
+  const ENDPOINT = "http://149.102.141.16/deleterequest";
   import { dialogs } from "svelte-dialogs";
   let id;
   function requestRestore() {

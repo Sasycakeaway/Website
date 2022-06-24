@@ -1,5 +1,5 @@
 <script >
-  const ENDPOINT = "http://localhost:3001/adduser";
+  const ENDPOINT = "http://149.102.141.16/adduser";
   import { dialogs } from "svelte-dialogs";
   import md5 from "md5";
   import emailjs from "@emailjs/browser";

@@ -17,6 +17,11 @@
     totale = localStorage.getItem("totale");
     pass = sessionStorage.getItem("password");
     cart = localStorage.getItem("cart");
+    if(user == null || pass == null){
+      dialogs.alert("Per completare il pagamento devi accedere al sito").then(()=>{
+        location.href = "/ecommerce/login.html";
+      });
+    }
   });
   function pagamento() {
 

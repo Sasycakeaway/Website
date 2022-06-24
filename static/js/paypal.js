@@ -2,22 +2,22 @@ import { loadScript } from "@paypal/paypal-js";
 import { dialogs } from "svelte-dialogs";
 import { v4 as uuidv4 } from "uuid";
 import emailjs from "@emailjs/browser";
-let totale: number;
-let user: string, pass: string, newordini: Array<object>;
+let totale;
+let user, pass, newordini;
 function putorder(
-  nome: string,
-  cognome: string,
-  indirizzo: string,
-  cap: string,
-  domicilio: boolean,
-  email: string,
-  pass: string,
-  cart: any
+  nome,
+  cognome,
+  indirizzo,
+  cap,
+  domicilio,
+  email,
+  pass,
+  cart
 ) {
   let regDate = new Date();
   let isodate = regDate.toISOString().split('T')[0];
   let id = uuidv4() + new Date().getTime().toString();
-  fetch("http://localhost:3001/addorder", {
+  fetch("http://149.102.141.16/addorder", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -60,15 +60,15 @@ function putorder(
     });
 }
 export async function init(
-  totale: string,
-  nome: string,
-  cognome: string,
-  indirizzo: string,
-  cap: string,
-  domicilio: boolean,
-  email: string,
-  pass: string,
-  cart: any
+  totale,
+  nome,
+  cognome,
+  indirizzo,
+  cap,
+  domicilio,
+  email,
+  pass,
+  cart
 ) {
   emailjs.init("XI3aGphpOi4C1--qr");
 
@@ -123,16 +123,17 @@ export async function init(
         .render("#paypal");
     } catch (error) {
       console.error("failed to render the PayPal Buttons", error);
+      location.href= "/ecommerce/pagamenti.html";
     }
   }
 }
-export function getorder(user: string, pass: string) {}
+export function getorder(user, pass) {}
 
 export function getvariable(
-  username: string,
-  password: string,
+  username,
+  password,
   ordinipass,
-  ordineora: object
+  ordineora
 ) {
   user = username;
   password = pass;

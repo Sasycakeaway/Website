@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-export let totale: number = 0;
+export let totale = 0;
 export const cartstore = writable("cart");
 export const totstore = writable("totale");
 let cart = [];
@@ -11,7 +11,7 @@ export function initcart() {
   return cart;
 }
 
-export function pusha(ida: string, qty: number, prezzo: number) {
+export function pusha(ida, qty, prezzo) {
   let count = 0;
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].id == ida) {

@@ -1,6 +1,6 @@
 <script>
   import md5 from "md5";
-  const ENDPOINT = "http://localhost:3001/login";
+  const ENDPOINT = "http://149.102.141.16/login";
   import { dialogs } from "svelte-dialogs";
   import { onMount } from "svelte";
   function logout() {

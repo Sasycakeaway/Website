@@ -1,5 +1,5 @@
 <script>
-  const ENDPOINT = "http://localhost:3001/changepass";
+  const ENDPOINT = "http://149.102.141.16/changepass";
   import { dialogs } from "svelte-dialogs";
   import { v4 as uuidv4 } from "uuid";
   import { onMount } from "svelte";

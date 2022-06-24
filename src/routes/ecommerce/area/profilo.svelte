@@ -1,6 +1,6 @@
 <script>
-  const ENDPOINT = "http://localhost:3001/login";
-  const ENDPOINT2 = "http://localhost:3001/getuserbypass";
+  const ENDPOINT = "http://149.102.141.16/login";
+  const ENDPOINT2 = "http://149.102.141.16/getuserbypass";
   import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
   let email,

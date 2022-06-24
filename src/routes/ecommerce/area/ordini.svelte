@@ -1,6 +1,6 @@
 <script>
-  const ENDPOINT = "http://localhost:3001/getordersbypass";
-  const LOGINENDPOINT = "http://localhost:3001/login";
+  const ENDPOINT = "http://149.102.141.16/getordersbypass";
+  const LOGINENDPOINT = "http://149.102.141.16/login";
   import { Circle3 } from "svelte-loading-spinners";
   import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
