@@ -6,8 +6,8 @@
     let userstime = [];
     let ordini = 0;
     import { onMount } from 'svelte';
-    const USEREND = "http://localhost:3001/alluserstime";
-    const ORDEREND = "http://localhost:3001/allordertime";
+    const USEREND = "http://149.102.141.16/alluserstime";
+    const ORDEREND = "http://149.102.141.16/allordertime";
     import { Chart } from 'frappe-charts/dist/frappe-charts.min.cjs.js';
     onMount(()=> {
         fetch(USEREND).then(response => response.json()).then((parsed) => {

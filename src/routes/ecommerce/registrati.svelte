@@ -35,7 +35,7 @@
             });
             await sessionStorage.clear();
           if (data.status == "1") {
-            dialogs.alert("Account creato correttamente").then(()=> location.href = "/ecommerce/login.html");
+            dialogs.alert("Account creato correttamente").then(()=> location.href = "/ecommerce/login");
 
           } else {
             dialogs.alert("Account esistente");

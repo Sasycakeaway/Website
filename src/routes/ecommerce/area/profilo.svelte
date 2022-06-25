@@ -14,7 +14,7 @@
     newemail = user;
     let pass = sessionStorage.getItem("password");
     if (user == null || pass == null) {
-      location.href = "/ecommerce/login.html";
+      location.href = "/ecommerce/login";
     } else {
       const dati = {
         email: user,
@@ -30,7 +30,7 @@
         .then((response) => response.json())
         .then(async (data) => {
           if (data.status != "1") {
-            location.href = "/ecommerce/login.html";
+            location.href = "/ecommerce/login";
           } else {
             fetch(ENDPOINT2, {
               method: "POST", // or 'PUT'

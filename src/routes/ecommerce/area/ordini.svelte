@@ -22,7 +22,7 @@
       .then((response) => response.json())
       .then(async (data) => {
         if (data.status != "1") {
-          location.href = "/ecommerce/login.html";
+          location.href = "/ecommerce/login";
         } else {
           fetch(ENDPOINT, {
             method: "POST",

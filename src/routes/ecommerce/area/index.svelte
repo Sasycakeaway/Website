@@ -12,7 +12,7 @@
     let user = sessionStorage.getItem("email");
     let pass = sessionStorage.getItem("password");
     if (user == null || pass == null) {
-      location.href = "/ecommerce/login.html";
+      location.href = "/ecommerce/login";
     } else {
       fetch(ENDPOINT, {
         method: "POST", // or 'PUT'
@@ -27,7 +27,7 @@
         .then((response) => response.json())
         .then(async (data) => {
           if (data.status != "1") {
-            location.href = "/ecommerce/login.html";
+            location.href = "/ecommerce/login";
           }
         })
         .catch((error) => {

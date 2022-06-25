@@ -24,7 +24,7 @@
         .then(async (data) => {
           console.log(data.status);
           if (data.status == "1") {
-            location.href = "/ecommerce/area.html";
+            location.href = "/ecommerce/area";
           } else {
             dialogs.alert("Login fallito, riprovare o creare un account");
           }
@@ -52,7 +52,7 @@
         if (data.status == "1") {
           await sessionStorage.setItem("email", user);
           await sessionStorage.setItem("password", md5(pass));
-          location.href = "/ecommerce/area.html";
+          location.href = "/ecommerce/area";
         } else {
           dialogs.alert("Login fallito, riprovare o creare un account");
         }
