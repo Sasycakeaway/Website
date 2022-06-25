@@ -16,7 +16,7 @@
       preservare la tua salute o quella dei tuoi cari.
     </p>
     <h6>&nbsp;</h6>
-    <a href="elenco_ingredienti.pdf"
+    <a href="/elenco_ingredienti.pdf"
       ><button class="uk-button uk-button-primary uk-button-large but"
         >Scarica l'elenco ingredienti</button
       ></a

@@ -22,7 +22,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/Paste di meliga.jpg" class="cardimg" alt="" />
+            <img src="//images/Paste di meliga.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/Baci di dama.jpg" class="cardimg" alt="" />
+            <img src="/images/Baci di dama.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="images/Brüt ma bon.jpg" class="cardimg" alt="" />
+            <img src="/images/Brüt ma bon.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/Meringhe.jpg" class="cardimg" alt="" />
+            <img src="/images/Meringhe.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/nocciolotti.jpeg" alt="" />
+            <img class="cardimg" src="/images/nocciolotti.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="/images/cantucci.jpeg" class="cardimg" alt="" />
+            <img src="//images/cantucci.jpeg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/Canestrelli.jpg" alt="" />
+            <img class="cardimg" src="/images/Canestrelli.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -188,7 +188,7 @@
           <div class="uk-card-media-bottom">
             <img
               class="cardimg"
-              src="images/Biscotti di frolla con gli aromi dell'orto.jpg"
+              src="/images/Biscotti di frolla con gli aromi dell'orto.jpg"
               alt=""
             />
           </div>
@@ -214,7 +214,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="/images/Assabesi.jpg" alt="" />
+            <img class="cardimg" src="//images/Assabesi.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -239,7 +239,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/Krumiri.jpg" alt="" />
+            <img class="cardimg" src="/images/Krumiri.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -265,7 +265,7 @@
           <div class="uk-card-media-bottom">
             <img
               class="acc"
-              src="/images/Diamantini.jpg"
+              src="//images/Diamantini.jpg"
               alt=""
               width="512px"
             />

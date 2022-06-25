@@ -169,7 +169,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/Bonet piemontese.jpg" class="cardimg" alt="" />
+            <img src="/images/Bonet piemontese.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/Tiramisù.jpg" alt="" />
+            <img class="cardimg" src="/images/Tiramisù.jpg" alt="" />
           </div>
         </div>
       </div>

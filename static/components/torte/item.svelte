@@ -25,7 +25,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/classiche.jpg" alt="" />
+            <img class="cardimg" src="/images/classiche.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
 
           <!-- <hr class="ashr"> -->
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/crostate.jpg" alt="" />
+            <img class="cardimg" src="/images/crostate.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/artistiche.jpg" alt="" />
+            <img class="cardimg" src="/images/artistiche.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/creamtart.jpg" alt="" />
+            <img class="cardimg" src="/images/creamtart.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="images/cakedesign.jpg" class="cardimg" alt="" />
+            <img src="/images/cakedesign.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/meringata.jpg" alt="" />
+            <img class="cardimg" src="/images/meringata.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="images/credenza.jpg" alt="" />
+            <img class="cardimg" src="/images/credenza.jpg" alt="" />
           </div>
         </div>
       </div>
