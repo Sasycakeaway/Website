@@ -1,6 +1,6 @@
 <script>
-  import Head from "../../static/components/head.svelte";
-  import Prod from "../../static/components/prod.svelte";
+  import Head from "../lib/components/head.svelte";
+  import Prod from "../lib/components/prod.svelte";
   import SvelteSeo from "svelte-seo";
   import { onMount } from "svelte";
 

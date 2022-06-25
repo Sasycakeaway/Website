@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/lievitati/head.svelte";
-  import Carousell from "/static/components/lievitati/carosello.svelte";
+  import Head from "../../lib/components/lievitati/head.svelte";
+  import Carousell from "../../lib/components/lievitati/carosello.svelte";
 </script>
 
 <svelte:head>

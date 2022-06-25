@@ -1,7 +1,7 @@
 <script >
-  import { initcart } from "../../../static/js/cart";
+  import { initcart } from "../../lib/js/cart";
   import { onMount } from "svelte";
-  import Stepper from "../../../static/components/stepper.svelte";
+  import Stepper from "../../lib/components/stepper.svelte";
   let cart = [];
   let verifica;
   let totale;

@@ -1,7 +1,7 @@
 <script>
-  import Head from "/static/components/praline/head.svelte";
-  import Item from "/static/components/praline/item.svelte";
-  import Slide from "/static/components/praline/slide.svelte";
+  import Head from "../lib/components/praline/head.svelte";
+  import Item from "../lib/components/praline/item.svelte";
+  import Slide from "../lib/components/praline/slide.svelte";
 </script>
 
 <svelte:head>

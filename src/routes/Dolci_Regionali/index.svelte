@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/dolcitra/head.svelte";
-  import Item from "/static/components/dolcitra/item.svelte";
+  import Head from "../../lib/components/dolcitra/head.svelte";
+  import Item from "../../lib/components/dolcitra/item.svelte";
 </script>
 
 <svelte:head>

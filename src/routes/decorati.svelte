@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/decorati/head.svelte";
-  import Item from "/static/components/decorati/item.svelte";
+  import Head from "../lib/components/decorati/head.svelte";
+  import Item from "../lib/components/decorati/item.svelte";
 </script>
 
 <svelte:head>

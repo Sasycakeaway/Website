@@ -1,6 +1,6 @@
 <script>
-  import item from "/static/images/slide/Pasta di zucchero/list.json";
-  import Gallery from "/static/components/gallery.svelte";
+  import item from "$lib/images/slide/Pasta di zucchero/list.json";
+  import Gallery from "$lib/components/gallery.svelte";
   import { dialogs } from "svelte-dialogs";
 </script>
 
@@ -15,7 +15,9 @@
       )}
   >
     {#each item as prod}
-      <img src={"/images/slide/Pasta di zucchero/" + prod} />
+      {#if prod != "list.json"}
+        <img src={"/images/slide/Pasta di zucchero/" + prod} alt=prod/>
+      {/if}
     {/each}
   </Gallery>
 </div>

@@ -1,6 +1,6 @@
 <script>
-  import Frescahead from "/static/components/frescahead.svelte";
-  import Frescaitem from "/static/components/frescaitem.svelte";
+  import Frescahead from "../lib/components/frescahead.svelte";
+  import Frescaitem from "../lib/components/frescaitem.svelte";
 </script>
 
 <svelte:head>

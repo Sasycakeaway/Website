@@ -1,7 +1,7 @@
 <script>
-  import Bishead from "/static/components/biscotti/head.svelte";
+  import Bishead from "../lib/components/biscotti/head.svelte";
 
-  import Bisitem from "/static/components/biscotti/item.svelte";
+  import Bisitem from "../lib/components/biscotti/item.svelte";
 </script>
 
 <svelte:head>

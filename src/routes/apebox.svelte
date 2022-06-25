@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/apebox/head.svelte";
-  import Item from "/static/components/apebox/item.svelte";
+  import Head from "../lib/components/apebox/head.svelte";
+  import Item from "../lib/components/apebox/item.svelte";
 </script>
 
 <svelte:head>

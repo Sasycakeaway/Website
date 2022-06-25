@@ -1,6 +1,6 @@
 <script>
-  import item from "/static/images/slide/Torte/list.json";
-  import Gallery from "/static/components/gallery.svelte";
+  import item from "$lib/images/slide/Torte/list.json";
+  import Gallery from "$lib/components/gallery.svelte";
   import { dialogs } from "svelte-dialogs";
 </script>
 
@@ -15,7 +15,9 @@
       )}
   >
     {#each item as prod}
+    {#if prod != "list.json"}
       <img src={"/images/slide/Torte/" + prod} />
+      {/if}
     {/each}
   </Gallery>
 </div>

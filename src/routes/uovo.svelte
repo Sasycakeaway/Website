@@ -1,7 +1,7 @@
 <script>
-  import Head from "/static/components/uovo/head.svelte";
-  import Slide from "/static/components/uovo/slide.svelte";
-  import Item from "/static/components/uovo/item.svelte";
+  import Head from "../lib/components/uovo/head.svelte";
+  import Slide from "../lib/components/uovo/slide.svelte";
+  import Item from "../lib/components/uovo/item.svelte";
 </script>
 
 <svelte:head>

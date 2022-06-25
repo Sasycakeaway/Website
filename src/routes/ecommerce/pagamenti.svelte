@@ -1,7 +1,7 @@
 <script>
   import { dialogs } from "svelte-dialogs";
   import md5 from "md5";
-  import { init, getorder, getvariable } from "../../../static/js/paypal";
+  import { init, getorder, getvariable } from "../../lib/js/paypal";
   import { onMount } from "svelte";
   let nome,
     cognome,

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { initcart, pushatra } from "../../../static/js/cart";
+  import { initcart, pushatra } from "$lib/js/cart";
   let cart;
   let totale;
   onMount(() => {

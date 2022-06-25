@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/sacco_di_natale/head.svelte";
-  import Item from "/static/components/sacco_di_natale/item.svelte";
+  import Head from "../lib/components/sacco_di_natale/head.svelte";
+  import Item from "../lib/components/sacco_di_natale/item.svelte";
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
 <script>
-  import Carousel from "/static/components/carousel.svelte";
-  import Head from "/static/components/head.svelte";
-  import Prod from "/static/components/prod.svelte";
+  import Carousel from "../lib/components/carousel.svelte";
+  import Head from "../lib/components/head.svelte";
+  import Prod from "../lib/components/prod.svelte";
 </script>
 
 <svelte:head>

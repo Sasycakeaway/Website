@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/torte/head.svelte";
-  import Item from "/static/components/torte/item.svelte";
+  import Head from "../lib/components/torte/head.svelte";
+  import Item from "../lib/components/torte/item.svelte";
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 <script>
-  import Head from "/static/components/american/head.svelte";
-  import Item from "/static/components/american/item.svelte";
+  import Head from "$lib/components/american/head.svelte";
+  import Item from "$lib/components/american/item.svelte";
 </script>
 
 <svelte:head>

@@ -1,5 +1,5 @@
 <script>
-  import Head from "/static/components/torte/paradiso/head.svelte";
+  import Head from "$lib/components/torte/paradiso/head.svelte";
 </script>
 
 <svelte:head>
