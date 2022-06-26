@@ -78,7 +78,7 @@
                 <li><a href="/about">Chi sono</a></li>
                 <li><a href="/why">Perchè Sasy's</a></li>
                 <li class="uk-parent ">
-                    <a href="#">I miei prodottit</a>
+                    <a href="#">I miei prodotti</a>
                     <ul class="uk-nav-sub">
                       <li><a href="/fresca">Pasticceria fresca</a></li>
                       <!-- <li><a href="#">Pasticceria salata</a></li> -->
