@@ -14,7 +14,7 @@
 </svelte:head>
 <div class="header">
   <header>
-    <nav class="uk-navbar uk-navbar-container ">
+    <nav class="uk-navbar uk-navbar-container " uk-navbar>
       <div class="uk-navbar-left">
         {#if mobile}
         <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
