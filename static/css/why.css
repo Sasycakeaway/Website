@@ -144,9 +144,6 @@
   font-size: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  margin-bottom: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 .testo {
   width: 70%;
@@ -174,4 +171,10 @@
 }
 .contatti {
   border-width: 0px;
+  margin: 20px;
+}
+.mappa{
+  overflow: hidden;
+  width: 860px;
+  /* position: absolute; */
 }

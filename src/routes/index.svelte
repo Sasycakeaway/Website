@@ -3,11 +3,12 @@
   import Prod from "../lib/components/prod.svelte";
   import SvelteSeo from "svelte-seo";
   import { onMount } from "svelte";
-
+  let mobile = false;
   onMount(async () => {
     if (
       /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
     ) {
+      mobile = true;
       document.getElementById("ifname").style.width = "300px";
       document.getElementById("ifname").style.height = "200px";
     }
@@ -86,7 +87,7 @@
     acceptsReservations: "True",
   }}
 />
-<Head />
+<Head {mobile}/>
 <br />
 <div class="prodi">
   <Prod />

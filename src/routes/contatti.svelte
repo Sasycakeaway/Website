@@ -1,4 +1,5 @@
 <script>
+  let mobile = false;
   import { onMount } from "svelte";
   import emailjs from "@emailjs/browser";
   let nome = "",
@@ -8,11 +9,10 @@
     ntel = "";
   function invia() {}
   onMount(async () => {
-    if (
-      !/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
-    ) {
-      document.getElementById("map").style.width = "600px";
-      document.getElementById("map").style.height = "400px";
+    if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById("map").className = "";
+      document.getElementById("map").style.width = "350px";
+      document.getElementById("map").style.height = "350px";
     }
   });
   function manda() {
@@ -48,8 +48,7 @@
 <h1>&nbsp;</h1>
 <h1>Contattaci per avere informazioni sui nostri prodotti o per fare ordini</h1>
 <h1>&nbsp;</h1>
-<div class="pure-g" align="center">
-  <div class="pure-u-1-2 contatti">
+  <div class="contatti">
     <fieldset class="contatti">
       <div class="uk-margin">
         {#if nome == ""}
@@ -108,22 +107,25 @@
         />
       </div>
     </fieldset>
-    <button class="uk-button uk-button-primary" on:click={manda}>Invia</button>
+    <center>
+      <button class="uk-button uk-button-primary" on:click={manda}>Invia</button>
+    </center>
   </div>
-
-  <div class="pure-u-1-2">
+  <br/>
+  <div align="center">
+    
     <iframe
+      title="Posizione Sasy's Cake Away"
+      class="mappa"
       id="map"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11259.999086265521!2d7.7086123!3d45.1263404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3a57226dc53caa17!2sSasy&#39;s%20cake%20away!5e0!3m2!1sit!2sit!4v1649366843756!5m2!1sit!2sit"
-      width="200"
-      height="150"
       style="border:0;"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      height="500px"
     />
   </div>
-</div>
 <!-- <section>
   <input type="text" >
 

@@ -22,14 +22,18 @@
   </p>
 </div>
 <h1>&nbsp;</h1>
-<div class="uk-child-width-expand@s uk-text-center foto" uk-grid align="center">
+<div class="uk-child-width-expand@s uk-text-center foto uk-flex uk-flex-center" uk-grid align="center">
+  <center>
   <div>
-    <img src="/images/renna.jpg" class="renna" />
+    <img src="/images/renna.jpg" width="512px" />
   </div>
+  <br/>
   <div>
-    <img src="/images/biscotti.jpg" class="bis" />
+    <img src="/images/biscotti.jpg" width="512px" />
   </div>
+</center>
 </div>
+
 <h1>&nbsp;</h1>
 <div align="center">
   <p class="parag">

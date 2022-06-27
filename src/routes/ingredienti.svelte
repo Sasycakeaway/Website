@@ -1,7 +1,15 @@
+<script>
+  import PdfViewer from 'svelte-pdf';
+  let ingredienti = false;
+  function download_ingredienti(){
+    window.open("/elenco_ingredienti.pdf");
+  }
+</script>
 <svelte:head>
   <title>Home</title>
   <link rel="stylesheet" href="/css/index.css" />
 </svelte:head>
+{#if ingredienti == false}
 <h1>&nbsp;</h1>
 <div align="center">
   <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m infor">
@@ -16,7 +24,7 @@
       preservare la tua salute o quella dei tuoi cari.
     </p>
     <h6>&nbsp;</h6>
-    <a href="/elenco_ingredienti.pdf"
+    <a href="#0" on:click={()=> ingredienti = true}
       ><button class="uk-button uk-button-primary uk-button-large but"
         >Scarica l'elenco ingredienti</button
       ></a
@@ -24,3 +32,7 @@
   </div>
 </div>
 <h1>&nbsp;</h1>
+{:else}
+<PdfViewer url="/elenco_ingredienti.pdf" scale="1.5"/>
+<br/>
+{/if}

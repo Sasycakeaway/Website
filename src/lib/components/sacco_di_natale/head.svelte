@@ -1,4 +1,14 @@
 <script>
+  import { onMount } from "svelte";
+  let divclass="";
+  onMount(async () => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+    }else{
+      divclass = "bloccot";
+    }
+  });
 </script>
 
 <svelte:head>
@@ -15,12 +25,7 @@
     class="uk-section uk-light uk-background-cover"
     style="background-color:#062a44"
   >
-    <div class="uk-container info">
-      <div class="uk-card uk-card-body">
-        <img src="/images/natale.jpg" />
-      </div>
-    </div>
-    <div class="bloccot">
+    <div style="margin: 20px">
       <h1
         style="color:#f5e01f;     font-size: 30px; font-family: 'Poppins', sans-serif;font-weight: 600;"
       >

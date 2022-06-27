@@ -29,6 +29,15 @@
       },
     });
   });
+  function facebook(){
+    window.open("https://www.facebook.com/sasy.cakeaway");
+  }
+  function instagram(){
+    window.open("https://www.instagram.com/sasy_cakeaway/");
+  }
+  function github(){
+    window.open("https://github.com/Sasycakeaway/Website");
+  }
 </script>
 
 <svelte:head>
@@ -52,23 +61,22 @@
   <p style="color: white;">Seguici su Instagram e Facebook</p>
   <div uk-grid>
     <div>
-      <a href="https://www.instagram.com/sasy_cakeaway/" target="_blank"
-        ><img
+      <a href="#0" on:click={instagram}
+        ><img alt="instagram"
           src="https://img.icons8.com/material-outlined/48/000000/instagram-new--v1.png"
         /></a
       >
     </div>
     <div>
-      <a href="https://www.facebook.com/sasy.cakeaway" target="_blank"
+      <a href="#0" on:click={facebook} alt="facebook"
         ><img src="https://img.icons8.com/ios/48/000000/facebook--v1.png" /></a
       >
     </div>
   </div>
-  <p class="social">&copy; Sasy's Cake Away</p>
-  <p class="src">
+  <p class="social" style="margin-bottom:40px">&copy; Sasy's Cake Away</p>
+  <p class="src" style="margin-top:150px">
     Codice sorgente del sito su <a
-      href="https://github.com/Sasycakeaway/Website"
-      target="_blank">Github</a
+      href="#0" on:click={github}>Github</a
     >
   </p>
 </footer>
